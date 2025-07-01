@@ -19,6 +19,7 @@ interface PricingPlan {
   ctaLink: string;
   ctaText: string;
   isPopular: boolean;
+  popularityRank: number;
 }
 
 const Pricing = () => {
@@ -51,7 +52,8 @@ const Pricing = () => {
         getImagePath('LSSMObile2.webp')
       ]);
 
-      setPlans([
+      // Define plans with popularity rank (lower number = more popular)
+      const plansData = [
         {
           id: 'starter',
           title: 'Starter Pack',
@@ -64,6 +66,7 @@ const Pricing = () => {
           ctaLink: buildUrlWithParams('https://secure.vnsh.com/vnls2/starter-checkout'),
           ctaText: 'Add to Cart',
           isPopular: false,
+          popularityRank: 3 // Middle popularity
         },
         {
           id: 'elite',
@@ -77,6 +80,7 @@ const Pricing = () => {
           ctaLink: buildUrlWithParams('https://secure.vnsh.com/vnls2/elite-checkout'),
           ctaText: 'Add to Cart',
           isPopular: true,
+          popularityRank: 1 // Most popular
         },
         {
           id: 'ultimate',
@@ -85,15 +89,17 @@ const Pricing = () => {
           originalPrice: '$599.88',
           savings: '$399.91',
           description: '',
-          features: [
-            '+ Extra Laser Cartidge',
-          ],
+          features: ['+ Extra Laser Cartidge'],
           image: ultimateImage,
           ctaLink: buildUrlWithParams('https://secure.vnsh.com/vnls2/ultimate-checkout'),
           ctaText: 'Add to Cart',
           isPopular: false,
+          popularityRank: 2 // Least popular
         }
-      ]);
+      ];
+
+      // Keep original order but apply margin based on popularityRank
+      setPlans(plansData);
       
       setIsLoading(false);
     };
@@ -114,7 +120,10 @@ const Pricing = () => {
               key={plan.id}
               className={`mx-auto w-full max-w-[300px] rounded-lg overflow-hidden shadow-lg ${
                 plan.id === 'elite' ? 'bg-[#ededed]' : 'bg-white'
-              } ${!plan.isPopular ? 'mt-[30px]' : ''}`}
+              }`}
+              style={{
+                marginTop: `${(plan.popularityRank - 1) * 15}px`
+              }}
             >
               <div className="flex flex-col items-center pb-[25px]">
                 <div className="relative w-full">
