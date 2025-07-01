@@ -72,7 +72,10 @@ const Features = () => {
               width={375}
               height={0}
               className="w-full h-auto object-cover"
-              sizes="375px"
+              sizes="(max-width: 640px) 100vw, 375px"
+              loading="lazy"
+              decoding="async"
+              quality={85}
             />
           </div>
           
@@ -94,6 +97,8 @@ const Features = () => {
                     width={30} 
                     height={30}
                     className="w-[30px] h-[30px]"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <span className="text-[22px] font-bold text-black mb-2 leaspaning-none">{feature.title}: </span>
@@ -122,6 +127,9 @@ const Features = () => {
               width={300}
               height={300}
               className="shadow-md self-start"
+              loading="lazy"
+              decoding="async"
+              sizes="(max-width: 768px) 100vw, 300px"
             />
           </div>
         </div>

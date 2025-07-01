@@ -88,6 +88,9 @@ const Pricing = () => {
                     height={200}
                     className="w-full h-auto object-cover"
                     sizes="(max-width: 768px) 100vw, 300px"
+                    loading="lazy"
+                    decoding="async"
+                    quality={85}
                   />
                 </div>
                 <div className={`p-4 w-full ${
@@ -124,6 +127,8 @@ const Pricing = () => {
                       height={60}
                       className="w-full h-auto"
                       loading="lazy"
+                      decoding="async"
+                      quality={85}
                     />
                   </a>
                 </div>  
@@ -135,6 +140,8 @@ const Pricing = () => {
                     width={160}
                     height={40}
                     className="mx-auto"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 

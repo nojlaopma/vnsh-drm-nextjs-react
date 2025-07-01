@@ -141,7 +141,10 @@ const Footer = () => {
               width={325} 
               height={183} 
               className="w-full h-auto"
-              priority
+              loading="lazy"
+              decoding="async"
+              quality={85}
+              sizes="(max-width: 768px) 100vw, 325px"
             />
           </div>
         </div>

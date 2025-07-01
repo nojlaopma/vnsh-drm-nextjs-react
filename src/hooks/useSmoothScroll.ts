@@ -6,11 +6,17 @@ import { initSmoothScrolling } from '@/utils/scroll';
  */
 const useSmoothScroll = (): void => {
   useEffect(() => {
-    // Initialize smooth scrolling
-    const cleanup = initSmoothScrolling();
+    // Only run on client-side
+    if (typeof window === 'undefined') return;
     
-    // Handle initial hash in URL
-    const handleInitialHash = () => {
+    // Initialize smooth scrolling
+    let cleanup: (() => void) | undefined;
+    
+    // Use requestAnimationFrame to ensure DOM is ready
+    const rafId = requestAnimationFrame(() => {
+      cleanup = initSmoothScrolling();
+      
+      // Handle initial hash in URL
       if (window.location.hash) {
         const id = window.location.hash.replace('#', '');
         if (id) {
@@ -23,14 +29,14 @@ const useSmoothScroll = (): void => {
           }, 100);
         }
       }
-    };
-    
-    // Run initial hash check
-    handleInitialHash();
+    });
     
     // Cleanup function
     return () => {
-      cleanup();
+      cancelAnimationFrame(rafId);
+      if (cleanup) {
+        cleanup();
+      }
     };
   }, []);
 };

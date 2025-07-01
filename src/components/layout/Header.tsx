@@ -9,12 +9,14 @@ const Header = () => {
         <div id="header-logo" className="flex justify-center lg:justify-start p-2.5 w-full">
           <Link href="/">
             <Image 
-              src={getImagePath('White-VNSH-Logo.webp')}
-              alt="VNSH Holster" 
+              src={getImagePath('White-VNSH-Logo.webp')} 
+              alt="VNSH Logo" 
               width={120} 
-              height={40}
-              className="h-[40px] w-[120px] aspect-auto"
+              height={40} 
               priority
+              loading="eager"
+              decoding="sync"
+              className="h-[40px] w-[120px] aspect-auto"
             />
           </Link>
         </div>
