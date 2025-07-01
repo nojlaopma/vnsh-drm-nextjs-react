@@ -3,6 +3,8 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { getImagePath } from '@/utils/images';
+import Link from 'next/link';
+import Button from '@/components/ui/Button';
 
 const features = [
   {
@@ -76,12 +78,15 @@ const Features = () => {
           <p className="text-[22px] text-black mb-4 ">Plus, when you get the Laser Strike System, it's almost like…</p>
           
           <div className="text-center mt-8 mb-12">
-            <a 
-              href="#targetselection" 
-              className="inline-block w-full md:w-[80%] mx-auto p-1.5 px-3 text-center font-bold animate-pulse-cta text-[1.125rem] md:text-[1.8rem] leading-normal text-white bg-[#28a745] rounded hover:bg-[#218838] transition-colors duration-200"
+          <Link href="#pricing" className="w-full sm:w-auto">
+            <Button 
+              variant="cta"
+              size="lg"
+              className="w-full md:w-[80%] mx-auto p-1.5 px-3 text-center font-bold animate-pulse-cta text-[1.125rem] md:text-[1.8rem] leading-normal"
             >
               Yes! Give Me My Laser Strike System!
-            </a>
+            </Button>
+          </Link>
           </div>
           
           <h2 className="text-[38px] font-bold text-center  my-0 mx-5">
@@ -165,12 +170,15 @@ const Features = () => {
 
         
         <div className="text-center mt-8 mb-8">
-          <a 
-            href="#targetselection" 
-            className="inline-block w-full md:w-[80%] mx-auto p-1.5 px-3 text-center font-bold animate-pulse-cta text-[1.125rem] md:text-[1.8rem] leading-normal text-white bg-[#28a745] rounded hover:bg-[#218838] transition-colors duration-200"
-          >
-            Yes! Give Me My Laser Strike System!
-          </a>
+        <Link href="#pricing" className="w-full sm:w-auto">
+            <Button 
+              variant="cta"
+              size="lg"
+              className="w-full md:w-[80%] mx-auto p-1.5 px-3 text-center font-bold animate-pulse-cta text-[1.125rem] md:text-[1.8rem] leading-normal"
+            >
+              Yes! Give Me My Laser Strike System!
+            </Button>
+          </Link>
         </div>
         
         <div className="mb-12">
