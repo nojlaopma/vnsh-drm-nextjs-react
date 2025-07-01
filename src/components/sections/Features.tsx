@@ -82,7 +82,7 @@ const Features = () => {
             <Button 
               variant="cta"
               size="lg"
-              className="w-[85%] md:w-[80%] mx-auto py-2 px-4 text-center font-bold animate-pulse-cta text-[1.125rem] md:text-[1.8rem] leading-[1.4] whitespace-normal break-words"
+              className="w-full md:w-[80%] mx-auto py-[39px] px-4 text-center font-bold animate-pulse-cta text-[1.125rem] md:text-[1.8rem] leading-[1.4] whitespace-normal break-words"
             >
               Yes! Give Me My Laser Strike System!
             </Button>
@@ -175,7 +175,7 @@ const Features = () => {
             <Button 
               variant="cta"
               size="lg"
-              className="w-[85%] md:w-[80%] mx-auto py-2 px-4 text-center font-bold animate-pulse-cta text-[1.125rem] md:text-[1.8rem] leading-[1.4] whitespace-normal break-words"
+              className="w-full md:w-[80%] mx-auto py-[39px] px-4 text-center font-bold animate-pulse-cta text-[1.125rem] md:text-[1.8rem] leading-[1.4] whitespace-normal break-words"
             >
               Yes! Give Me My Laser Strike System!
             </Button>
