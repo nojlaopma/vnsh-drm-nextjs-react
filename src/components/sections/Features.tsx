@@ -153,17 +153,18 @@ const Features = () => {
               But the Laser Strike System transforms traditional dry fire training from a simple shortcut <b className="italic">to a full-on accuracy cheat code!!</b>
             </p>
           </div>
-          <div className="w-full md:w-auto flex-shrink-0">
-            <Image
-              src={imagePaths.markVogel}
-              alt="Mark Vogel - Professional Shooter"
-              width={300}
-              height={300}
-              className="shadow-md self-start"
-              loading="lazy"
-              decoding="async"
-              sizes="(max-width: 768px) 100vw, 300px"
-            />
+          <div className="w-full flex justify-center md:justify-end md:w-auto flex-shrink-0">
+            <div className="relative w-[300px] h-[300px] md:w-[300px] md:h-[300px]">
+              <Image
+                src={imagePaths.markVogel}
+                alt="Mark Vogel - Professional Shooter"
+                fill
+                className="object-cover shadow-md"
+                loading="lazy"
+                decoding="async"
+                sizes="(max-width: 768px) 300px, 300px"
+              />
+            </div>
           </div>
         </div>
         
