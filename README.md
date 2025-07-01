@@ -64,8 +64,6 @@ src/
 - [React](https://reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
-- [Hero Icons](https://heroicons.com/)
-- [Headless UI](https://headlessui.com/)
 
 ## Deployment
 
