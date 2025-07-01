@@ -9,13 +9,13 @@ const Hero = () => {
     <section id="hero" className="py-8">
       <div className="max-w-[1265px] mx-auto">
         <div className="text-center mb-8">
-          <h2 className="text-[#ff0000] text-[31px] font-normal italic mb-4 leading-none">
+          <h2 className="text-[#ff0000] text-[26px] md:text-[31px] font-normal italic mb-4 leading-none">
             URGENT: For Anyone Seeking <u>Better Accuracy!</u>
           </h2>
-          <h1 className="text-[37px] font-bold mb-4 leading-none">
+          <h1 className="text-[23px] md:text-[37px] font-bold mb-4 leading-none">
             Increase Accuracy and Gain Confidence With Your Shooting Save Big With Our New Customer Program
           </h1>
-          <p className="text-[31px] font-normal italic text-gray-800 leading-none">
+          <p className="text-[23px] md:text-[31px] font-normal italic text-gray-800 leading-none">
             (Money-Back <b><u>Guaranteed to Skyrocket Your Accuracy</u></b> In 60 Days Or Less)
           </p>
         </div>
@@ -29,7 +29,7 @@ const Hero = () => {
             <Button 
               variant="cta"
               size="lg"
-              className="w-full md:w-[80%] mx-auto p-1.5 px-3 text-center font-bold animate-pulse-cta text-[1.125rem] md:text-[1.8rem] leading-normal"
+              className="w-[85%] md:w-[80%] mx-auto py-2 px-4 text-center font-bold animate-pulse-cta text-[1.125rem] md:text-[1.8rem] leading-[1.4] whitespace-normal break-words"
             >
               Yes! Give Me My Laser Strike System!
             </Button>
