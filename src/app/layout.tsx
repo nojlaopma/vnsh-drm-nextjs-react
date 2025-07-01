@@ -39,7 +39,7 @@ export default function RootLayout({
         <title>VNSH Laser Strike Training System</title>
         <meta name="description" content="Increase accuracy and gain confidence with your shooting. Save big with our new customer program." />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-        <link rel="icon" type="image/png" href="/images/VNSH_-_fav_128w.png" />
+        <link rel="icon" type="image/webp" href="/images/VNSH_-_fav_128w.webp" />
         
         {/* Preload critical font files */}
         <link 

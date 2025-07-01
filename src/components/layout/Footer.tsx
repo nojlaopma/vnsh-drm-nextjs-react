@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { getImagePath } from '@/utils/images';
@@ -10,6 +10,16 @@ import ShippingPolicyContent from '../policies/ShippingPolicyContent';
 import ReturnPolicyContent from '../policies/ReturnPolicyContent';
 
 const Footer = () => {
+  const [logoPath, setLogoPath] = useState<string>('');
+
+  useEffect(() => {
+    const loadLogo = async () => {
+      const path = await getImagePath('VNSHLogoFooter.webp');
+      setLogoPath(path);
+    };
+
+    loadLogo();
+  }, []);
   const [activeModal, setActiveModal] = useState<string | null>(null);
   const currentYear = new Date().getFullYear();
 
@@ -133,21 +143,23 @@ const Footer = () => {
           </button>
         </div>
         
-        <div className="flex justify-center">
-          <div className="w-[325px]">
-            <Image 
-              src={getImagePath('VNSHLogoFooter.png')}
-              alt="VNSH Logo" 
-              width={325} 
-              height={183} 
-              className="w-full h-auto"
-              loading="lazy"
-              decoding="async"
-              quality={85}
-              sizes="(max-width: 768px) 100vw, 325px"
-            />
+        {logoPath && (
+          <div className="flex justify-center">
+            <div className="w-[325px]">
+              <Image 
+                src={logoPath}
+                alt="VNSH Logo" 
+                width={325} 
+                height={183} 
+                className="w-full h-auto"
+                loading="lazy"
+                decoding="async"
+                quality={85}
+                sizes="(max-width: 768px) 100vw, 325px"
+              />
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </footer>
   );

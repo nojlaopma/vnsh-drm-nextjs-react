@@ -1,3 +1,6 @@
+'use client';
+
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { getImagePath } from '@/utils/images';
 
@@ -21,6 +24,31 @@ const features = [
 ];
 
 const Features = () => {
+  const [imagePaths, setImagePaths] = useState<{[key: string]: string}>({});
+
+  useEffect(() => {
+    const loadImages = async () => {
+      const paths = await Promise.all([
+        getImagePath('vnsh-laser4-desktop.webp'),
+        getImagePath('check_30_30.webp'),
+        getImagePath('Mark_Vogel.webp')
+      ]);
+
+      setImagePaths({
+        desktop: paths[0],
+        checkmark: paths[1],
+        markVogel: paths[2]
+      });
+    };
+
+    loadImages();
+  }, []);
+
+  // Show loading state if images aren't loaded yet
+  if (Object.keys(imagePaths).length === 0) {
+    return <div className="py-12">Loading...</div>;
+  };
+
   return (
     <section className="pt-2 pb-6">
       <div className="max-w-[1100px] mx-auto px-4" style={{ fontFamily: 'Arial, sans-serif' }}>
@@ -67,7 +95,7 @@ const Features = () => {
         <div className="mb-12">
           <div className="relative w-full max-w-[375px] mx-auto overflow-hidden shadow-lg mb-8">
             <Image
-              src={getImagePath('vnsh-laser4-desktop.jpg')}
+              src={imagePaths.desktop}
               alt="Laser Strike Training System"
               width={375}
               height={0}
@@ -92,7 +120,7 @@ const Features = () => {
               <div key={index} className="relative pl-12">
                 <div className="absolute left-0 top-0 w-8 h-8 flex items-center justify-center">
                   <Image 
-                    src={getImagePath('check_30_30.png')} 
+                    src={imagePaths.checkmark} 
                     alt="Checkmark" 
                     width={30} 
                     height={30}
@@ -122,7 +150,7 @@ const Features = () => {
           </div>
           <div className="w-full md:w-auto flex-shrink-0">
             <Image
-              src={getImagePath('Mark_Vogel.webp')}
+              src={imagePaths.markVogel}
               alt="Mark Vogel - Professional Shooter"
               width={300}
               height={300}

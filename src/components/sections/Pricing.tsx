@@ -1,12 +1,29 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { getImagePath } from '@/utils/images';
 import { useSearchParams } from 'next/navigation';
 import { useMemo } from 'react';
 
+interface PricingPlan {
+  id: string;
+  title: string;
+  price: string;
+  originalPrice: string;
+  savings: string;
+  description: string;
+  features: string[];
+  image: string;
+  ctaLink: string;
+  ctaText: string;
+  isPopular: boolean;
+}
+
 const Pricing = () => {
+  const [plans, setPlans] = useState<PricingPlan[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
   const searchParams = useSearchParams();
   
   // Get all URL parameters as an object
@@ -16,7 +33,7 @@ const Pricing = () => {
   }, [searchParams]);
   
   // Function to append URL parameters to a base URL
-  const buildUrlWithParams = (baseUrl: string) => {
+  const buildUrlWithParams = useMemo(() => (baseUrl: string) => {
     if (Object.keys(urlParams).length === 0) return baseUrl;
     
     const url = new URL(baseUrl);
@@ -24,55 +41,78 @@ const Pricing = () => {
       url.searchParams.append(key, value);
     });
     return url.toString();
-  };
+  }, [urlParams]);
   
-  const pricingPlans = [
-    {
-      id: 'starter',
-      title: 'Starter Pack',
-      price: '$49.97',
-      originalPrice: '$79.97',
-      savings: '$30.00',
-      description: '(Pick Your Caliber)',
-      features: [],
-      image: getImagePath('LSSMobile.webp'),
-      ctaLink: buildUrlWithParams('https://secure.vnsh.com/vnls2/starter-checkout'),
-      ctaText: 'Add to Cart',
-      isPopular: false,
-    },
-    {
-      id: 'elite',
-      title: 'Elite Pack',
-      price: '$129.97',
-      originalPrice: '$399.88',
-      savings: '$269.91',
-      description: '',
-      features: ['+ All Calibers (9mm, .380, .40 & .45)'],
-      image: getImagePath('LSSMobile3.webp'),
-      ctaLink: buildUrlWithParams('https://secure.vnsh.com/vnls2/advanced-checkout'),
-      ctaText: 'Add to Cart',
-      isPopular: false,
-    },
-    {
-      id: 'pro',
-      title: 'Pro Pack',
-      price: '$89.97',
-      originalPrice: '$199.94',
-      savings: '$109.97',
-      description: '(Pick Your Caliber)',
-      features: ['+ Extra Laser Cartridge'],
-      image: getImagePath('LSSMObile2.webp'),
-      ctaLink: buildUrlWithParams('https://secure.vnsh.com/vnls2/enhanced-checkout'),
-      ctaText: 'Add to Cart',
-      isPopular: false,
-    },
-  ];
+  useEffect(() => {
+    const loadImages = async () => {
+      const [starterImage, eliteImage, ultimateImage] = await Promise.all([
+        getImagePath('LSSMobile.webp'),
+        getImagePath('LSSMobile3.webp'),
+        getImagePath('LSSMObile2.webp')
+      ]);
+
+      setPlans([
+        {
+          id: 'starter',
+          title: 'Starter Pack',
+          price: '$49.97',
+          originalPrice: '$79.97',
+          savings: '$30.00',
+          description: '(Pick Your Caliber)',
+          features: [],
+          image: starterImage,
+          ctaLink: buildUrlWithParams('https://secure.vnsh.com/vnls2/starter-checkout'),
+          ctaText: 'Add to Cart',
+          isPopular: false,
+        },
+        {
+          id: 'elite',
+          title: 'Elite Pack',
+          price: '$129.97',
+          originalPrice: '$399.88',
+          savings: '$269.91',
+          description: '',
+          features: ['+ All Calibers (9mm, .380, .40 & .45)'],
+          image: eliteImage,
+          ctaLink: buildUrlWithParams('https://secure.vnsh.com/vnls2/elite-checkout'),
+          ctaText: 'Add to Cart',
+          isPopular: false,
+        },
+        {
+          id: 'ultimate',
+          title: 'Ultimate Pack',
+          price: '$199.97',
+          originalPrice: '$599.88',
+          savings: '$399.91',
+          description: '',
+          features: [
+            '+ All Calibers (9mm, .380, .40 & .45)',
+            '+ 5 FREE Targets ($50 Value)',
+            '+ FREE Shipping',
+            '+ FREE Training Guide'
+          ],
+          image: ultimateImage,
+          ctaLink: buildUrlWithParams('https://secure.vnsh.com/vnls2/ultimate-checkout'),
+          ctaText: 'Add to Cart',
+          isPopular: false,
+        }
+      ]);
+      
+      setIsLoading(false);
+    };
+
+    loadImages();
+  }, [buildUrlWithParams]);
+  
+  if (isLoading) {
+    return <div className="py-12 text-center">Loading pricing...</div>;
+  }
 
   return (
     <section id="pricing" className="pb-[50px]">
       <div className="max-w-[1100px] mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {pricingPlans.map((plan) => (
+          {plans.map((plan) => (
             <div 
               key={plan.id}
               className={`mx-auto w-full max-w-[300px] rounded-lg overflow-hidden shadow-lg ${
