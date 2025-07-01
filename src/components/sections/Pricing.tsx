@@ -76,7 +76,7 @@ const Pricing = () => {
           image: eliteImage,
           ctaLink: buildUrlWithParams('https://secure.vnsh.com/vnls2/elite-checkout'),
           ctaText: 'Add to Cart',
-          isPopular: false,
+          isPopular: true,
         },
         {
           id: 'ultimate',
@@ -86,10 +86,7 @@ const Pricing = () => {
           savings: '$399.91',
           description: '',
           features: [
-            '+ All Calibers (9mm, .380, .40 & .45)',
-            '+ 5 FREE Targets ($50 Value)',
-            '+ FREE Shipping',
-            '+ FREE Training Guide'
+            '+ Extra Laser Cartidge',
           ],
           image: ultimateImage,
           ctaLink: buildUrlWithParams('https://secure.vnsh.com/vnls2/ultimate-checkout'),
@@ -117,7 +114,7 @@ const Pricing = () => {
               key={plan.id}
               className={`mx-auto w-full max-w-[300px] rounded-lg overflow-hidden shadow-lg ${
                 plan.id === 'elite' ? 'bg-[#ededed]' : 'bg-white'
-              }`}
+              } ${!plan.isPopular ? 'mt-[30px]' : ''}`}
             >
               <div className="flex flex-col items-center pb-[25px]">
                 <div className="relative w-full">
@@ -184,12 +181,6 @@ const Pricing = () => {
                     decoding="async"
                   />
                 </div>
-                
-                {plan.isPopular && (
-                  <div className="bg-green-500 text-white text-center py-1 font-bold w-full">
-                    MOST POPULAR
-                  </div>
-                )}
               </div>
             </div>
           ))}
