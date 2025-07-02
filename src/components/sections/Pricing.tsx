@@ -25,6 +25,23 @@ interface PricingPlan {
 const Pricing = () => {
   const [plans, setPlans] = useState<PricingPlan[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Set initial value
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+    
+    // Set initial value
+    checkIfMobile();
+    
+    // Add event listener
+    window.addEventListener('resize', checkIfMobile);
+    
+    // Clean up
+    return () => window.removeEventListener('resize', checkIfMobile);
+  }, []);
   const searchParams = useSearchParams();
   
   // Get all URL parameters as an object
@@ -69,29 +86,29 @@ const Pricing = () => {
           popularityRank: 3 // Middle popularity
         },
         {
-          id: 'elite',
-          title: 'Elite Pack',
+          id: 'advanced',
+          title: 'Advanced Pack',
           price: '$129.97',
           originalPrice: '$399.88',
           savings: '$269.91',
           description: '',
           features: ['+ All Calibers (9mm, .380, .40 & .45)'],
           image: eliteImage,
-          ctaLink: buildUrlWithParams('https://secure.vnsh.com/vnls2/elite-checkout'),
+          ctaLink: buildUrlWithParams('https://secure.vnsh.com/vnls2/advanced-checkout'),
           ctaText: 'Add to Cart',
           isPopular: true,
           popularityRank: 1 // Most popular
         },
         {
-          id: 'ultimate',
-          title: 'Ultimate Pack',
+          id: 'enhanced',
+          title: 'Enhanced Pack',
           price: '$199.97',
           originalPrice: '$599.88',
           savings: '$399.91',
           description: '',
           features: ['+ Extra Laser Cartidge'],
           image: ultimateImage,
-          ctaLink: buildUrlWithParams('https://secure.vnsh.com/vnls2/ultimate-checkout'),
+          ctaLink: buildUrlWithParams('https://secure.vnsh.com/vnls2/enhanced-checkout'),
           ctaText: 'Add to Cart',
           isPopular: false,
           popularityRank: 2 // Least popular
@@ -114,15 +131,17 @@ const Pricing = () => {
   return (
     <section id="pricing" className="pb-[50px]">
       <div className="max-w-[1100px] mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {plans.map((plan) => (
+        <div className="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {[...plans]
+            .sort((a, b) => isMobile ? a.popularityRank - b.popularityRank : 0)
+            .map((plan) => ( // Sort by popularityRank on mobile/tablet, keep original order on desktop
             <div 
               key={plan.id}
               className={`mx-auto w-full max-w-[300px] rounded-lg overflow-hidden shadow-lg ${
-                plan.id === 'elite' ? 'bg-[#ededed]' : 'bg-white'
+                plan.id === 'advanced' ? 'bg-[#ededed]' : 'bg-white'
               }`}
               style={{
-                marginTop: `${(plan.popularityRank - 1) * 15}px`
+                marginTop: !isMobile ? `${(plan.popularityRank - 1) * 15}px` : '0'
               }}
             >
               <div className="flex flex-col items-center pb-[25px]">
@@ -140,7 +159,7 @@ const Pricing = () => {
                   />
                 </div>
                 <div className={`p-4 w-full ${
-                  plan.id === 'elite' ? 'bg-[#ededed]' : ''
+                  plan.id === 'advanced' ? 'bg-[#ededed]' : ''
                 }`}>
                   
                   {/* <h3 className="text-2xl font-bold mb-2">{plan.title}</h3> */}
