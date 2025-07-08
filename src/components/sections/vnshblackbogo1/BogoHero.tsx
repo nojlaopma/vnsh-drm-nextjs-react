@@ -32,11 +32,11 @@ const BogoHero = () => {
         </div>
         
         <div className="text-center">
-          <Link href={checkoutUrl} className="w-full sm:w-auto" target="_blank" rel="noopener noreferrer">
+          <Link href={checkoutUrl} className="w-full" target="_blank" rel="noopener noreferrer">
             <Button 
               variant="cta"
               size="lg"
-              className="w-full md:w-[80%] mx-auto py-[39px] px-4 text-center font-bold animate-pulse-cta text-[1.125rem] md:text-[1.8rem] leading-[1.4] whitespace-normal break-words"
+              className="w-full mx-auto py-[39px] px-4 text-center font-bold animate-pulse-cta text-[1.125rem] md:text-[1.8rem] leading-[1.4] whitespace-normal break-words"
             >
               Give Me This Buy 1, Get 1 FREE Deal Before It's Gone!
             </Button>
