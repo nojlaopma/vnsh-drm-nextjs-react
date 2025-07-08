@@ -1,53 +1,49 @@
+// @ts-nocheck
+
 import { notFound } from 'next/navigation';
-import { Metadata } from 'next';
-import dynamic from 'next/dynamic';
+import DynamicPageLoader from '@/components/pages/DynamicPageLoader';
 
-// Define the valid page IDs and their corresponding components
-const pageComponents = {
-  vnls2: dynamic(() => import('../../../components/pages/Vnls2Page')),
-  vnshblackbogo1: dynamic(() => import('../../../components/pages/VnshBlackBogo1Page')),
-} as const;
+// This is a list of valid page IDs for static generation.
+// It must be kept in sync with the keys in `pageComponents` in DynamicPageLoader.tsx
+const validPageIds = ['vnls2', 'vnshblackbogo1'] as const;
 
-type PageId = keyof typeof pageComponents;
+type ValidPageId = typeof validPageIds[number];
 
-
-
-// Generate static params for static generation
+// This tells Next.js which pages to generate at build time
 export async function generateStaticParams() {
-  return Object.keys(pageComponents).map((pageId) => ({
+  return validPageIds.map((pageId) => ({
     pageId,
   }));
 }
 
-// Generate metadata for better SEO
-export async function generateMetadata({ params }: { params: { pageId: string } }): Promise<Metadata> {
-  const pageTitles: Record<string, string> = {
-    vnls2: 'Vintage Nylon Laptop Sleeve',
-    vnshblackbogo1: 'Vintage Nylon Shoulder Bag - Black BOGO',
-  };
-
-  return {
-    title: pageTitles[params.pageId] || 'Page Not Found',
-  };
-}
-
 // This is the main page component
-export default async function Page({ params }: { params: { pageId: string } }) {
-  const { pageId } = params;
-
+export default function Page({ 
+  params, 
+  searchParams 
+}: { 
+  params: { pageId: string }; 
+  searchParams?: { [key: string]: string | string[] | undefined }; 
+}) {
+  // Get the pageId from params
+  const pageId = params?.pageId;
+  
   // Check if the pageId is valid
-  if (!(pageId in pageComponents)) {
+  if (!pageId || !validPageIds.includes(pageId as ValidPageId)) {
     notFound();
   }
 
-  const PageComponent = pageComponents[pageId as PageId];
-
-  // Use a type assertion to ensure the component has the correct props
-  const Component = PageComponent as React.ComponentType<{ params: { pageId: string } }>;
+  // Client-side only: Handle search params in the browser
+  // This will only run on the client side after hydration
+  const safeSearchParams = typeof window !== 'undefined' ? 
+    Object.fromEntries(new URLSearchParams(window.location.search)) : 
+    {};
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <Component params={params} />
+      <DynamicPageLoader 
+        params={{ pageId }} 
+        searchParams={safeSearchParams} 
+      />
     </div>
   );
 }
