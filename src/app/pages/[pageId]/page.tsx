@@ -10,10 +10,7 @@ const pageComponents = {
 
 type PageId = keyof typeof pageComponents;
 
-interface PageProps {
-  params: { pageId: string };
-  searchParams?: { [key: string]: string | string[] | undefined };
-}
+
 
 // Generate static params for static generation
 export async function generateStaticParams() {
@@ -45,16 +42,12 @@ export default async function Page({ params }: { params: { pageId: string } }) {
 
   const PageComponent = pageComponents[pageId as PageId];
 
-  // Create a new object to satisfy the type system
-  const pageProps: PageProps = {
-    params: { pageId }
-  };
+  // Use a type assertion to ensure the component has the correct props
+  const Component = PageComponent as React.ComponentType<{ params: { pageId: string } }>;
 
   return (
     <div className="container mx-auto px-4 py-8">
-      {/* @ts-ignore */}
-      <PageComponent {...pageProps} />
+      <Component params={params} />
     </div>
   );
 }
-

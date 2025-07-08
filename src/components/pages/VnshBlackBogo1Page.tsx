@@ -71,10 +71,5 @@ export default function VnshBlackBogo1Page({ params }: VnshBlackBogo1PageProps) 
   );
 };
 
-export async function generateStaticParams() {
-  return [
-    { pageId: "vnshblackbogo1" },
-  ];
-}
 
 
