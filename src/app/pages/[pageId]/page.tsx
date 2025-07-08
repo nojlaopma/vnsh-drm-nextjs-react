@@ -4,20 +4,18 @@ import dynamic from 'next/dynamic';
 
 // Define the valid page IDs and their corresponding components
 const pageComponents = {
-  vnls2: dynamic(() => import('../../../components/pages/Vnls2Page'), { ssr: true }),
-  vnshblackbogo1: dynamic(() => import('../../../components/pages/VnshBlackBogo1Page'), { ssr: true }),
+  vnls2: dynamic(() => import('../../../components/pages/Vnls2Page')),
+  vnshblackbogo1: dynamic(() => import('../../../components/pages/VnshBlackBogo1Page')),
 } as const;
 
 type PageId = keyof typeof pageComponents;
 
 interface PageProps {
-  params: { pageId: string };
+  params: {
+    pageId: string;
+  };
   searchParams?: { [key: string]: string | string[] | undefined };
 }
-
-type PageParams = {
-  params: { pageId: string };
-};
 
 // Generate static params for static generation
 export async function generateStaticParams() {
@@ -39,7 +37,7 @@ export async function generateMetadata({ params }: { params: { pageId: string } 
 }
 
 // This is the main page component
-export default async function Page({ params }: PageParams) {
+export default function Page({ params }: { params: { pageId: string } }) {
   const { pageId } = params;
 
   // Check if the pageId is valid
@@ -48,13 +46,10 @@ export default async function Page({ params }: PageParams) {
   }
 
   const PageComponent = pageComponents[pageId as PageId];
-  
-  // Create a new params object to ensure it's not a Promise
-  const componentParams = { params };
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <PageComponent {...componentParams} />
+      <PageComponent params={{ pageId }} />
     </div>
   );
 }
