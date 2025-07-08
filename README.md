@@ -16,7 +16,7 @@ A modern, responsive React/Next.js application for the VNSH Laser Strike Trainin
 1. **Clone the repository**
    ```bash
    git clone <repository-url>
-   cd vnls2-react
+   cd vnsh-drm-nextjs-react
    ```
 
 2. **Install dependencies**
