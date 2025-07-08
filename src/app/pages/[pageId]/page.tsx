@@ -10,12 +10,32 @@ const pageComponents = {
 
 type PageId = keyof typeof pageComponents;
 
-// This is the main page component
-export default function Page({
-  params,
-}: {
+type Props = {
   params: { pageId: string };
-}) {
+  searchParams: { [key: string]: string | string[] | undefined };
+};
+
+// Generate static params for static generation
+export async function generateStaticParams() {
+  return Object.keys(pageComponents).map((pageId) => ({
+    pageId,
+  }));
+}
+
+// Generate metadata for better SEO
+export async function generateMetadata({ params }: { params: { pageId: string } }): Promise<Metadata> {
+  const pageTitles: Record<string, string> = {
+    vnls2: 'Vintage Nylon Laptop Sleeve',
+    vnshblackbogo1: 'Vintage Nylon Shoulder Bag - Black BOGO',
+  };
+
+  return {
+    title: pageTitles[params.pageId] || 'Page Not Found',
+  };
+}
+
+// This is the main page component
+export default function Page({ params }: Props) {
   const { pageId } = params;
 
   // Check if the pageId is valid
@@ -30,29 +50,5 @@ export default function Page({
       <PageComponent />
     </div>
   );
-}
-
-// Generate static params for static generation
-export async function generateStaticParams() {
-  return Object.keys(pageComponents).map((pageId) => ({
-    pageId,
-  }));
-}
-
-// Generate metadata for better SEO
-export async function generateMetadata({
-  params,
-}: {
-  params: { pageId: string };
-}): Promise<Metadata> {
-  // You can customize the metadata based on the page ID
-  const pageTitles: Record<string, string> = {
-    vnls2: 'Vintage Nylon Laptop Sleeve',
-    vnshblackbogo1: 'Vintage Nylon Shoulder Bag - Black BOGO',
-  };
-
-  return {
-    title: pageTitles[params.pageId] || 'Page Not Found',
-  };
 }
 
