@@ -13,14 +13,13 @@ const BogoHero = () => {
   const checkoutUrl = `https://secure.vnsh.com/vnshcamobogo1/checkout${utmParams ? `?${utmParams}` : ''}`;
 
   return (
-    <section id="bogo-hero" className="px-4 bg-white">
-      <div className="max-w-[1265px] mx-auto px-4">
-        <div className="text-center mb-8 px-[60px]">
+    <section id="bogo-hero" className="sm:px-4 bg-white">
+      <div className="max-w-[1265px] mx-auto sm:px-4">
+        <div className="text-center mb-8 lg:px-[60px]">
           <h1 className="text-[23px] md:text-[35px] mb-4 leading-none">
           <i className='font-bold'> Insanely Comfy Holster</i> Makes Any Semi-Auto (Plus 2 Extra Mags) <i className='font-bold'>Disappear In Plain Sight</i> Even If You Wear <u className='text-italic'>Nothing But Gym Shorts, Sweatpants and T-Shirts!</u>
           </h1>
-          <p className="bg-[#ff0] text-center font-bold inline-block text-red-600 text-[25px] italic leading-none">
-          Guaranteed Comfort Or 100% Of Your Money Back!
+          <p className="text-center font-bold inline-block text-red-600 text-[25px] italic leading-none"><span className='bg-[#ff0] '>Guaranteed Comfort Or 100% Of Your Money Back!</span>
           </p>
         </div>
         

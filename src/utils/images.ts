@@ -1,55 +1,43 @@
-/**
- * Checks if the browser supports WebP format
- * @returns Promise that resolves to boolean indicating WebP support
- */
-const checkWebPSupport = (): Promise<boolean> => {
-  return new Promise((resolve) => {
-    if (typeof window === 'undefined') return resolve(false);
-    
-    const img = new Image();
-    img.onload = () => resolve(img.width > 0 && img.height > 0);
-    img.onerror = () => resolve(false);
-    img.src = 'data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=';
-  });
+// Image paths
+export const images = {
+  // Holster images
+  holster: {
+    blackHolsterMobile1: '/images/holster/BlackHolsterMobile1.webp',
+    blackHolsterMobile2: '/images/holster/BlackHolsterMobile2.webp',
+    blackHolsterMobile3: '/images/holster/BlackHolsterMobile3.webp',
+    blackHolsterMobile4: '/images/holster/BlackHolsterMobile4.webp',
+  },
+  
+  // Logos
+  logo: {
+    mobile: '/images/logo/LogoMobile.webp',
+    desktop: '/images/logo/LogoDesktop.webp',
+  },
+  
+  // Testimonials
+  testimonial: {
+    mobile: '/images/testimonials/TestimoniesMobile.webp',
+    desktop: '/images/testimonials/TestimoniesDesktop.webp',
+  },
+  
+  // Guarantees and features
+  guarantee: {
+    bannerMobile: '/images/guarantee/guaranteed_bannerMobile.webp',
+    moneyBack: '/images/guarantee/guarantee-money-back-200.webp',
+  },
+  
+  // Footer features
+  features: {
+    moneyBack: '/images/features/money_back_guarantee_footer.webp',
+    smallBusiness: '/images/features/small_business_footer.webp',
+    securePayment: '/images/features/secure_payment_footer.webp',
+  },
 };
 
-// Cache the WebP support check
-let webPSupported: boolean | null = null;
-
-/**
- * Utility function to get the correct image path with WebP support
- * @param path Relative path to the image in the public/images directory
- * @param options Options for image handling
- * @returns Full path to the image
- */
-export const getImagePath = async (
-  path: string,
-  options: { forceOriginal?: boolean } = {}
-): Promise<string> => {
-  // Remove leading slash if present
+// For backward compatibility
+export const getImagePath = (path: string) => {
   const cleanPath = path.startsWith('/') ? path.slice(1) : path;
-  
-  // Check if we should try to use WebP
-  if (!options.forceOriginal && cleanPath.match(/\.(jpg|jpeg|png)$/i)) {
-    // Initialize WebP support check if not done yet
-    if (webPSupported === null) {
-      webPSupported = await checkWebPSupport();
-    }
-    
-    // If WebP is supported, replace extension
-    if (webPSupported) {
-      const webpPath = cleanPath.replace(/\.(jpg|jpeg|png)$/i, '.webp');
-      const fullPath = cleanPath.startsWith('images/') 
-        ? `/${webpPath}`
-        : `/images/${webpPath}`;
-      
-      // Verify the WebP file exists (in a real app, you'd want to check this at build time)
-      return fullPath;
-    }
-  }
-  
-  // Return original path
   return cleanPath.startsWith('images/') 
-    ? `/${cleanPath}`
+    ? `/${cleanPath}` 
     : `/images/${cleanPath}`;
 };

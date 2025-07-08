@@ -16,7 +16,7 @@ export default function VnshBlackBogo1Page({ params }: VnshBlackBogo1PageProps) 
     // Add specific class to body for this page
     document.body.classList.add('bogo-page');
     // Apply background styles to body
-    document.body.style.backgroundImage = 'url(https://assets.checkoutchamp.com/62b0f310-5aa9-11ed-9dd3-f1c9444fa4a0/1682937100067_black_geo_ver_min.webp)';
+    document.body.style.backgroundImage = 'url(/images/background/black_geo_ver_min.webp)';
     document.body.style.backgroundSize = 'cover';
     document.body.style.backgroundAttachment = 'fixed';
     document.body.style.backgroundRepeat = 'repeat';
@@ -31,8 +31,7 @@ export default function VnshBlackBogo1Page({ params }: VnshBlackBogo1PageProps) 
       floater.style.fontSize = 'clamp(16px, 4vw, 22px)';
       floater.style.fontWeight = '700';
       
-      const link = document.createElement('a');
-      link.href = 'https://secure.vnsh.com/vnshblackbogo1/checkout';
+      const link = document.createElement('span');
       link.className = 'hover:underline block w-full';
       link.textContent = 'Buy 1 Get 1 FREE Blowout On Limited-Run Camo Holsters!';
       

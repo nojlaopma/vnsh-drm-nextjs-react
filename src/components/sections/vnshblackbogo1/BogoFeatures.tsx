@@ -2,30 +2,17 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { getImagePath } from '@/utils/images';
+import { images } from '@/utils/images';
 import Link from 'next/link';
 import Button from '@/components/ui/Button';
+import FeatureGrid from '@/components/common/FeatureGrid';
 
 const BogoFeatures = () => {
-  const [imagePaths, setImagePaths] = useState<{[key: string]: string}>({});
-
-  useEffect(() => {
-    const loadImages = async () => {
-      const paths = await Promise.all([
-        getImagePath('vnsh-laser4-desktop.webp'),
-        getImagePath('check_30_30.webp'),
-        getImagePath('Mark_Vogel.webp')
-      ]);
-
-      setImagePaths({
-        desktop: paths[0],
-        checkmark: paths[1],
-        markVogel: paths[2]
-      });
-    };
-
-    loadImages();
-  }, []);
+  const [imagePaths, setImagePaths] = useState<{[key: string]: string}>({
+    desktop: '',
+    checkmark: '',
+    markVogel: ''
+  });
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -54,11 +41,11 @@ const BogoFeatures = () => {
     <section className="pt-2 pb-6">
       <div className="max-w-[1100px] mx-auto px-4" style={{ fontFamily: 'Arial, sans-serif' }}>
         {/* Responsive Image */}
-        <div className="w-full mt-[30px] mb-8 md:mb-12 overflow-hidden shadow-lg flex justify-center">
+        <div className="w-full mt-[30px] sm:mb-8 md:mb-12 overflow-hidden flex justify-center">
           <div className="relative w-full max-w-[800px] mx-auto">
             <div style={{ position: 'relative', width: '100%', paddingBottom: '56.25%' }}>
               <Image
-                src="https://cdn.shopify.com/s/files/1/0670/4948/8684/files/BlackHolsterMobile4.webp"
+                src={images.holster.blackHolsterMobile4}
                 alt="VNSH Holster - Comfortable and Secure Concealed Carry"
                 fill
                 sizes="(max-width: 768px) 100vw, 800px"
@@ -69,9 +56,9 @@ const BogoFeatures = () => {
           </div>
         </div>
         
-        <div className="text-left mb-12 text-[18px] md:text-[22px] text-black">
+        <div className="text-left text-[18px] md:text-[22px] text-black">
 
-          <h2 className="text-[20px] md:text-[38px] font-bold text-center my-0 mx-5 leading-[45px] py-4 px-6 rounded-lg">
+          <h2 className="text-[20px] md:text-[38px] font-bold text-center my-0 mx-5 lg:leading-[45px] py-4 px-6 rounded-lg">
           <span className="bg-[#ffa500]">175,232 Americans Have Trusted Us to Give Them The MOST Comfortable Holster They've Ever Worn</span>
           </h2>
           
@@ -80,43 +67,47 @@ const BogoFeatures = () => {
           <p className="mb-4">It's GUARANTEED to be <b>the most comfortable holster</b> you'll ever wear - or you get 100% of your money back! Try it for 60 days, and if you don't like it for any reason, let us know and we'll give you every penny back.</p>
           
           <div className="w-full my-6 flex justify-center">
-            <Image
-              src="https://cdn.shopify.com/s/files/1/0670/4948/8684/files/guaranteed_bannerMobile.webp?v=1729109678"
-              alt="60 Day Money Back Guarantee"
-              width={375}
-              height={100}
-              className="max-w-full h-auto"
-              priority
-            />
+            <div className="w-full md:w-[90%] lg:w-[65%] mx-auto">
+              <Image
+                src={images.guarantee.bannerMobile}
+                alt="60 Day Money Back Guarantee"
+                width={1200}
+                height={320}
+                className="w-full h-auto"
+                priority
+              />
+            </div>
           </div>
           
-          <p className="mb-4">The reason for it’s insane comfort? The materials. We combined the rugged 1000D <b>Cordura</b> with a stretchy <b>‘yoga pant’ fabric</b> that is not only built to last for years, but also feels like silk boxers on your skin.</p>
+          <p className="mb-4">The reason for it’s insane comfort? The materials. We combined the rugged <b>1000D Cordura</b> with a stretchy <b>‘yoga pant’ fabric</b> that is not only built to last for years, but also feels like silk boxers on your skin.</p>
           
-          <p className="mb-4">Even better, these sweat-wicking materials do NOT retain sweat or odor, so you can carry comfortably all day without getting sticky or slimy.</p>
+          <p className="mb-4">Even better, these sweat-wicking materials do <u>NOT</u> retain sweat or odor, so you can <b>carry comfortably all day</b> without getting sticky or slimy.</p>
           
-          <p className="mb-4">You can wear this holster with ANY clothing. That’s because our specially designed, built in waistband simply goes around your torso like a belt, and doesn’t need hooks, clips, or a tactical belt to wear.</p>
+          <p className="mb-4">You can wear this holster with <u className="font-bold">ANY</u> clothing. That’s because our specially designed, built in waistband simply goes around your torso like a belt, and doesn’t need hooks, clips, or a tactical belt to wear.</p>
           
-          <p className="mb-4">This means you can wear this holster with a business suit, sweat suit, or swim suit… or even just your birthday suit.</p>
+          <p className="mb-4">This means you can wear this holster with a business suit, sweat suit, or swim suit… <i>or even just your birthday suit.</i></p>
           
-          <p className="mb-4">But where it really excels (and where most other holsters fail miserably) is that it helps you carry anywhere while having the ability to carry 2 additional mags.</p>
+          <p className="mb-4">But where it really excels <i className="font-bold">(and where most other holsters fail miserably)</i> is that it helps you carry anywhere while having the ability to carry 2 additional mags.</p>
           
           <p className="mb-4">Perhaps the best thing of all is this holster will fit 99% of all brands, types, and styles of semi autos.</p>
           
-          <p className="mb-4">And our unique design ensures your concealed carry device “Vanishes” against your body, making it virtually invisible to others.</p>
+          <p className="mb-4">And our unique design ensures your concealed carry device <b>“Vanishes”</b> against your body, making it virtually invisible to others.</p>
           
-          <p className="mb-4">It’s why we named it the VNSH Holster!</p>
+          <p className="mb-4">It’s why we named it the <u className="font-bold">VNSH Holster!</u></p>
           
-          <p className="mb-4">How many other holsters can do all that? The answer is ZERO.</p>
+          <p className="mb-4">How many other holsters can do all that? <b>The answer is ZERO.</b></p>
           
           <div className="w-full my-6 flex justify-center">
-            <Image
-              src="https://cdn.shopify.com/s/files/1/0670/4948/8684/files/BlackHolsterMobile3.webp?v=1729176482"
-              alt="VNSH Holster - Comfortable and Concealable"
-              width={375}
-              height={250}
-              className="h-full w-[60%] object-cover"
-              priority
-            />
+            <div className="w-[90%] md:w-[90%] lg:w-[65%] mx-auto">
+              <Image
+                src={images.holster.blackHolsterMobile3}
+                alt="VNSH Holster - Comfortable and Concealable"
+                width={600}
+                height={400}
+                className="w-full h-auto object-cover"
+                priority
+              />
+            </div>
           </div>
           <p className="mb-4">Now it’s obvious we’d be saying this. But take a look at what some of our thousands upon thousands of customers say about our holster.</p>
           
@@ -167,10 +158,9 @@ const BogoFeatures = () => {
           <hr></hr>
           
           <p 
-            className="text-center my-6"
+            className="text-center my-6 text-[26px] lg:text-[36px]"
             style={{
               color: '#f16500',
-              fontSize: '36px',
               fontWeight: '700',
               lineHeight: '1.2'
             }}
@@ -179,12 +169,12 @@ const BogoFeatures = () => {
           </p>
           
           <div className="w-full flex justify-center my-6">
-            <div style={{ width: '60%' }}>
+            <div className="w-[90%] md:w-[90%] lg:w-[65%] mx-auto">
               <Image
-                src="https://cdn.shopify.com/s/files/1/0670/4948/8684/files/BlackHolsterMobile1.webp?v=1729176481"
+                src={images.holster.blackHolsterMobile1}
                 alt="VNSH Holster - Fits Most Pistols"
-                width={375}
-                height={211}
+                width={1200}
+                height={675}
                 className="w-full h-auto object-contain"
                 style={{ borderRadius: 0 }}
                 priority
@@ -192,36 +182,36 @@ const BogoFeatures = () => {
             </div>
           </div>
 
-          <p className="mb-4">Our holster design means that regardless of what pistol you own it will help you safely and comfortably carry it.</p>
+          <p className="mb-4">Our holster design means that <b>regardless of what pistol you own</b> it will help you safely and comfortably carry it.</p>
           
           <p className="mb-4">No more needing to buy multiple holsters for all your pistols.</p>
           
-          <p className="mb-4">Plus, since it has 2-built in mag pouches, now you don't need to spend extra money on mag pouches to guarantee you’re never out of the fight.</p>
+          <p className="mb-4">Plus, since it has 2-built in mag pouches, <b>now you don't need to spend extra money on mag pouches</b> to guarantee you’re never out of the fight.</p>
 
           <p className="mb-4">Take a look at the list of brands our holster works with and then grab yours before the price goes up!</p>
 
-          <div className="w-full flex justify-center my-8">
-            <div className="w-[90%] md:w-full max-w-[1200px]">
-              <div className="relative" style={{ height: '300px' }}>
+          <div className="w-full my-8">
+            <div className="w-full">
+              <div className="relative w-full">
                 {/* Mobile/Tablet Image */}
-                <div className="md:hidden w-full h-full">
+                <div className="block md:hidden w-full">
                   <Image
-                    src="https://cdn.shopify.com/s/files/1/0670/4948/8684/files/LogoMobile.webp?v=1729112354"
-                    alt="VNSH Holster - Compatible Brands"
-                    fill
-                    sizes="90vw"
-                    className="object-contain"
+                    src={images.logo.mobile}
+                    alt="VNSH Logo"
+                    width={1200}
+                    height={600}
+                    className="w-full h-auto"
                     priority
                   />
                 </div>
                 {/* Desktop Image */}
-                <div className="hidden md:block w-full h-full">
+                <div className="hidden md:block w-full">
                   <Image
-                    src="https://cdn.shopify.com/s/files/1/0670/4948/8684/files/LogoDesktop.webp?v=1729112354"
-                    alt="VNSH Holster - Compatible Brands"
-                    fill
-                    sizes="100vw"
-                    className="object-contain"
+                    src={images.logo.desktop}
+                    alt="VNSH Logo"
+                    width={1200}
+                    height={300}
+                    className="w-full h-auto"
                     priority
                   />
                 </div>
@@ -257,10 +247,9 @@ const BogoFeatures = () => {
           <hr></hr>
 
           <p 
-            className="text-center my-6"
+            className="text-center my-6 text-[26px] lg:text-[36px]"
             style={{
               color: '#f16500',
-              fontSize: '36px',
               fontWeight: '700',
               lineHeight: '1.2'
             }}
@@ -272,15 +261,15 @@ const BogoFeatures = () => {
           
           <p className="mb-4">They don’t like how their holster feels.</p>
           
-          <p className="mb-4">The good news is that the VNSH Holster is made for all day wear… and owning it is the #1 thing you can do to ensure you're always ready to defend yourself and your family.</p>
+          <p className="mb-4">The good news is that the VNSH Holster is made for all day wear… and owning <b>it is the #1 thing you can do to ensure you're always ready to defend yourself</b> and your family.</p>
           
-          <p className="mb-4">The VNSH holster is superior to leather and kydex.</p>
+          <p className="mb-4">The VNSH holster is <b>superior</b> to leather and kydex.</p>
           
           <p className="mb-4">Where kydex can be rigid and uncomfortable… and leather is sweaty and sticky, the VNSH holster is ultra-comfortable because it uses a custom blend of sweat-wicking fabrics that we call "yoga pant" fabric to help you stay cool and dry in the nastiest environments.</p>
           
-          <p className="mb-4">Not to mention the waist band is made from a crazy comfy velcro that will not snag on shirts, waistbands and the like.</p>
+          <p className="mb-4">Not to mention the waist band is made from a crazy comfy velcro <b>that will not</b> snag on shirts, waistbands and the like.</p>
           
-          <p className="mb-4">And because of its unique no-clip, no hook design, you can comfortably configure the holster any which way you want.</p>
+          <p className="mb-4">And because of its unique no-clip, no hook design, <b>you can comfortably configure the holster any which way you want.</b></p>
           
           <p className="mb-4">Want to carry at 3 o’clock? Go for it.</p>
           
@@ -292,19 +281,19 @@ const BogoFeatures = () => {
           
           <p className="mb-4">Also, we combined that awesome "yoga pant" fabric with rugged 1000D Cordura so it will withstand years and years of abuse without showing a sign of distress..</p>
           
-          <p className="mb-4">And best of all it features an enhanced trigger guard. Yes, it’s true, the VNSH holster is the only bellyband on the planet with a dedicated trigger guard built in. A solid but flexible piece of .7mm plastic resits in the custom-built holster to prevent anything from accidentally causing a negligent discharge.</p>
+          <p className="mb-4">And best of all it features an <b>enhanced trigger guard.</b> Yes, it’s true, the VNSH holster is the only bellyband on the planet with a dedicated trigger guard built in. A solid but flexible piece of .7mm plastic resits in the custom-built holster to prevent <b>anything</b> from accidentally causing a negligent discharge.</p>
           
           <div className="flex flex-col md:flex-row items-center gap-8 mb-12">
-            <p className="mb-4 md:mb-0 md:flex-1">Not to mention the retention is rock-solid… but still incredibly easy to draw. Never fear that your gun will fall out, or that a criminal will be able to disarm you.</p>
+            <p className="mb-4 md:mb-0 md:flex-1">Not to mention the retention is rock-solid… <b>but still incredibly easy to draw.</b> Never fear that your gun will fall out, or that a criminal will be able to disarm you.</p>
           </div>
 
           <div className="w-full flex justify-center my-8">
-            <div className="w-full md:w-2/3 lg:w-1/2">
+            <div className="w-[90%] md:w-[90%] lg:w-[65%] mx-auto">
               <Image
-                src="https://cdn.shopify.com/s/files/1/0670/4948/8684/files/BlackHolsterMobile2.webp?v=1729176482"
+                src={images.holster.blackHolsterMobile2}
                 alt="VNSH Holster - Secure Retention"
-                width={375}
-                height={250}
+                width={1200}
+                height={800}
                 className="w-full h-auto rounded-none"
                 priority
               />
@@ -334,29 +323,28 @@ const BogoFeatures = () => {
                 display: 'inline-block'
               }}
             >
-              60 Days to Try It Yourself… Love It Or You Don't Pay a Dime!
+              60 Days to Try It Yourself… Love It Or You Don’t Pay a Dime!
             </p>
           </div><br></br>
           <hr></hr>
 
           <p 
-            className="text-center my-6"
+            className="text-center my-6 text-[26px] lg:text-[36px]"
             style={{
               color: '#f16500',
-              fontSize: '36px',
               fontWeight: '700',
               lineHeight: '1.2'
             }}
           >
-            Crazy Holiday Deal!
-            <p style={{ color: '#ff0000' }}>Buy 1 Holster, Get 1 FREE!</p>
+            Crazy Holiday Deal!<br></br>
+            <span style={{ color: '#ff0000' }}>Buy 1 Holster, Get 1 FREE!</span>
           </p>
 
-          <div className="w-full mt-[30px] mb-8 md:mb-12 overflow-hidden shadow-lg flex justify-center">
+          <div className="w-full mt-[30px] mb-8 md:mb-12 overflow-hidden flex justify-center">
           <div className="relative w-full max-w-[800px] mx-auto">
             <div style={{ position: 'relative', width: '100%', paddingBottom: '56.25%' }}>
               <Image
-                src="https://cdn.shopify.com/s/files/1/0670/4948/8684/files/BlackHolsterMobile4.webp"
+                src={images.holster.blackHolsterMobile4}
                 alt="VNSH Holster - Comfortable and Secure Concealed Carry"
                 fill
                 sizes="(max-width: 768px) 100vw, 800px"
@@ -368,23 +356,22 @@ const BogoFeatures = () => {
         </div>
 
 
-        <p className="mb-4">As you’ve seen… people love the VNSH Holster.</p>
+        <p className="mb-4">As you’ve seen… people <i className='font-bold'>love</i> the VNSH Holster.</p>
           
-          <p className="mb-4">In fact, most people who buy one almost always end up wanting at least one more – either for themselves or to give to a friend or family member.</p>
+          <p className="mb-4">In fact, most people who buy one almost always <b>end up wanting at least one more</b> – either for themselves or to give to a friend or family member.</p>
           
           <p className="mb-4">So since the holidays are right around the corner…</p>
           
-          <p className="mb-4">We’re giving you the biggest deal we’ve EVER offered!</p>
+          <p className="mb-4">We’re giving you the <b>biggest deal we’ve EVER offered!</b></p>
 
-          <p className="mb-4">Buy 1 Holster, Get 1 Totally FREE!!</p>
+          <p className="mb-4 font-bold underline " ><span className='bg-[#ff0]'>Buy 1 Holster, Get 1 Totally FREE!!</span></p>
           
-          <p className="mb-4">Plus, when you grab this deal today, you’ll be doing so 100% Risk-Free, because…</p>
+          <p className="mb-4">Plus, when you grab this deal today, you’ll be doing so <b>100% Risk-Free, because…</b></p>
           
           <p 
-            className="text-center my-6"
+            className="text-center my-6 text-[26px] lg:text-[36px]"
             style={{
               color: '#f16500',
-              fontSize: '36px',
               fontWeight: '700',
               lineHeight: '1.2'
             }}
@@ -397,11 +384,11 @@ const BogoFeatures = () => {
           <div className="w-full mt-[30px] mb-8 md:mb-12 overflow-hidden flex justify-center">
             <div className="relative w-full max-w-[250px] mx-auto">
               <Image
-                src="https://cdn.shopify.com/s/files/1/0670/4948/8684/files/guarantee-money-back-200.webp?v=1729100261"
+                src={images.guarantee.moneyBack}
                 alt="60-Day Money Back Guarantee"
-                width={250}
-                height={220}
-                className="w-full h-auto"
+                width={200}
+                height={200}
+                className="object-contain"
                 priority
               />
             </div>
@@ -409,17 +396,17 @@ const BogoFeatures = () => {
 
 
 
-          <p className="mb-4">Love everything about your order, or we’ll refund you every penny.</p>
+          <p className="mb-4">Love everything about your order, or <b className='italic'>we’ll refund you every penny.</b></p>
           
           <p className="mb-4">It’s that simple.</p>
           
-          <p className="mb-4">If you aren’t totally thrilled, all you have to do is contact our US-Based Support Team within 60 days to get a full refund.</p>
+          <p className="mb-4">If you aren’t totally thrilled, all you have to do is contact our <b className='italic'>US-Based Support Team</b> within 60 days to get a full refund.</p>
           
-          <p className="mb-4">Plus, we also give you a 2-year workmanship guarantee as well!</p>
+          <p className="mb-4 font-bold"><span className='bg-[#ff0]'>Plus, we also give you a <i className="font-extrabold">2-year workmanship guarantee as well!</i></span></p>
 
           <p className="mb-4">We know you’ll love your VNSH gear, which is why we’re happy to extend you these iron-clad guarantees.</p>
           
-          <p className="mb-4">So if you want the comfiest holster on earth … plus a second one totally FREE on the house …</p>
+          <p className="mb-4">So if you want the <b className='italic'>comfiest holster on earth</b> … plus a second one <b className='italic'>totally FREE on the house</b>…</p>
           
           <p className="mb-4">Plus… get a FREE VNSH Holster with it…</p>
           
@@ -456,10 +443,9 @@ const BogoFeatures = () => {
           <hr></hr>
 
           <p 
-            className="text-center my-6"
+            className="text-center my-6 text-[26px] lg:text-[36px]"
             style={{
               color: '#f16500',
-              fontSize: '36px',
               fontWeight: '700',
               lineHeight: '1.2'
             }}
@@ -470,13 +456,13 @@ const BogoFeatures = () => {
           </p>
 
 
-          <p className="mb-4">Since we launched in late 2022, we’ve done everything in our power to keep the VNSH Holster as affordable as possible.</p>
+          <p className="mb-4">Since we launched in late 2022, we’ve done everything in our power to keep the VNSH Holster <b className='italic'>as affordable as possible.</b></p>
           
           <p className="mb-4">But sadly, inflation is finally forcing us to raise prices on our holster.</p>
           
-          <p className="mb-4">Now, as much of a bummer as that is… the GOOD NEWS is that…</p>
+          <p className="mb-4">Now, as much of a bummer as that is… the <b>GOOD NEWS</b> is that…</p>
           
-          <p className="mb-4">We’re running this huge Buy 1, Get 1 FREE deal to make sure everyone has a chance to get the VNSH Holster for an awesome price before it becomes more expensive in the weeks ahead.</p>
+          <p className="mb-4">We’re running this huge <b className='font-extrabold underline bg-[#ff0]'>Buy 1, Get 1 FREE</b> deal to make sure everyone has a chance to get the VNSH Holster for an awesome price before it becomes more expensive in the weeks ahead.</p>
 
           <p className="mb-4">It won’t last forever though…</p>
           
@@ -484,13 +470,199 @@ const BogoFeatures = () => {
           
           <p className="mb-4">So don’t wait!</p>
           
-          <p className="mb-4">Grab your VNSH Holster and get a second one 100% FREE while you still can!</p>
+          <p className="mb-4 font-bold">Grab your VNSH Holster and <span className='bg-[#ff0]'>get a second one 100% FREE</span> while you still can!</p>
 
+
+
+
+          <div className="text-center mt-8 mb-12">
+            <Link href="#pricing" className="w-full">
+              <Button 
+                variant="cta"
+                size="lg"
+                className="w-full mx-auto py-[39px] px-4 text-center font-bold animate-pulse-cta text-[1.125rem] md:text-[1.8rem] leading-[1.4] whitespace-normal break-words"
+              >
+                Give Me This Buy 1, Get 1 FREE Deal Before It's Gone!
+              </Button>
+            </Link>
+          </div>
+          <div className="w-full flex justify-center my-4">
+            <p 
+              className="font-bold px-4 py-2 text-center" 
+              style={{
+                backgroundColor: '#ff0',
+                color: 'red',
+                fontSize: '22px',
+                lineHeight: '33px',
+                display: 'inline-block'
+              }}
+            >
+              60 Days to Try It Yourself… Love It Or You Don't Pay a Dime!
+            </p>
+          </div><br></br>
+
+          <div className="w-full flex justify-center my-8">
+            <div className="w-full max-w-[1200px] px-4">
+              {/* Mobile/Tablet Image */}
+              <div className="block md:hidden">
+                <Image
+                  src={images.testimonial.mobile}
+                  alt="Customer Testimonials"
+                  width={600}
+                  height={800}
+                  className="block md:hidden w-full h-auto"
+                  priority
+                />
+              </div>
+              {/* Desktop Image */}
+              <div className="hidden md:block">
+                <Image
+                  src={images.testimonial.desktop}
+                  alt="Customer Testimonials"
+                  width={1200}
+                  height={800}
+                  className="hidden md:block w-full h-auto"
+                  priority
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* FAQ Section */}
+          <FAQ />
+
+          <div className="text-center mt-8 mb-12">
+            <Link href="#pricing" className="w-full">
+              <Button 
+                variant="cta"
+                size="lg"
+                className="w-full mx-auto py-[39px] px-4 text-center font-bold animate-pulse-cta text-[1.125rem] md:text-[1.8rem] leading-[1.4] whitespace-normal break-words"
+              >
+                Give Me This Buy 1, Get 1 FREE Deal Before It's Gone!
+              </Button>
+            </Link>
+          </div>
+          <div className="w-full flex justify-center my-4">
+            <p 
+              className="font-bold px-4 py-2 text-center" 
+              style={{
+                backgroundColor: '#ff0',
+                color: 'red',
+                fontSize: '22px',
+                lineHeight: '33px',
+                display: 'inline-block'
+              }}
+            >
+              60 Days to Try It Yourself… Love It Or You Don’t Pay a Dime!
+            </p>
+          </div>
+
+          <FeatureGrid items={[
+            {
+              image: {
+                mobile: images.features.moneyBack,
+                desktop: images.features.moneyBack,
+                alt: '60 Day Money Back Guarantee'
+              },
+              title: '60 Day Money Back Guarantee',
+              description: 'No question asked 60 day refund or replacement guaranteed. If you are unhappy for any reason, get your money back.'
+            },
+            {
+              image: {
+                mobile: images.features.smallBusiness,
+                desktop: images.features.smallBusiness,
+                alt: 'Thank You!'
+              },
+              title: 'Thank You!',
+              description: 'Your purchase supports the second amendment community and increases our ability to defend ourselves and remain free.'
+            },
+            {
+              image: {
+                mobile: images.features.securePayment,
+                desktop: images.features.securePayment,
+                alt: '100% Secure Payment'
+              },
+              title: '100% Secure Payment',
+              description: 'All orders are AES-256 Bit encrypted through a HTTPS secure network. We respect your privacy.'
+            }
+          ]} />
+          
         </div>
-        {/* Rest of the Features component content would go here */}
-        {/* I've included the main content structure, but you might want to add the remaining features sections */}
       </div>
     </section>
+  );
+};
+
+// FAQ Component
+const FAQ = () => {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggleFAQ = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  const faqItems = [
+    {
+      question: 'Q: Does this come in right-handed and left-handed configurations?',
+      answer: 'A: No, the VNSH holster is a true ambidextrous holster.'
+    },
+    {
+      question: 'Q: Will This Work With My Laser Sights or a Mounted Light?',
+      answer: 'A: Depending on the light or sight you are using it may fit. Smaller lights and lasers do fit with most compact and some full-size guns. You can safely purchase the holster and if it doesn\'t work for your setup we\'ll give you a prepaid return label for a full refund.'
+    },
+    {
+      question: 'Q: Will this work for my revolver?',
+      answer: 'A: The holster will fit most compact revolvers but we don\'t have an exhaustive list of which revolvers do and don\'t fit.'
+    },
+    {
+      question: 'Q: Do I Need a Belt? How Does It Connect Around The Waist?',
+      answer: 'A: NO! The holster has a built in Waist Band. It secures around your waist with built-in, high quality molded velcro. You do not need a belt... or anything else for that matter. You could even wear it naked if you wanted too. ;)'
+    },
+    {
+      question: 'Q: My Semi-automatic Isn\'t Listed. Will it fit?',
+      answer: 'A: Yes, all semi-automatic firearms fit. In fact, that is what our design is specifically set for. This is the only holster on the market that will fit any semi-automatic firearm. The exception is the C.O.R.E. series from Smith and Wesson.'
+    },
+    {
+      question: 'Q: Will My Magazines Fit in the Pouches?',
+      answer: 'A: Yes, all magazines for all semi-automatics will fit in any or all of the two magazine pouches.'
+    },
+    {
+      question: 'Q: Does this holster work with slide-mounted optics (Red dots, etc)?',
+      answer: 'A: In most cases no, though some smaller, sub-compact weapons may work with a slide-mounted optic. If you want to try the holster out with your optic and it doesn\'t work, please remember we offer an any-reason return policy for the first 60-days you own the holster.'
+    }
+  ];
+
+  return (
+    <div className="w-full px-4 my-12">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-3xl font-bold text-center mb-8">Frequently Asked Questions</h2>
+        <div className="space-y-2">
+          {faqItems.map((item, index) => (
+            <div key={index} className="border border-gray-200 overflow-hidden">
+              <button
+                className="w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 transition-colors text-left cursor-pointer"
+                onClick={() => toggleFAQ(index)}
+                style={{
+                  fontSize: '20px',
+                  color: '#007bff',
+                  fontWeight: 700
+                }}
+              >
+                <span className="flex-grow">{item.question}</span>
+                <span className="text-[#007bff] transform transition-transform duration-200 ml-4 flex-shrink-0">
+                  {openIndex === index ? '▲' : '▼'}
+                </span>
+              </button>
+              {openIndex === index && (
+                <div className="p-4 bg-white border-t border-gray-100">
+                  <p className="text-gray-700">{item.answer}</p>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
   );
 };
 
