@@ -10,6 +10,28 @@ const pageComponents = {
 
 type PageId = keyof typeof pageComponents;
 
+// This is the main page component
+export default function Page({
+  params,
+}: {
+  params: { pageId: string };
+}) {
+  const { pageId } = params;
+
+  // Check if the pageId is valid
+  if (!(pageId in pageComponents)) {
+    notFound();
+  }
+
+  const PageComponent = pageComponents[pageId as PageId];
+
+  return (
+    <div className="container mx-auto px-4 py-8">
+      <PageComponent />
+    </div>
+  );
+}
+
 // Generate static params for static generation
 export async function generateStaticParams() {
   return Object.keys(pageComponents).map((pageId) => ({
@@ -32,26 +54,5 @@ export async function generateMetadata({
   return {
     title: pageTitles[params.pageId] || 'Page Not Found',
   };
-}
-
-export default async function Page({
-  params,
-}: {
-  params: { pageId: string };
-}) {
-  const { pageId } = params;
-
-  // Check if the pageId is valid
-  if (!(pageId in pageComponents)) {
-    notFound();
-  }
-
-  const PageComponent = pageComponents[pageId as PageId];
-
-  return (
-    <div className="container mx-auto px-4 py-8">
-      <PageComponent />
-    </div>
-  );
 }
 
