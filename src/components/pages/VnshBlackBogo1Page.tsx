@@ -4,13 +4,13 @@ import { useEffect } from 'react';
 // Import BogoHero and BogoFeatures from the vnshblackbogo1 sections
 import { BogoHero, BogoFeatures } from '@/components/sections/vnshblackbogo1';
 
-type PageProps = {
+interface PageProps {
   params: {
     pageId: string;
   };
-};
+}
 
-const VnshBlackBogo1Page: React.FC<PageProps> = ({ params }) => {
+const VnshBlackBogo1Page = ({ params }: PageProps) => {
   useEffect(() => {
     // Add specific class to body for this page
     document.body.classList.add('bogo-page');
