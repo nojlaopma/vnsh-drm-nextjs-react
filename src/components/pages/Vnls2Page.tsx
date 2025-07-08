@@ -10,6 +10,7 @@ interface Vnls2PageProps {
   params: {
     pageId: string;
   };
+  searchParams?: { [key: string]: string | string[] | undefined };
 }
 
 export default function Vnls2Page({ params }: Vnls2PageProps) {

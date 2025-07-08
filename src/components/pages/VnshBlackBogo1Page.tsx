@@ -8,6 +8,7 @@ interface VnshBlackBogo1PageProps {
   params: {
     pageId: string;
   };
+  searchParams?: { [key: string]: string | string[] | undefined };
 }
 
 export default function VnshBlackBogo1Page({ params }: VnshBlackBogo1PageProps) {
