@@ -19,7 +19,7 @@ const VnshBlackBogo1Page = () => {
     const header = document.querySelector('header');
     if (header) {
       const floater = document.createElement('div');
-      floater.className = 'w-full bg-[#2afe4e] text-center py-2 md:py-3 sticky top-0 z-10';
+      floater.className = 'banner-floater w-full bg-[#2afe4e] text-center py-2 md:py-3 sticky top-0 z-10';
       floater.style.color = '#000';
       floater.style.fontSize = 'clamp(16px, 4vw, 22px)';
       floater.style.fontWeight = '700';
@@ -47,7 +47,7 @@ const VnshBlackBogo1Page = () => {
       document.body.style.backgroundRepeat = '';
       document.body.style.backgroundPosition = '';
       
-      const floater = document.querySelector('.w-full.bg-\\[#2afe4e\\]');
+      const floater = document.querySelector('.banner-floater');
       if (floater) {
         floater.remove();
       }

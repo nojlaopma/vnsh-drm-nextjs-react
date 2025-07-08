@@ -1,35 +1,14 @@
 import { notFound } from 'next/navigation';
+import { Metadata } from 'next';
 import dynamic from 'next/dynamic';
 
 // Define the valid page IDs and their corresponding components
 const pageComponents = {
   vnls2: dynamic(() => import('../../../components/pages/Vnls2Page'), { ssr: true }),
   vnshblackbogo1: dynamic(() => import('../../../components/pages/VnshBlackBogo1Page'), { ssr: true }),
-};
+} as const;
 
-interface PageProps {
-  params: {
-    pageId: string;
-  };
-  searchParams?: { [key: string]: string | string[] | undefined };
-}
-
-export default function Page({ params }: PageProps) {
-  const { pageId } = params;
-  
-  // Check if the pageId is valid
-  if (!(pageId in pageComponents)) {
-    notFound();
-  }
-
-  const PageComponent = pageComponents[pageId as keyof typeof pageComponents];
-  
-  return (
-    <div className="container mx-auto px-4 py-8">
-      <PageComponent />
-    </div>
-  );
-}
+type PageId = keyof typeof pageComponents;
 
 // Generate static params for static generation
 export async function generateStaticParams() {
@@ -39,16 +18,40 @@ export async function generateStaticParams() {
 }
 
 // Generate metadata for better SEO
-export async function generateMetadata({ params }: PageProps) {
-  const { pageId } = params;
-  
+export async function generateMetadata({
+  params,
+}: {
+  params: { pageId: string };
+}): Promise<Metadata> {
   // You can customize the metadata based on the page ID
   const pageTitles: Record<string, string> = {
     vnls2: 'Vintage Nylon Laptop Sleeve',
     vnshblackbogo1: 'Vintage Nylon Shoulder Bag - Black BOGO',
   };
-  
+
   return {
-    title: pageTitles[pageId] || 'Page Not Found',
+    title: pageTitles[params.pageId] || 'Page Not Found',
   };
 }
+
+export default async function Page({
+  params,
+}: {
+  params: { pageId: string };
+}) {
+  const { pageId } = params;
+
+  // Check if the pageId is valid
+  if (!(pageId in pageComponents)) {
+    notFound();
+  }
+
+  const PageComponent = pageComponents[pageId as PageId];
+
+  return (
+    <div className="container mx-auto px-4 py-8">
+      <PageComponent />
+    </div>
+  );
+}
+
