@@ -10,7 +10,7 @@ declare global {
   }
 }
 
-const useVidalyticsPlayer = () => {
+const useVidalyticsPlayer = (playerId: string = 'iyFI_qiQT5gw4Arh') => {
   useEffect(() => {
     // Only run on client-side
     if (typeof window === 'undefined') return;
@@ -74,12 +74,12 @@ const useVidalyticsPlayer = () => {
             t.run(a);
           });
         });
-      })(
+      }) (
         window,
         document,
         'Vidalytics',
-        'vidalytics_embed_iyFI_qiQT5gw4Arh',
-        'https://quick.vidalytics.com/embeds/IgKBDqAD/iyFI_qiQT5gw4Arh/',
+        `vidalytics_embed_${playerId}`,
+        `https://quick.vidalytics.com/embeds/IgKBDqAD/${playerId}/`,
         undefined as any, // y (will be set to _vidalytics inside the function)
         undefined as any, // t (will be set inside the function)
         undefined as any, // c (will be set inside the function)
@@ -94,7 +94,7 @@ const useVidalyticsPlayer = () => {
     return () => {
       // Add any cleanup code here if needed
     };
-  }, []);
+  }, [playerId]);
 };
 
 export default useVidalyticsPlayer;

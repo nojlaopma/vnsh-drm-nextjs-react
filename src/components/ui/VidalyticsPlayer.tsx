@@ -5,16 +5,20 @@ import useVidalyticsPlayer from '@/hooks/useVidalyticsPlayer';
 
 interface VidalyticsPlayerProps {
   className?: string;
+  playerId?: string;
 }
 
-const VidalyticsPlayer: React.FC<VidalyticsPlayerProps> = ({ className = '' }) => {
-  // Initialize the Vidalytics player
-  useVidalyticsPlayer();
+const VidalyticsPlayer: React.FC<VidalyticsPlayerProps> = ({ 
+  className = '',
+  playerId = 'iyFI_qiQT5gw4Arh' // Default ID for vnls2
+}) => {
+  // Initialize the Vidalytics player with the specified ID
+  useVidalyticsPlayer(playerId);
 
   // The player will be injected into this div
   return (
     <div 
-      id="vidalytics_embed_iyFI_qiQT5gw4Arh"
+      id={`vidalytics_embed_${playerId}`}
       className={`vidalytics-player ${className}`}
       style={{
         width: '100%',

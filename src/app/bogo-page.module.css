@@ -1,0 +1,42 @@
+.bogoPage {
+  min-height: 100vh;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.bgImage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://assets.checkoutchamp.com/62b0f310-5aa9-11ed-9dd3-f1c9444fa4a0/1682937100067_black_geo_ver_min.webp');
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: repeat;
+  background-position: center center;
+  z-index: -1;
+}
+
+.mainContent {
+  width: 100%;
+  background: white;
+  padding: 0 1rem;
+  max-width: 1265px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .mainContent {
+    padding: 0 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .mainContent {
+    padding: 0 4.375rem;
+  }
+}

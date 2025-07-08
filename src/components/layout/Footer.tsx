@@ -144,7 +144,7 @@ const Footer = () => {
         </div>
         
         {logoPath && (
-          <div className="flex justify-center">
+          <div className="footer-logo-container flex justify-center">
             <div className="w-[325px]">
               <Image 
                 src={logoPath}
