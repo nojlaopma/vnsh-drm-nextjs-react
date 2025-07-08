@@ -10,9 +10,9 @@ const pageComponents = {
 
 type PageId = keyof typeof pageComponents;
 
-type Props = {
+type PageProps = {
   params: { pageId: string };
-  searchParams: { [key: string]: string | string[] | undefined };
+  searchParams?: { [key: string]: string | string[] | undefined };
 };
 
 // Generate static params for static generation
@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: { params: { pageId: string } 
 }
 
 // This is the main page component
-export default function Page({ params }: Props) {
+export default function Page({ params }: PageProps) {
   const { pageId } = params;
 
   // Check if the pageId is valid
@@ -47,7 +47,7 @@ export default function Page({ params }: Props) {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <PageComponent />
+      <PageComponent params={params} />
     </div>
   );
 }
