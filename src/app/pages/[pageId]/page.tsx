@@ -7,13 +7,14 @@ const pageComponents = {
   vnshblackbogo1: dynamic(() => import('../../../components/pages/VnshBlackBogo1Page'), { ssr: true }),
 };
 
-type PageParams = {
+interface PageProps {
   params: {
     pageId: string;
   };
-};
+  searchParams?: { [key: string]: string | string[] | undefined };
+}
 
-export default function Page({ params }: PageParams) {
+export default function Page({ params }: PageProps) {
   const { pageId } = params;
   
   // Check if the pageId is valid
@@ -38,7 +39,7 @@ export async function generateStaticParams() {
 }
 
 // Generate metadata for better SEO
-export async function generateMetadata({ params }: PageParams) {
+export async function generateMetadata({ params }: PageProps) {
   const { pageId } = params;
   
   // You can customize the metadata based on the page ID
