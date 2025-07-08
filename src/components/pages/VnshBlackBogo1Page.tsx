@@ -4,8 +4,6 @@ import { useEffect } from 'react';
 // Import BogoHero and BogoFeatures from the vnshblackbogo1 sections
 import { BogoHero, BogoFeatures } from '@/components/sections/vnshblackbogo1';
 
-'use client';
-
 interface VnshBlackBogo1PageProps {
   params: {
     pageId: string;
