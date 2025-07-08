@@ -6,7 +6,13 @@ import dynamic from 'next/dynamic';
 // Dynamically import shared sections
 import { Hero, Features, Pricing } from '@/components/sections/shared';
 
-export default function Vnls2Page() {
+interface Vnls2PageProps {
+  params: {
+    pageId: string;
+  };
+}
+
+export default function Vnls2Page({ params }: Vnls2PageProps) {
   return (
     <main>
       <Hero />
