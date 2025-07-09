@@ -10,7 +10,7 @@ const BogoHero = () => {
   const utmParams = Array.from(searchParams.entries())
     .map(([key, value]) => `${key}=${encodeURIComponent(value)}`)
     .join('&');
-  const checkoutUrl = `https://secure.vnsh.com/vnshblackbogo1/checkout${utmParams ? `?${utmParams}` : ''}`;
+  const checkoutUrl = `https://secure.vnsh.com/vnshcamobogo1/checkout${utmParams ? `?${utmParams}` : ''}`;
 
   return (
     <section id="bogo-hero" className="sm:px-4 bg-white">
@@ -25,11 +25,10 @@ const BogoHero = () => {
         
         <div className="w-full mx-auto mb-8">
           <VidalyticsPlayer 
-            playerId="HwShRL3Xs4kohiz4" 
+            playerId="bXLpdVyyHPBrQOyH" 
             className="rounded-lg shadow-lg w-full" 
           />
         </div>
-        
         <div className="text-center">
           <Link href={checkoutUrl} className="w-full" target="_blank" rel="noopener noreferrer">
             <Button 

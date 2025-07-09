@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "export": "next export",
-    "convert:images": "tsx scripts/convertToWebp.ts"
+    "convert:images": "tsx scripts/convertToWebp.ts",
+    "page:duplicate": "node scripts/page-manager.js duplicate",
+    "page:remove": "node scripts/page-manager.js remove"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.14",

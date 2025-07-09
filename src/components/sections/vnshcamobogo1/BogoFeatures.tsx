@@ -13,7 +13,7 @@ const BogoFeatures = () => {
   const utmParams = Array.from(searchParams.entries())
     .map(([key, value]) => `${key}=${encodeURIComponent(value)}`)
     .join('&');
-  const checkoutUrl = `https://secure.vnsh.com/vnshblackbogo1/checkout${utmParams ? `?${utmParams}` : ''}`;
+  const checkoutUrl = `https://secure.vnsh.com/vnshcamobogo1/checkout${utmParams ? `?${utmParams}` : ''}`;
 
   const [imagePaths, setImagePaths] = useState<{[key: string]: string}>({
     desktop: '',
@@ -52,8 +52,8 @@ const BogoFeatures = () => {
           <div className="relative w-full max-w-[800px] mx-auto">
             <div style={{ position: 'relative', width: '100%', paddingBottom: '56.25%' }}>
               <Image
-                src={images.holster.blackHolsterMobile4}
-                alt="VNSH Holster - Comfortable and Secure Concealed Carry"
+                src="/images/holster/VNSH_Camo_BOGO.webp"
+                alt="VNSH Camo Holster - Limited Time BOGO Offer"
                 fill
                 sizes="(max-width: 768px) 100vw, 800px"
                 className="object-contain"
@@ -107,8 +107,8 @@ const BogoFeatures = () => {
           <div className="w-full my-6 flex justify-center">
             <div className="w-[90%] md:w-[90%] lg:w-[65%] mx-auto">
               <Image
-                src={images.holster.blackHolsterMobile3}
-                alt="VNSH Holster - Comfortable and Concealable"
+                src="/images/holster/VNSH_Holster_Camo_1.webp"
+                alt="VNSH Camo Holster - Comfortable and Concealable"
                 width={600}
                 height={400}
                 className="w-full h-auto object-cover"
@@ -178,8 +178,8 @@ const BogoFeatures = () => {
           <div className="w-full flex justify-center my-6">
             <div className="w-[90%] md:w-[90%] lg:w-[65%] mx-auto">
               <Image
-                src={images.holster.blackHolsterMobile1}
-                alt="VNSH Holster - Fits Most Pistols"
+                src="/images/holster/VNSH_Holster_Camo_2Desktop.webp"
+                alt="VNSH Camo Holster - Fits Most Pistols"
                 width={1200}
                 height={675}
                 className="w-full h-auto object-contain"
@@ -297,8 +297,8 @@ const BogoFeatures = () => {
           <div className="w-full flex justify-center my-8">
             <div className="w-[90%] md:w-[90%] lg:w-[65%] mx-auto">
               <Image
-                src={images.holster.blackHolsterMobile2}
-                alt="VNSH Holster - Secure Retention"
+                src="/images/holster/VNSH_Holster_Camo_4.webp"
+                alt="VNSH Camo Holster - Secure Retention"
                 width={1200}
                 height={800}
                 className="w-full h-auto rounded-none"
@@ -351,8 +351,8 @@ const BogoFeatures = () => {
           <div className="relative w-full max-w-[800px] mx-auto">
             <div style={{ position: 'relative', width: '100%', paddingBottom: '56.25%' }}>
               <Image
-                src={images.holster.blackHolsterMobile4}
-                alt="VNSH Holster - Comfortable and Secure Concealed Carry"
+                src="/images/holster/VNSH_Camo_BOGO.webp"
+                alt="VNSH Camo Holster - Limited Time BOGO Offer"
                 fill
                 sizes="(max-width: 768px) 100vw, 800px"
                 className="object-contain"
@@ -385,7 +385,7 @@ const BogoFeatures = () => {
           >
             You’re Getting An 
             <span style={{ color: '#ff0000' }}> Iron-Clad,
-            Money-Back</span>Guarantee
+            Money-Back</span> Guarantee
           </p>
 
           <div className="w-full mt-[30px] mb-8 md:mb-12 overflow-hidden flex justify-center">
@@ -393,8 +393,8 @@ const BogoFeatures = () => {
               <Image
                 src={images.guarantee.moneyBack}
                 alt="60-Day Money Back Guarantee"
-                width={200}
-                height={200}
+                width={250}
+                height={220}
                 className="object-contain"
                 priority
               />
