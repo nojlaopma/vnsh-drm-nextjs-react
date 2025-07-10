@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Image from 'next/image';
-import { images, getImagePath } from '@/utils/images';
+import { images } from '@/utils/images';
 import Link from 'next/link';
 import Button from '@/components/ui/Button';
 import FeatureGrid from '@/components/common/FeatureGrid';
@@ -15,12 +15,7 @@ const BogoFeatures = () => {
     .join('&');
   const checkoutUrl = `https://secure.vnsh.com/vnsmp1/checkout${utmParams ? `?${utmParams}` : ''}`;
 
-  const [imagePaths, setImagePaths] = useState<{[key: string]: string}>({
-    desktop: '',
-    checkmark: '',
-    markVogel: ''
-  });
-
+  // Yotpo script for reviews
   useEffect(() => {
     const timer = setTimeout(() => {
       const script = document.createElement('script');
@@ -38,11 +33,6 @@ const BogoFeatures = () => {
       };
     }, 5000);
   }, []);
-
-  // Show loading state if images aren't loaded yet
-  if (Object.keys(imagePaths).length === 0) {
-    return <div className="py-12">Loading...</div>;
-  };
 
   return (
     <section className="pt-2 pb-6">
@@ -174,12 +164,12 @@ const BogoFeatures = () => {
             <div className="space-y-4 flex-1">
             <div className="flex items-start">
               <div className="flex-shrink-0 mr-3 mt-1">
-                <Image 
-                  src={getImagePath('check_30_30.webp')} 
-                  alt="Checkmark" 
-                  width={30} 
-                  height={30} 
-                />
+                  <Image 
+                    src={images.checkmark}
+                    alt="Checkmark"
+                    width={30}
+                    height={30}
+                  />
               </div>
               <p className="leading-relaxed">
                 <span className="font-bold text-[#dc3545]">Ultra Durable 1000D Cordura:</span> We made this mag pouch with the same bombproof material as our flagship VNSH Holster, so you can count on it lasting you a lifetime.
@@ -188,12 +178,12 @@ const BogoFeatures = () => {
             
             <div className="flex items-start">
               <div className="flex-shrink-0 mr-3 mt-1">
-                <Image 
-                  src={getImagePath('check_30_30.webp')} 
-                  alt="Checkmark" 
-                  width={30} 
-                  height={30} 
-                />
+                  <Image 
+                    src={images.checkmark}
+                    alt="Checkmark"
+                    width={30}
+                    height={30}
+                  />
               </div>
               <p className="leading-relaxed">
                 <span className="font-bold text-[#dc3545]">Fits 99% of All Modern Handgun Magazines:</span> Thanks to its universal fit design, this pouch will easily hold just about any magazines in your arsenal.
@@ -202,12 +192,12 @@ const BogoFeatures = () => {
             
             <div className="flex items-start">
               <div className="flex-shrink-0 mr-3 mt-1">
-                <Image 
-                  src={getImagePath('check_30_30.webp')} 
-                  alt="Checkmark" 
-                  width={30} 
-                  height={30} 
-                />
+                  <Image 
+                    src={images.checkmark}
+                    alt="Checkmark"
+                    width={30}
+                    height={30}
+                  />
               </div>
               <p className="leading-relaxed">
                 <span className="font-bold text-[#dc3545]">Perfect for Other EDC Too:</span> The two compartments in this pouch will perfectly accommodate a flashlight, knife, or other daily carry items - whenever you don't feel the need to be strapped to the gills. ;)
@@ -216,12 +206,12 @@ const BogoFeatures = () => {
             
             <div className="flex items-start">
               <div className="flex-shrink-0 mr-3 mt-1">
-                <Image 
-                  src={getImagePath('check_30_30.webp')} 
-                  alt="Checkmark" 
-                  width={30} 
-                  height={30} 
-                />
+                  <Image 
+                    src={images.checkmark}
+                    alt="Checkmark"
+                    width={30}
+                    height={30}
+                  />
               </div>
               <p className="leading-relaxed">
                 <span className="font-bold text-[#dc3545]">Preserves Your Stance and Accuracy Under Stress:</span> If you're engaged in a conflict, the last thing you want to do is reach across your body to reload. Carrying with this mag pouch means you'll never have to worry about doing that!
@@ -230,18 +220,24 @@ const BogoFeatures = () => {
             
             <div className="flex items-start">
               <div className="flex-shrink-0 mr-3 mt-1">
-                <Image 
-                  src={getImagePath('check_30_30.webp')} 
-                  alt="Checkmark" 
-                  width={30} 
-                  height={30} 
-                />
+                  <Image 
+                    src={images.checkmark}
+                    alt="Checkmark"
+                    width={30}
+                    height={30}
+                  />
               </div>
               <p className="leading-relaxed">
                 <span className="font-bold text-[#dc3545]">Super Solid Retention + Instant Access:</span> The unique elasticity of the individual pouches will hold any magazine secure regardless of what you're doing, but the open design lets you get to them instantly when needed.
               </p>
             </div>
-            
+            <p className="mb-4">If you carry regularly…</p>
+
+            <p className="mb-4">And if your <b>top priority</b> is to be the <b>best protector for yourself and others</b> that you possibly can be…</p>
+
+            <p className="mb-4">Then there’s simply no reason not to own a VNSH Support-Side Mag Pouch.</p>
+
+            <p className="mb-4">And right now is the best time to snag one, because…</p>
             </div>
             
             {/* Side images - responsive layout */}
@@ -250,7 +246,7 @@ const BogoFeatures = () => {
               <div className="hidden md:grid grid-cols-2 lg:grid-cols-1 gap-4 lg:w-[300px] items-start">
                 <div className="relative aspect-square w-full rounded-lg overflow-hidden">
                   <Image 
-                    src="https://cdn.shopify.com/s/files/1/0670/4948/8684/files/MagPouch2Mobile.webp?v=1730563797"
+                    src={images.vnsmp1.frontView}
                     alt="Magazine Pouch - Front View"
                     width={300}
                     height={300}
@@ -260,7 +256,7 @@ const BogoFeatures = () => {
                 </div>
                 <div className="relative aspect-square w-full rounded-lg overflow-hidden">
                   <Image 
-                    src="https://cdn.shopify.com/s/files/1/0670/4948/8684/files/MagPouch3Mobile.webp?v=1730563797"
+                    src={images.vnsmp1.sideView}
                     alt="Magazine Pouch - Side View"
                     width={300}
                     height={300}
@@ -270,7 +266,7 @@ const BogoFeatures = () => {
                 </div>
                 <div className="relative aspect-square w-full rounded-lg overflow-hidden lg:block">
                   <Image 
-                    src="https://cdn.shopify.com/s/files/1/0670/4948/8684/files/MagPouch4Mobile.webp?v=1730563797"
+                    src={images.vnsmp1.wornView}
                     alt="Magazine Pouch - Worn View"
                     width={300}
                     height={300}
@@ -285,7 +281,7 @@ const BogoFeatures = () => {
                 <div className="flex space-x-4 overflow-x-auto pb-4 -mx-4 px-4 snap-x snap-mandatory">
                   <div className="flex-shrink-0 w-[85vw] aspect-square relative rounded-lg overflow-hidden snap-center">
                     <Image 
-                      src="https://cdn.shopify.com/s/files/1/0670/4948/8684/files/MagPouch2Mobile.webp?v=1730563797"
+                      src={images.vnsmp1.frontView}
                       alt="Magazine Pouch - Front View"
                       width={300}
                       height={300}
@@ -296,7 +292,7 @@ const BogoFeatures = () => {
                   </div>
                   <div className="flex-shrink-0 w-[85vw] aspect-square relative rounded-lg overflow-hidden snap-center">
                     <Image 
-                      src="https://cdn.shopify.com/s/files/1/0670/4948/8684/files/MagPouch3Mobile.webp?v=1730563797"
+                      src={images.vnsmp1.sideView}
                       alt="Magazine Pouch - Side View"
                       width={300}
                       height={300}
@@ -306,7 +302,7 @@ const BogoFeatures = () => {
                   </div>
                   <div className="flex-shrink-0 w-[85vw] aspect-square relative rounded-lg overflow-hidden snap-center">
                     <Image 
-                      src="https://cdn.shopify.com/s/files/1/0670/4948/8684/files/MagPouch4Mobile.webp?v=1730563797"
+                      src={images.vnsmp1.wornView}
                       alt="Magazine Pouch - Worn View"
                       width={300}
                       height={300}
@@ -320,13 +316,7 @@ const BogoFeatures = () => {
             </div>
           </div>
 
-          <p className="mb-4">If you carry regularly…</p>
 
-          <p className="mb-4">And if your <b>top priority</b> is to be the <b>best protector for yourself and others</b> that you possibly can be…</p>
-          
-          <p className="mb-4">Then there’s simply no reason not to own a VNSH Support-Side Mag Pouch.</p>
-
-          <p className="mb-4">And right now is the best time to snag one, because…</p>
           
           <div className="text-center mt-8 mb-12">
             <Link href={checkoutUrl} className="w-full">

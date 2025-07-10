@@ -1,5 +1,15 @@
 // Image paths
 export const images = {
+  // Common images
+  checkmark: '/images/check_30_30.webp',
+  // vnsmp1 (Magazine Pouch) images
+  vnsmp1: {
+    hero: '/images/vnsmp1/MagPouchDesktop.webp',
+    frontView: '/images/vnsmp1/MagPouch2Mobile.webp',
+    sideView: '/images/vnsmp1/MagPouch3Mobile.webp',
+    wornView: '/images/vnsmp1/MagPouch4Mobile.webp',
+  },
+  
   // Holster images
   holster: {
     blackHolsterMobile1: '/images/holster/BlackHolsterMobile1.webp',
