@@ -6,7 +6,7 @@ import DynamicPageLoader from '@/components/pages/DynamicPageLoader';
 
 // This is a list of valid page IDs for static generation.
 // It must be kept in sync with the keys in `pageComponents` in DynamicPageLoader.tsx
-const validPageIds = ['vnls2', 'vnshblackbogo1'];
+const validPageIds = ['vnls2', 'vnshblackbogo1', 'vnsmp1'];
 
 // Generate static params for static generation
 export async function generateStaticParams() {
@@ -20,6 +20,7 @@ export async function generateMetadata({ params }: { params: { pageId: string } 
   const pageTitles: Record<string, string> = {
     vnls2: 'Vintage Nylon Laptop Sleeve',
     vnshblackbogo1: 'Vintage Nylon Shoulder Bag - Black BOGO',
+    vnsmp1: 'Vintage Nylon Shoulder Bag - Multi-Pack',
   };
 
   return {

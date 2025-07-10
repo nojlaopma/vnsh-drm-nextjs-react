@@ -21,6 +21,15 @@ function replaceAll(str, find, replace) {
   return str.split(find).join(replace);
 }
 
+// Function to convert to kebab case
+function toKebabCase(str) {
+  return str
+    .replace(/([a-z])([A-Z])/g, '$1-$2')
+    .replace(/[\s_]+/g, '-')
+    .toLowerCase()
+    .replace(/page$/i, '');
+}
+
 // Function to convert to simple lowercase
 function toSimpleLower(str) {
   return str.replace(/Page$/i, '').toLowerCase();
@@ -97,32 +106,46 @@ function updateDynamicPageLoader(pageName, action = 'add') {
   const loaderPath = path.join(rootDir, 'src', 'components', 'pages', 'DynamicPageLoader.tsx');
   try {
     let content = fs.readFileSync(loaderPath, 'utf8');
-    const pageKebab = toKebabCase(pageName.replace('Page', ''));
+    const pageKebab = toKebabCase(pageName);
     
     if (action === 'add') {
       // Add new page component
       if (!content.includes(`'${pageKebab}':`)) {
-        const lastComponentRegex = /([\s\S]*?)(\},[\s\r\n]+)\] as const;/;
-        const match = content.match(lastComponentRegex);
+        // Find the last component in the pageComponents object
+        const lastComponentMatch = content.match(/(\s+)([a-z0-9]+):\s*dynamic\([^}]+\},\s*\{ ssr: false \}\)(,?)\s*\n(\s*)\};?/g);
         
-        if (match) {
-          const newComponent = `  ${pageKebab}: dynamic(() => import('./${pageName}'), { ssr: false }),\n`;
-          const newContent = content.replace(lastComponentRegex, `$1$2${newComponent}] as const;`);
+        if (lastComponentMatch) {
+          const lastComponent = lastComponentMatch[lastComponentMatch.length - 1];
+          const newComponent = lastComponent
+            .replace(/([a-z0-9]+):/g, `  ${pageKebab}:`)  // Replace the key
+            .replace(/import\('\.[^']+'\)/g, `import('./${pageName}')`);  // Replace the import path
+          
+          // Add the new component before the closing bracket
+          const newContent = content.replace(/\s+\};?\s*$/, `,${newComponent}\n};`);
+          
           fs.writeFileSync(loaderPath, newContent, 'utf8');
           console.log(`✅ Added ${pageName} to DynamicPageLoader`);
+        } else {
+          // Fallback to simple append if regex matching fails
+          const newComponent = `  ${pageKebab}: dynamic(() => import('./${pageName}'), { ssr: false }),\n`;
+          const newContent = content.replace(/(\s+\};?\s*)$/, `,${newComponent}$1`);
+          fs.writeFileSync(loaderPath, newContent, 'utf8');
+          console.log(`✅ Added ${pageName} to DynamicPageLoader (fallback method)`);
         }
       }
     } else if (action === 'remove') {
       // Remove page component
-      const componentRegex = new RegExp(`\s*'${pageKebab}': dynamic\(\s*\(\)\s*=>\s*import\('\.\/${pageName}'\)\s*,\s*\{\s*ssr:\s*false\s*\},\s*\}[,]?[\s\r\n]*`, 'g');
-      if (componentRegex.test(content)) {
-        const newContent = content.replace(componentRegex, '');
+      const componentRegex = new RegExp(`\s*'?${pageKebab}'?:\s*dynamic\([^)]+\)[^}]+\{\s*ssr:\s*false\s*\}[^,}]*,?\s*\n`, 'g');
+      const newContent = content.replace(componentRegex, '');
+      
+      if (newContent !== content) {
         fs.writeFileSync(loaderPath, newContent, 'utf8');
         console.log(`✅ Removed ${pageName} from DynamicPageLoader`);
       }
     }
   } catch (error) {
-    console.warn(`⚠️ Could not update DynamicPageLoader for ${pageName}`);
+    console.error(`❌ Error updating DynamicPageLoader for ${pageName}:`, error.message);
+    console.warn(`⚠️ Please update DynamicPageLoader.tsx manually to include the new page component`);
   }
 }
 
@@ -194,7 +217,16 @@ function duplicatePage(sourcePage, newPage) {
     fs.writeFileSync(newPagePath, newContent);
     console.log(`✅ Created ${path.basename(newPagePath)}`);
     
-    // 2. Duplicate the section directory
+    // Ensure the page ID is in kebab-case for routing
+    const pageId = newPageName.replace('Page', '').toLowerCase();
+    
+    // 2. Update the valid page IDs in the route handler
+    updateValidPageIds(pageId, 'add');
+    
+    // 3. Update the DynamicPageLoader with the new page
+    updateDynamicPageLoader(newPageName, 'add');
+    
+    // 4. Duplicate the section directory if it exists
     if (fs.existsSync(sourceSectionPath)) {
       // Create the new section directory
       fs.mkdirSync(newSectionPath, { recursive: true });
@@ -219,12 +251,8 @@ function duplicatePage(sourcePage, newPage) {
       console.log(`✅ Created section directory: ${path.basename(newSectionPath)}`);
     }
     
-    // 3. Update the valid page IDs in the route handler
-    const pageId = newPage.replace('Page', '').toLowerCase();
-    updateValidPageIds(pageId, 'add');
-    
-    // 4. Update DynamicPageLoader.tsx
-    updateDynamicPageLoader(newPage, 'add');
+    // 5. Update the metadata in page.tsx
+    updatePageMetadata(newPageName, sourcePageName);
     
     console.log('\n🎉 Page duplication complete!');
     console.log(`\nNext steps:`);
@@ -235,6 +263,33 @@ function duplicatePage(sourcePage, newPage) {
   } catch (error) {
     console.error('Error duplicating page:', error);
     process.exit(1);
+  }
+}
+
+// Function to update the metadata in page.tsx
+function updatePageMetadata(newPageName, sourcePageName) {
+  const pageFilePath = path.join(rootDir, 'src', 'app', '[pageId]', 'page.tsx');
+  try {
+    let content = fs.readFileSync(pageFilePath, 'utf8');
+    
+    // Update the pageTitles object in generateMetadata
+    const pageTitlesRegex = /const pageTitles: Record<string, string> = \{([^}]*)\};/;
+    const titlesMatch = content.match(pageTitlesRegex);
+    
+    if (titlesMatch) {
+      const sourceKebab = toKebabCase(sourcePageName.replace('Page', ''));
+      const newKebab = toKebabCase(newPageName.replace('Page', ''));
+      
+      // Add the new page title based on the source page's title
+      const newTitleEntry = `\n    '${newKebab}': '${sourcePageName.replace('Page', '').replace(/([A-Z])/g, ' $1').trim()}',`;
+      const newTitles = titlesMatch[1] + newTitleEntry;
+      
+      content = content.replace(pageTitlesRegex, `const pageTitles: Record<string, string> = {${newTitles}\n  };`);
+      fs.writeFileSync(pageFilePath, content, 'utf8');
+      console.log(`✅ Updated page titles in route configuration`);
+    }
+  } catch (error) {
+    console.warn('⚠️ Could not update page metadata. Please update it manually.');
   }
 }
 
