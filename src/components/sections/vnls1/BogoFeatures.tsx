@@ -65,7 +65,7 @@ const BogoFeatures = () => {
       <p 
             className="text-center my-6 text-[26px] lg:text-[38px] text-[#f16500] font-bold leading-[1.2]"
           >
-           <span className='text-[#ff0000]'>The Fastest, Easiest Way to</span>  Become An <u>Insanely Accurate Shooter</u> <span className='text-[#ff0000]'> (Guaranteed, Or You Don't Pay a Dime)</span>  
+           <span className='text-[#dc3545]'>The Fastest, Easiest Way to</span>  Become An <u>Insanely Accurate Shooter</u> <span className='text-[#dc3545]'> (Guaranteed, Or You Don't Pay a Dime)</span>  
           </p>
 
         <div className="text-left text-[18px] md:text-[22px] text-black">
@@ -100,7 +100,7 @@ const BogoFeatures = () => {
             className="text-center my-6 text-[26px] lg:text-[38px] text-[#f16500] font-bold leading-[1.2]"
           >
             You Will Become a Better Shot In Minutes –
-            <span className='text-[#ff0000]'> Without Spending a Dime On Ammo or Range Time!</span>
+            <span className='text-[#dc3545]'> Without Spending a Dime On Ammo or Range Time!</span>
           </p>
 
           <div className="w-full my-6 flex justify-center">
@@ -154,7 +154,7 @@ const BogoFeatures = () => {
             
           >
             1000s and 1000s of Americans Have Used This to
-            <span className='text-[#ff0000]'>  Kill Their Bad Shooting Habits</span>
+            <span className='text-[#dc3545]'>  Kill Their Bad Shooting Habits</span>
             … Like a Cheat Code for Better Accuracy and Speed!
           </p>
 
@@ -206,7 +206,7 @@ const BogoFeatures = () => {
           <p 
             className="text-center my-6 text-[26px] lg:text-[38px] text-[#f16500] font-bold leading-[1.2]">
             The Laser Strike System Is<br></br>
-            <span className="text-[#ff0000]"> Stupid-Simple to Use!</span>
+            <span className="text-[#dc3545]"> Stupid-Simple to Use!</span>
           </p>
 
 
@@ -262,7 +262,7 @@ const BogoFeatures = () => {
           <p 
             className="text-center my-6 text-[26px] lg:text-[38px] text-[#f16500] font-bold leading-[1.2]"
           >
-            <span className='text-[#ff0000]'>6 Reasons</span> the Laser Strike Will Help You Make the Shot <br></br> <span className='text-[#ff0000]'>You Can’t Afford to Miss…</span>
+            <span className='text-[#dc3545]'>6 Reasons</span> the Laser Strike Will Help You Make the Shot <br></br> <span className='text-[#dc3545]'>You Can’t Afford to Miss…</span>
           </p>
           
 
@@ -480,7 +480,7 @@ const BogoFeatures = () => {
             className="text-center my-6 text-[26px] lg:text-[38px] text-[#f16500] font-bold leading-[1.2]"
           >
             We Give You An
-            <span className='text-[#ff0000]'> Iron-Clad,
+            <span className='text-[#dc3545]'> Iron-Clad,
             <br></br>Money-Back</span>  Guarantee
           </p>
 
@@ -530,7 +530,7 @@ const BogoFeatures = () => {
           <p 
             className="text-center my-6 text-[26px] lg:text-[38px] text-[#f16500] font-bold leading-[1.2]"
           >
-            Don’t Wait… Leave Now and Your Chance to Lock In <br></br>Today’s Low Price <span className='text-[#ff0000]'>May Not Come Again!</span>
+            Don’t Wait… Leave Now and Your Chance to Lock In <br></br>Today’s Low Price <span className='text-[#dc3545]'>May Not Come Again!</span>
           </p>
 
           <p className="mb-4 font-bold italic">If you want the <u>fastest, easiest possible way</u> to maximize your accuracy and confidence…</p>
