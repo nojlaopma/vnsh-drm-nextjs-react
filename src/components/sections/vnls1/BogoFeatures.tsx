@@ -61,18 +61,11 @@ const BogoFeatures = () => {
 
   return (
     <section className="pt-2 pb-6">
-      <div className="max-w-[1100px] mx-auto px-4" style={{ fontFamily: 'Arial, sans-serif' }}>
-
-
+      <div className="max-w-[1100px] mx-auto px-4 font-arial">
       <p 
-            className="text-center my-6 text-[26px] lg:text-[36px]"
-            style={{
-              color: '#f16500',
-              fontWeight: '700',
-              lineHeight: '1.2'
-            }}
+            className="text-center my-6 text-[26px] lg:text-[38px] text-[#f16500] font-bold leading-[1.2]"
           >
-           <span style={{ color: '#ff0000' }}>The Fastest, Easiest Way to</span>  Become An <u>Insanely Accurate Shooter</u> <span style={{ color: '#ff0000' }}> (Guaranteed, Or You Don't Pay a Dime)</span>  
+           <span className='text-[#ff0000]'>The Fastest, Easiest Way to</span>  Become An <u>Insanely Accurate Shooter</u> <span className='text-[#ff0000]'> (Guaranteed, Or You Don't Pay a Dime)</span>  
           </p>
 
         <div className="text-left text-[18px] md:text-[22px] text-black">
@@ -85,7 +78,7 @@ const BogoFeatures = () => {
           
           <p className="mb-4">And with lightning quick speed?</p>
 
-          <p className="mb-4">I'm sure you said “YES.”</p>
+          <p className="mb-4">I'm sure you said <b>“YES.”</b></p>
 
           <p className="mb-4">That's every shooter's dream, to be deadly accurate and as fast as a pro.</p>
 
@@ -93,7 +86,7 @@ const BogoFeatures = () => {
 
           <p className="mb-4">The problem is…</p>
 
-            <ol className="mb-4 pl-6 list-decimal space-y-2 font-bold">
+            <ol className="mb-4 pl-10 list-decimal space-y-2 font-bold">
               <li className="pl-2 leading-[0.9]">It's impossible to find the time to train…</li>
               <li className="pl-2 leading-[0.9]">And shooting enough to be deadly accurate is crazy expensive!</li>
             </ol>
@@ -104,21 +97,16 @@ const BogoFeatures = () => {
           
 
           <p 
-            className="text-center my-6 text-[26px] lg:text-[36px]"
-            style={{
-              color: '#f16500',
-              fontWeight: '700',
-              lineHeight: '1.2'
-            }}
+            className="text-center my-6 text-[26px] lg:text-[38px] text-[#f16500] font-bold leading-[1.2]"
           >
             You Will Become a Better Shot In Minutes –
-            <span style={{ color: '#ff0000' }}> Without Spending a Dime On Ammo or Range Time!</span>
+            <span className='text-[#ff0000]'> Without Spending a Dime On Ammo or Range Time!</span>
           </p>
 
           <div className="w-full my-6 flex justify-center">
             <div className="w-full md:w-[90%] lg:w-[65%] mx-auto">
               <Image
-                src="https://cdn.shopify.com/s/files/1/0670/4948/8684/files/vnsh-laser4-desktop.webp?v=1729098713"
+                src={images.laserStrike.laser1}
                 alt="60 Day Money Back Guarantee"
                 width={1200}
                 height={320}
@@ -143,24 +131,17 @@ const BogoFeatures = () => {
 
           <div className="text-center">
           <Link href={checkoutUrl} className="w-full" target="_blank" rel="noopener noreferrer">
-            <Button 
+          <Button 
               variant="cta"
               size="lg"
-              className="w-full mx-auto py-[39px] px-4 text-center font-bold animate-pulse-cta text-[1.125rem] md:text-[1.8rem] leading-[1.4] whitespace-normal break-words"
+              className="w-[70%] mx-auto py-[25px] px-4 text-center font-bold animate-pulse-cta text-[1.125rem] md:text-[1.8rem] leading-[1.4] whitespace-normal break-words"
             >
               Yes! Give Me My Laser Strike System!
             </Button>
           </Link>
         </div>
         <div className="w-full flex justify-center my-4">
-            <span 
-              className="font-bold text-center" 
-              style={{
-                backgroundColor: '#ff0',
-                color: 'red',
-                fontSize: '22px'
-              }}
-            >
+            <span className="font-bold text-center bg-[#ff0] text-[red] text-[22px]">
               In Stock Now and Ships FREE!
             </span>
           </div>
@@ -169,15 +150,11 @@ const BogoFeatures = () => {
 
 
           <p 
-            className="text-center my-6 text-[26px] lg:text-[36px]"
-            style={{
-              color: '#f16500',
-              fontWeight: '700',
-              lineHeight: '1.2'
-            }}
+            className="text-center my-6 text-[26px] lg:text-[38px] text-[#f16500] font-bold leading-[1.2]"
+            
           >
             1000s and 1000s of Americans Have Used This to
-            <span style={{ color: '#ff0000' }}>  Kill Their Bad Shooting Habits</span>
+            <span className='text-[#ff0000]'>  Kill Their Bad Shooting Habits</span>
             … Like a Cheat Code for Better Accuracy and Speed!
           </p>
 
@@ -210,47 +187,34 @@ const BogoFeatures = () => {
 
           <div className="text-center">
           <Link href={checkoutUrl} className="w-full" target="_blank" rel="noopener noreferrer">
-            <Button 
+          <Button 
               variant="cta"
               size="lg"
-              className="w-full mx-auto py-[39px] px-4 text-center font-bold animate-pulse-cta text-[1.125rem] md:text-[1.8rem] leading-[1.4] whitespace-normal break-words"
+              className="w-[70%] mx-auto py-[25px] px-4 text-center font-bold animate-pulse-cta text-[1.125rem] md:text-[1.8rem] leading-[1.4] whitespace-normal break-words"
             >
               Yes! Give Me My Laser Strike System!
             </Button>
           </Link>
         </div>
         <div className="w-full flex justify-center my-4">
-            <span 
-              className="font-bold text-center" 
-              style={{
-                backgroundColor: '#ff0',
-                color: 'red',
-                fontSize: '22px'
-              }}
-            >
+        <span className="font-bold text-center bg-[#ff0] text-[red] text-[22px]">
               In Stock Now and Ships FREE!
             </span>
           </div>
 
 
           <p 
-            className="text-center my-6 text-[26px] lg:text-[36px]"
-            style={{
-              color: '#f16500',
-              fontWeight: '700',
-              lineHeight: '1.2'
-            }}
-          >
+            className="text-center my-6 text-[26px] lg:text-[38px] text-[#f16500] font-bold leading-[1.2]">
             The Laser Strike System Is<br></br>
-            <span style={{ color: '#ff0000' }}> Stupid-Simple to Use!</span>
+            <span className="text-[#ff0000]"> Stupid-Simple to Use!</span>
           </p>
 
 
           <div className="w-full my-6 flex justify-center">
             <div className="w-full md:w-[90%] lg:w-[80%] mx-auto">
               <Image
-                src="https://cdn.shopify.com/s/files/1/0670/4948/8684/files/LaserStrikeDemoV2SNoGlitch.webp?v=1728482673"
-                alt="60 Day Money Back Guarantee"
+                src={images.laserStrike.demo}
+                alt="Laser Strike Demo"
                 width={1200}
                 height={320}
                 className="w-full h-auto"
@@ -272,7 +236,7 @@ const BogoFeatures = () => {
               <div key={index} className="relative pl-12">
                 <div className="absolute left-0 top-0 w-8 h-8 flex items-center justify-center">
                   <Image 
-                    src="https://cdn.shopify.com/s/files/1/0670/4948/8684/files/check_30_30.webp?v=1729104421"
+                    src={images.checkmark}
                     alt="Checkmark" 
                     width={30} 
                     height={30}
@@ -296,14 +260,9 @@ const BogoFeatures = () => {
           <hr></hr>
 
           <p 
-            className="text-center my-6 text-[26px] lg:text-[36px]"
-            style={{
-              color: '#f16500',
-              fontWeight: '700',
-              lineHeight: '1.2'
-            }}
+            className="text-center my-6 text-[26px] lg:text-[38px] text-[#f16500] font-bold leading-[1.2]"
           >
-            <span style={{ color: '#ff0000' }}>6 Reasons</span> the Laser Strike Will Help You Make the Shot <br></br> <span style={{ color: '#ff0000' }}>You Can’t Afford to Miss…</span>
+            <span className='text-[#ff0000]'>6 Reasons</span> the Laser Strike Will Help You Make the Shot <br></br> <span className='text-[#ff0000]'>You Can’t Afford to Miss…</span>
           </p>
           
 
@@ -321,7 +280,7 @@ const BogoFeatures = () => {
           <p className="mb-4">That simple fact alone is reason enough to own one, but that’s not the only thing that makes it great:</p>
 
             <br></br>
-          <div className="flex flex-col lg:flex-row gap-6 mb-6">
+          <div className="flex flex-col lg:flex-row gap-7 mb-7">
             <div className="space-y-4 flex-1">
             <div className="flex items-start">
               <div className="flex-shrink-0 mr-3 mt-1">
@@ -426,35 +385,35 @@ const BogoFeatures = () => {
             {/* Side images - responsive layout */}
             <div className="w-full lg:w-auto lg:pl-6 mt-6 lg:mt-0 lg:pt-6">
               {/* Grid for medium and large screens */}
-              <div className="hidden md:grid grid-cols-2 lg:grid-cols-1 gap-4 lg:w-[300px] items-start">
-                <div className="relative aspect-square w-full rounded-lg overflow-hidden">
+              <div className="hidden md:grid grid-cols-2 lg:grid-cols-1 gap-4 lg:w-[400px] items-start">
+                <div className="relative aspect-square w-full overflow-hidden">
                   <Image 
                     src={images.laserStrike.laser2}
                     alt="Magazine Pouch - Front View"
-                    width={300}
-                    height={300}
+                    width={400}
+                    height={400}
                     className="object-cover w-full h-full"
-                    sizes="(min-width: 1024px) 300px, (min-width: 768px) calc(50vw - 2rem), 100vw"
+                    sizes="(min-width: 1024px) 400px, (min-width: 768px) calc(50vw - 2rem), 100vw"
                   />
                 </div>
-                <div className="relative aspect-square w-full rounded-lg overflow-hidden">
+                <div className="relative aspect-square w-full overflow-hidden">
                   <Image 
                     src={images.logo.desktop}
                     alt="Magazine Pouch - Side View"
-                    width={300}
-                    height={300}
+                    width={400}
+                    height={400}
                     className="w-full h-full"
-                    sizes="(min-width: 1024px) 300px, (min-width: 768px) calc(50vw - 2rem), 100vw"
+                    sizes="(min-width: 1024px) 400px, (min-width: 768px) calc(50vw - 2rem), 100vw"
                   />
                 </div>
-                <div className="relative aspect-square w-full rounded-lg overflow-hidden lg:block">
+                <div className="relative aspect-square w-full overflow-hidden lg:block">
                   <Image 
                     src={images.laserStrike.laser3}
                     alt="Magazine Pouch - Worn View"
-                    width={300}
-                    height={300}
+                    width={400}
+                    height={400}
                     className="w-full h-full"
-                    sizes="(min-width: 1024px) 300px, (min-width: 768px) calc(50vw - 2rem), 100vw"
+                    sizes="(min-width: 1024px) 400px, (min-width: 768px) calc(50vw - 2rem), 100vw"
                   />
                 </div>
               </div>
@@ -466,8 +425,8 @@ const BogoFeatures = () => {
                     <Image 
                       src={images.laserStrike.laser2}
                       alt="Magazine Pouch - Front View"
-                      width={300}
-                      height={300}
+                      width={400}
+                      height={400}
                       className="object-cover w-full h-full"
                       sizes="85vw"
                       priority
@@ -477,8 +436,8 @@ const BogoFeatures = () => {
                     <Image 
                       src={images.logo.desktop}
                       alt="Magazine Pouch - Side View"
-                      width={300}
-                      height={300}
+                      width={400}
+                      height={400}
                       className="object-cover w-full h-full"
                       sizes="85vw"
                     />
@@ -487,8 +446,8 @@ const BogoFeatures = () => {
                     <Image 
                       src={images.laserStrike.laser3}
                       alt="Magazine Pouch - Worn View"
-                      width={300}
-                      height={300}
+                      width={400}
+                      height={400}
                       className="object-cover w-full h-full"
                       sizes="85vw"
                     />
@@ -501,39 +460,27 @@ const BogoFeatures = () => {
 
           <div className="text-center">
           <Link href={checkoutUrl} className="w-full" target="_blank" rel="noopener noreferrer">
-            <Button 
+          <Button 
               variant="cta"
               size="lg"
-              className="w-full mx-auto py-[39px] px-4 text-center font-bold animate-pulse-cta text-[1.125rem] md:text-[1.8rem] leading-[1.4] whitespace-normal break-words"
+              className="w-[70%] mx-auto py-[25px] px-4 text-center font-bold animate-pulse-cta text-[1.125rem] md:text-[1.8rem] leading-[1.4] whitespace-normal break-words"
             >
               Yes! Give Me My Laser Strike System!
             </Button>
           </Link>
         </div>
         <div className="w-full flex justify-center my-4">
-            <span 
-              className="font-bold text-center" 
-              style={{
-                backgroundColor: '#ff0',
-                color: 'red',
-                fontSize: '22px'
-              }}
-            >
+        <span className="font-bold text-center bg-[#ff0] text-[red] text-[22px]">
               In Stock Now and Ships FREE!
             </span>
           </div>
 
 
           <p 
-            className="text-center my-6 text-[26px] lg:text-[36px]"
-            style={{
-              color: '#f16500',
-              fontWeight: '700',
-              lineHeight: '1.2'
-            }}
+            className="text-center my-6 text-[26px] lg:text-[38px] text-[#f16500] font-bold leading-[1.2]"
           >
             We Give You An
-            <span style={{ color: '#ff0000' }}> Iron-Clad,
+            <span className='text-[#ff0000]'> Iron-Clad,
             <br></br>Money-Back</span>  Guarantee
           </p>
 
@@ -581,14 +528,9 @@ const BogoFeatures = () => {
           <hr></hr>
 
           <p 
-            className="text-center my-6 text-[26px] lg:text-[36px]"
-            style={{
-              color: '#f16500',
-              fontWeight: '700',
-              lineHeight: '1.2'
-            }}
+            className="text-center my-6 text-[26px] lg:text-[38px] text-[#f16500] font-bold leading-[1.2]"
           >
-            Don’t Wait… Leave Now and Your Chance to Lock In <br></br>Today’s Low Price <span style={{ color: '#ff0000' }}>May Not Come Again!</span>
+            Don’t Wait… Leave Now and Your Chance to Lock In <br></br>Today’s Low Price <span className='text-[#ff0000]'>May Not Come Again!</span>
           </p>
 
           <p className="mb-4 font-bold italic">If you want the <u>fastest, easiest possible way</u> to maximize your accuracy and confidence…</p>
@@ -606,24 +548,17 @@ const BogoFeatures = () => {
 
           <div className="text-center mt-8 mb-12">
             <Link href={checkoutUrl} className="w-full">
-              <Button 
-                variant="cta"
-                size="lg"
-                className="w-full mx-auto py-[39px] px-4 text-center font-bold animate-pulse-cta text-[1.125rem] md:text-[1.8rem] leading-[1.4] whitespace-normal break-words"
-              >
-                Give Me This Buy 1, Get 1 FREE Deal Before It's Gone!
-              </Button>
+            <Button 
+              variant="cta"
+              size="lg"
+              className="w-[70%] mx-auto py-[25px] px-4 text-center font-bold animate-pulse-cta text-[1.125rem] md:text-[1.8rem] leading-[1.4] whitespace-normal break-words"
+            >
+              Yes! Give Me My Laser Strike System!
+            </Button>
             </Link>
           </div>
           <div className="w-full flex justify-center my-4">
-            <span 
-              className="font-bold text-center" 
-              style={{
-                backgroundColor: '#ff0',
-                color: 'red',
-                fontSize: '22px'
-              }}
-            >
+          <span className="font-bold text-center bg-[#ff0] text-[red] text-[22px]">
               In Stock Now and Ships FREE!
             </span>
           </div>
@@ -711,13 +646,8 @@ const FAQ = () => {
           {faqItems.map((item, index) => (
             <div key={index} className="border border-gray-200 overflow-hidden">
               <button
-                className="w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 transition-colors text-left cursor-pointer"
+                className="w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 transition-colors text-left cursor-pointer text-[20px] text-[#007bff] font-bold"
                 onClick={() => toggleFAQ(index)}
-                style={{
-                  fontSize: '20px',
-                  color: '#007bff',
-                  fontWeight: 700
-                }}
               >
                 <span className="flex-grow">{item.question}</span>
                 <span className="text-[#007bff] transform transition-transform duration-200 ml-4 flex-shrink-0">
@@ -726,7 +656,7 @@ const FAQ = () => {
               </button>
               {openIndex === index && (
                 <div className="p-4 bg-white border-t border-gray-100">
-                  <p className="text-gray-700">{item.answer}</p>
+                  <p className="text-gray-700 text-[20px]">{item.answer}</p>
                 </div>
               )}
             </div>

@@ -22,6 +22,8 @@ export const images = {
   laserStrike: {
     laser2: '/images/laserStrike/VNS-laser2.webp',
     laser3: '/images/laserStrike/VNSH-laser3.webp',
+    laser1: '/images/laserStrike/vnsh-laser4-desktop.jpeg',
+    demo: '/images/laserStrike/LaserStrikeDemoV2SNoGlitch.webp',
   },
   
   // Logos
