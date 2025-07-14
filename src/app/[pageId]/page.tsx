@@ -21,6 +21,8 @@ export async function generateMetadata({ params }: { params: { pageId: string } 
     vnls2: 'Vintage Nylon Laptop Sleeve',
     vnshblackbogo1: 'Vintage Nylon Shoulder Bag - Black BOGO',
     vnsmp1: 'Vintage Nylon Shoulder Bag - Multi-Pack',
+  
+    'vnls1': 'Vnsh Black Bogo1',
   };
 
   return {

@@ -16,7 +16,7 @@ type FeatureItem = {
 
 const FeatureGrid = ({ items, className = '' }: { items: FeatureItem[]; className?: string }) => {
   return (
-    <div className={`w-full lg:py-12 ${className}`}>
+    <div className={`w-full ${className}`}>
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {items.map((item, index) => (

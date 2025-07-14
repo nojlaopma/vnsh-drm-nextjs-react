@@ -16,7 +16,7 @@ const Header = () => {
   const [logoPath, setLogoPath] = useState<string>('');
   
   // Determine logo size and showContact based on the current route
-  const isBogoPage = pathname?.includes('vnshblackbogo1') || pathname?.includes('vnshcamobogo1') || pathname?.includes('vnsmp1');
+  const isBogoPage = pathname?.includes('vnshblackbogo1') || pathname?.includes('vnshcamobogo1') || pathname?.includes('vnsmp1') || pathname?.includes('vnls1');
   const logoSize = isBogoPage ? BOGO_LOGO_SIZE : DEFAULT_LOGO_SIZE;
 
   useEffect(() => {

@@ -17,6 +17,12 @@ export const images = {
     blackHolsterMobile3: '/images/holster/BlackHolsterMobile3.webp',
     blackHolsterMobile4: '/images/holster/BlackHolsterMobile4.webp',
   },
+
+  // Laser Strike images
+  laserStrike: {
+    laser2: '/images/laserStrike/VNS-laser2.webp',
+    laser3: '/images/laserStrike/VNSH-laser3.webp',
+  },
   
   // Logos
   logo: {

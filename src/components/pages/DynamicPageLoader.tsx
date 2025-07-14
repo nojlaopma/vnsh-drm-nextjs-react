@@ -10,6 +10,7 @@ const pageComponents = {
   vnshblackbogo1: dynamic(() => import('./VnshBlackBogo1Page'), { ssr: false }),
   vnshcamobogo1: dynamic(() => import('./VnshCamoBogo1Page'), { ssr: false }),
   vnsmp1: dynamic(() => import('./Vnsmp1Page'), { ssr: false }),
+  vnls1: dynamic(() => import('./vnls1Page'), { ssr: false }),
 } as const;
 
 type PageId = keyof typeof pageComponents;
