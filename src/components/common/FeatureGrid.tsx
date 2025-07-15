@@ -18,9 +18,9 @@ const FeatureGrid = ({ items, className = '' }: { items: FeatureItem[]; classNam
   return (
     <div className={`w-full ${className}`}>
       <div className="max-w-7xl mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-1">
           {items.map((item, index) => (
-            <div key={index} className="flex flex-col items-center text-center p-6">
+            <div key={index} className="flex flex-col items-center text-center">
               <div className="mb-4">
                 <div className="relative w-[150px] h-[150px] mx-auto">
                   <Image

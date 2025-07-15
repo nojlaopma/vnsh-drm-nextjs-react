@@ -39,7 +39,7 @@ export default async function Page({
     {};
 
   return (
-    <div className="container mx-auto px-4 py-4">
+    <div className="container mx-auto px-4 font-arial">
       <DynamicPageLoader 
         params={{ pageId }} 
         searchParams={safeSearchParams} 

@@ -26,10 +26,7 @@ export default function VnshCamoBogo1Page({ params }: VnshCamoBogo1PageProps) {
     const header = document.querySelector('header');
     if (header) {
       const floater = document.createElement('div');
-      floater.className = 'banner-floater w-full bg-[#2afe4e] text-center py-2 md:py-3 sticky top-0 z-10';
-      floater.style.color = '#000';
-      floater.style.fontSize = 'clamp(16px, 4vw, 22px)';
-      floater.style.fontWeight = '700';
+      floater.className = 'banner-floater w-full bg-[#2afe4e] text-center sticky top-0 z-10 text-[22px] leading-[2.5] font-bold text-black font-arial';
       
       const link = document.createElement('span');
       link.className = 'hover:underline block w-full';
@@ -61,7 +58,7 @@ export default function VnshCamoBogo1Page({ params }: VnshCamoBogo1PageProps) {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col bg-transparent">
+    <div className="min-h-screen flex flex-col bg-transparent font-arial">
       <main className="bg-transparent">
         <BogoHero />
         <BogoFeatures />

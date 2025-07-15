@@ -27,7 +27,7 @@ const Footer = () => {
   const closeModal = () => setActiveModal(null);
   
   return (
-    <footer className="bg-[#f7f4f4] w-full px-4 md:px-8 lg:px-[70px] max-w-[1265px] mx-auto py-8">
+    <footer className="bg-[#f7f4f4] w-full px-4 md:px-8 lg:px-[70px] max-w-[1200px] mx-auto py-8 font-arial">
       {/* Terms & Conditions Modal */}
       <PolicyModal 
         isOpen={activeModal === 'terms'} 
@@ -72,71 +72,39 @@ const Footer = () => {
         </PolicyContent>
       </PolicyModal>
 
-      <div className="max-w-[1100px] mx-auto px-4">
-        <div id="footer-copyright" className="text-center text-gray-800 text-sm mb-4">
+      <div className="max-w-[1100px] mx-auto px-4 font-arial">
+        <div id="footer-copyright" className="text-center text-gray-800">
           &copy; {currentYear} VNSH.com. All Rights Reserved.
         </div>
         
-        <div id="footer-links" className="flex flex-wrap justify-center gap-4 text-base" style={{ width: '100%', fontSize: '18px', paddingBottom: '20px' }}>
+        <div id="footer-links" className="flex flex-wrap justify-center gap-4 w-full pb-[20px] text-[18px] leading-[0.8]">
           <button 
             onClick={() => setActiveModal('terms')}
-            style={{
-              background: 'transparent',
-              border: 'none',
-              color: '#212529',
-              cursor: 'pointer',
-              padding: 0,
-              textDecoration: 'none',
-              fontFamily: 'Arial, sans-serif'
-            }}
+            className="bg-transparent border-none text-[#212529] cursor-pointer p-0 no-underline"
             aria-label="View Terms & Disclaimer"
           >
             Terms & Disclaimer
           </button>
-          <span style={{ color: '#212529' }}>|</span>
+
           <button 
             onClick={() => setActiveModal('privacy')}
-            style={{
-              background: 'transparent',
-              border: 'none',
-              color: '#212529',
-              cursor: 'pointer',
-              padding: 0,
-              textDecoration: 'none',
-              fontFamily: 'Arial, sans-serif'
-            }}
+            className="bg-transparent border-none text-[#212529] cursor-pointer p-0 no-underline"
             aria-label="View Privacy Policy"
           >
             Privacy Policy
           </button>
-          <span style={{ color: '#212529' }}>|</span>
+
           <button 
             onClick={() => setActiveModal('shipping')}
-            style={{
-              background: 'transparent',
-              border: 'none',
-              color: '#212529',
-              cursor: 'pointer',
-              padding: 0,
-              textDecoration: 'none',
-              fontFamily: 'Arial, sans-serif'
-            }}
+            className="bg-transparent border-none text-[#212529] cursor-pointer p-0 no-underline"
             aria-label="View Shipping Policy"
           >
             Shipping Policy
           </button>
-          <span style={{ color: '#212529' }}>|</span>
+
           <button 
             onClick={() => setActiveModal('returns')}
-            style={{
-              background: 'transparent',
-              border: 'none',
-              color: '#212529',
-              cursor: 'pointer',
-              padding: 0,
-              textDecoration: 'none',
-              fontFamily: 'Arial, sans-serif'
-            }}
+            className="bg-transparent border-none text-[#212529] cursor-pointer p-0 no-underline"
             aria-label="View Return Policy"
           >
             Return Policy

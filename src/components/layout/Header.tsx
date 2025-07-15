@@ -30,7 +30,7 @@ const Header = () => {
 
   if (!logoPath) {
     return (
-      <header className="bg-black py-2">
+      <header className="bg-black pt-[10px] pb-[10px]">
         <div className="max-w-[1265px] mx-auto px-4 md:px-8 lg:px-[70px] h-[64px] flex items-center">
           {/* Placeholder for logo */}
         </div>
@@ -38,9 +38,9 @@ const Header = () => {
     );
   }
   return (
-    <header className="bg-black py-2">
+    <header className="bg-black pt-[10px] pb-[10px] font-arial">
       <div className="max-w-[1265px] mx-auto px-4 md:px-8 lg:px-[70px]">
-        <div className="flex flex-col lg:flex-row lg:justify-between items-center w-full p-2.5">
+        <div className="flex flex-col lg:flex-row lg:justify-between items-center w-full p-[10px] px-[3px]">
           <Link href="/" className="lg:flex-1 lg:flex lg:justify-start">
             <Image 
               src={logoPath} 
@@ -51,10 +51,6 @@ const Header = () => {
               loading="eager"
               decoding="sync"
               className="aspect-auto object-contain"
-              style={{
-                width: `${logoSize.width}px`,
-                height: 'auto',
-              }}
             />
           </Link>
           {isBogoPage && (

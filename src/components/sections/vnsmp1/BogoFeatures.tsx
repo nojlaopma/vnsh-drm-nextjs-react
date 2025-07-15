@@ -35,41 +35,34 @@ const BogoFeatures = () => {
   }, []);
 
   return (
-    <section className="pt-2 pb-6">
-      <div className="max-w-[1100px] mx-auto px-4" style={{ fontFamily: 'Arial, sans-serif' }}>
+    <section className="pt-[19px] pb-6">
+      <div className="max-w-[1100px] mx-auto px-1 font-arial">
         
-      <p 
-            className="text-center my-6 text-[26px] lg:text-[36px]"
-            style={{
-              color: '#f16500',
-              fontWeight: '700',
-              lineHeight: '1.2'
-            }}
-          >
-            Why Adding This to Your CCW Rig Lets You <br></br><span style={{ color: '#ff0000' }}>Be Ready for Anything...</span>
+      <p className="text-center text-[26px] lg:text-[38px] text-[#f16500] font-bold leading-[44px]">
+            Why Adding This to Your CCW Rig Lets You <br></br><span className="text-[#ff0000]">Be Ready for Anything...</span>
           </p>
         
-        <div className="text-left text-[18px] md:text-[22px] text-black">
+        <div className="text-left text-[18px] md:text-[22px] text-black mt-[39px] leading-[26px]">
 
-          <p className='mb-4'>Let’s be honest, there's never such a thing as too much ammo.</p>
+          <p className='mb-[23px]'>Let’s be honest, there's never such a thing as too much ammo.</p>
           
-          <p className="mb-4">And if you own a VNSH holster, you’re already aware it’s a leader in its class with how many rounds it lets you carry.</p>
+          <p className="mb-[23px]">And if you own a VNSH holster, you’re already aware it’s a leader in its class with how many rounds it lets you carry.</p>
           
-          <p className="mb-4">But what if you want to add <b className='italic'>even more ammo</b> … or use the pockets on your VNSH holster for a knife or light?</p>
+          <p className="mb-[23px]">But what if you want to add <b className='italic'>even more ammo</b> … or use the pockets on your VNSH holster for a knife or light?</p>
           
-          <p className="mb-4">Or maybe you want to reload from your support side, not your strong side.</p>
+          <p className="mb-[23px]">Or maybe you want to reload from your support side, not your strong side.</p>
           
-          <p className="mb-4 underline">That’s why we made the VNSH Support-Side Mag Pouch.</p>
+          <p className="mb-[23px] underline">That’s why we made the VNSH Support-Side Mag Pouch.</p>
           
-          <p className="mb-4">Not only does it let you carry an <b>absolutely massive load of ammo</b>…</p>
+          <p className="mb-[23px]">Not only does it let you carry an <b>absolutely massive load of ammo</b>…</p>
           
-          <p className="mb-4">But it also <b>prevents you from having to reach across your body</b> to reload – saving you precious time in a conflict and preserving your stance.</p>
+          <p className="mb-[23px]">But it also <b>prevents you from having to reach across your body</b> to reload – saving you precious time in a conflict and preserving your stance.</p>
           
-          <p className="mb-4">There’s no two ways about it.</p>
+          <p className="mb-[23px]">There’s no two ways about it.</p>
           
           <p className="mb-4">This support-side mag pouch is <b className='italic'>perfect for anyone who wants to</b>…</p>
           
-          <div className="text-center mt-8 mb-12">
+          <div className="text-center mt-8 mb-6">
             <Link href={checkoutUrl} className="w-full">
               <Button 
                 variant="cta"
@@ -83,25 +76,13 @@ const BogoFeatures = () => {
           
           <div className="w-full flex justify-center my-4">
             <span 
-              className="font-bold text-center" 
-              style={{
-                backgroundColor: '#ff0',
-                color: 'red',
-                fontSize: '22px'
-              }}
+              className="font-bold text-center bg-[#ff0] text-[#ff0000] text-[22px]"
             >
               In Stock Now and Ships FREE!
             </span>
           </div><br></br>
           
-          <p 
-            className="text-center my-6 text-[26px] lg:text-[36px] italic"
-            style={{
-              color: 'red',
-              fontWeight: '700',
-              lineHeight: '1.2'
-            }}
-          >
+          <p className="text-center my-6 text-[26px] lg:text-[38px] italic text-[#ff0000] px-[100px] font-bold leading-[1.2]">
             Carry the Most Ammo Possible and Reload Faster to Maximize Your Defensive Capability
           </p>
 
@@ -119,7 +100,7 @@ const BogoFeatures = () => {
 
           <p className="mb-4">If you want to <u>maximize your defensive capabilities</u> and be ready for anything, then the VNSH Support-Side Mag Pouch is exactly what you want.</p>
 
-          <div className="text-center mt-8 mb-12">
+          <div className="text-center mt-8 mb-6">
             <Link href={checkoutUrl} className="w-full">
               <Button 
                 variant="cta"
@@ -133,26 +114,14 @@ const BogoFeatures = () => {
           
           <div className="w-full flex justify-center my-4">
             <span 
-              className="font-bold text-center" 
-              style={{
-                backgroundColor: '#ff0',
-                color: 'red',
-                fontSize: '22px'
-              }}
+              className="font-bold text-center bg-[#ff0] text-[#ff0000] text-[22px]"
             >
               In Stock Now and Ships FREE!
             </span>
-          </div><br></br>
+          </div><br></br><br></br>
           <hr></hr>
-          <p 
-            className="text-center my-6 text-[26px] lg:text-[36px]"
-            style={{
-              color: '#f16500',
-              fontWeight: '700',
-              lineHeight: '1.2'
-            }}
-          >
-            <span style={{ color: '#ff0000' }}>5 Reasons</span> to Grab a VNSH Support-Side Mag Pouch NOW!
+          <p className="px-[100px] text-center my-6 text-[26px] lg:text-[38px] text-[#f16500] font-bold leading-[1.2]">
+            <span className="text-[#ff0000]">5 Reasons</span> to Grab a VNSH Support-Side Mag Pouch NOW!
           </p>
 
           <p className="mb-4">The simple fact that the VNSH Support-Side Mag Pouch lets you conceal an absurd amount of ammo wherever you go… while also making it lightning-fast to reload in a confrontation… should be more than enough to justify owning one.</p>
@@ -318,7 +287,7 @@ const BogoFeatures = () => {
 
 
           
-          <div className="text-center mt-8 mb-12">
+          <div className="text-center mt-8 mb-6">
             <Link href={checkoutUrl} className="w-full">
               <Button 
                 variant="cta"
@@ -331,25 +300,13 @@ const BogoFeatures = () => {
           </div>
           <div className="w-full flex justify-center my-4">
             <span 
-              className="font-bold text-center" 
-              style={{
-                backgroundColor: '#ff0',
-                color: 'red',
-                fontSize: '22px'
-              }}
+              className="font-bold text-center bg-[#ff0] text-[#ff0000] text-[22px]"
             >
               In Stock Now and Ships FREE!
             </span>
           </div><br></br>
 
-          <p 
-            className="text-center my-6 text-[26px] lg:text-[36px]"
-            style={{
-              color: '#f16500',
-              fontWeight: '700',
-              lineHeight: '1.2'
-            }}
-          >
+          <p className="px-[100px] text-center my-6 text-[26px] lg:text-[38px] text-[#f16500] font-bold leading-[1.2]">
            New Product Launch Pricing Is Still In Effect! Grab Your Support-Side Mag Pouch NOW
           </p>
 
@@ -365,27 +322,20 @@ const BogoFeatures = () => {
           
           <p className="mb-4">And if you act now, you can get one for <b>just $25.97</b>.</p>
           <p className="mb-4">Plus, when you grab yours right now, you’ll be doing so 100% risk-free, because…</p>
-          <p 
-            className="text-center my-6 text-[26px] lg:text-[36px]"
-            style={{
-              color: '#f16500',
-              fontWeight: '700',
-              lineHeight: '1.2'
-            }}
-          >
+          <p className="px-[100px] text-center my-6 text-[26px] lg:text-[38px] text-[#f16500] font-bold leading-[1.2]">
             You’re Getting An 
-            <span style={{ color: '#ff0000' }}> Iron-Clad,
-            Money-Back</span> Guarantee
+            <span className="text-[#ff0000]"> Iron-Clad,
+            <br></br>Money-Back</span> Guarantee
           </p>
 
           <div className="w-full mt-[30px] mb-8 md:mb-12 overflow-hidden flex justify-center">
-            <div className="relative w-full max-w-[250px] mx-auto">
+            <div className="relative w-full max-w-[350px] mx-auto">
               <Image
                 src={images.guarantee.moneyBack}
                 alt="60-Day Money Back Guarantee"
-                width={200}
-                height={200}
-                className="object-contain"
+                width={600}
+                height={600}
+                className="object-contain w-[350px] h-auto"
                 priority
               />
             </div>
@@ -415,26 +365,19 @@ const BogoFeatures = () => {
           
           <p className="mb-4">Grab your VNSH Support-Side Mag Pouch NOW!</p>
 
-          <p 
-            className="text-center my-6 text-[26px] lg:text-[36px]"
-            style={{
-              color: '#f16500',
-              fontWeight: '700',
-              lineHeight: '1.2'
-            }}
-          >
+          <p className="px-[100px] text-center my-6 text-[26px] lg:text-[38px] text-[#f16500] font-bold leading-[1.2]">
             Don’t Wait - Leave Now and Your Chance to Lock In This Low Price
-            <span style={{ color: '#ff0000' }}> May Not Come Again!</span>  
+            <span className="text-[#ff0000]"> May Not Come Again!</span>  
           </p>
 
           <div className="w-full mt-[30px] mb-8 md:mb-12 overflow-hidden flex justify-center">
-            <div className="relative w-full max-w-[400px] mx-auto">
+            <div className="relative w-full max-w-[600px] mx-auto">
               <Image
                 src="https://cdn.shopify.com/s/files/1/0670/4948/8684/files/MagPouch5Mobile.webp?v=1730563797"
                 alt="VNSH Support-Side Mag Pouch - Money-Back Guarantee"
-                width={400}
-                height={400}
-                className="object-contain"
+                width={600}
+                height={600}
+                className="object-contain w-[600px] h-auto"
                 priority
               />
             </div>
@@ -455,7 +398,7 @@ const BogoFeatures = () => {
           <p className="mb-4">So don’t wait!</p>
           <p className="mb-4">Grab your VNSH Support-Side Mag Pouch NOW!</p>
 
-        <div className="text-center mt-8 mb-12">
+        <div className="text-center mt-8 mb-6">
             <Link href={checkoutUrl} className="w-full">
               <Button 
                 variant="cta"
@@ -469,12 +412,7 @@ const BogoFeatures = () => {
 
           <div className="w-full flex justify-center my-4">
             <span 
-              className="font-bold text-center" 
-              style={{
-                backgroundColor: '#ff0',
-                color: 'red',
-                fontSize: '22px'
-              }}
+              className="font-bold text-center bg-[#ff0] text-[#ff0000] text-[22px]"
             >
               In Stock Now and Ships FREE!
             </span>
@@ -516,77 +454,5 @@ const BogoFeatures = () => {
   );
 };
 
-// FAQ Component
-const FAQ = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-  const toggleFAQ = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
-  const faqItems = [
-    {
-      question: 'Q: Does this come in right-handed and left-handed configurations?',
-      answer: 'A: No, the VNSH holster is a true ambidextrous holster.'
-    },
-    {
-      question: 'Q: Will This Work With My Laser Sights or a Mounted Light?',
-      answer: 'A: Depending on the light or sight you are using it may fit. Smaller lights and lasers do fit with most compact and some full-size guns. You can safely purchase the holster and if it doesn\'t work for your setup we\'ll give you a prepaid return label for a full refund.'
-    },
-    {
-      question: 'Q: Will this work for my revolver?',
-      answer: 'A: The holster will fit most compact revolvers but we don\'t have an exhaustive list of which revolvers do and don\'t fit.'
-    },
-    {
-      question: 'Q: Do I Need a Belt? How Does It Connect Around The Waist?',
-      answer: 'A: NO! The holster has a built in Waist Band. It secures around your waist with built-in, high quality molded velcro. You do not need a belt... or anything else for that matter. You could even wear it naked if you wanted too. ;)'
-    },
-    {
-      question: 'Q: My Semi-automatic Isn\'t Listed. Will it fit?',
-      answer: 'A: Yes, all semi-automatic firearms fit. In fact, that is what our design is specifically set for. This is the only holster on the market that will fit any semi-automatic firearm. The exception is the C.O.R.E. series from Smith and Wesson.'
-    },
-    {
-      question: 'Q: Will My Magazines Fit in the Pouches?',
-      answer: 'A: Yes, all magazines for all semi-automatics will fit in any or all of the two magazine pouches.'
-    },
-    {
-      question: 'Q: Does this holster work with slide-mounted optics (Red dots, etc)?',
-      answer: 'A: In most cases no, though some smaller, sub-compact weapons may work with a slide-mounted optic. If you want to try the holster out with your optic and it doesn\'t work, please remember we offer an any-reason return policy for the first 60-days you own the holster.'
-    }
-  ];
-
-  return (
-    <div className="w-full px-4 my-12">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-8">Frequently Asked Questions</h2>
-        <div className="space-y-2">
-          {faqItems.map((item, index) => (
-            <div key={index} className="border border-gray-200 overflow-hidden">
-              <button
-                className="w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 transition-colors text-left cursor-pointer"
-                onClick={() => toggleFAQ(index)}
-                style={{
-                  fontSize: '20px',
-                  color: '#007bff',
-                  fontWeight: 700
-                }}
-              >
-                <span className="flex-grow">{item.question}</span>
-                <span className="text-[#007bff] transform transition-transform duration-200 ml-4 flex-shrink-0">
-                  {openIndex === index ? '▲' : '▼'}
-                </span>
-              </button>
-              {openIndex === index && (
-                <div className="p-4 bg-white border-t border-gray-100">
-                  <p className="text-gray-700">{item.answer}</p>
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-};
 
 export default BogoFeatures;

@@ -2,6 +2,7 @@
 export const images = {
   // Common images
   checkmark: '/images/check_30_30.webp',
+
   // vnsmp1 (Magazine Pouch) images
   vnsmp1: {
     hero: '/images/vnsmp1/MagPouchDesktop.webp',

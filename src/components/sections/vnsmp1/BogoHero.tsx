@@ -13,27 +13,25 @@ const BogoHero = () => {
   const checkoutUrl = `https://secure.vnsh.com/vnsmp1/checkout${utmParams ? `?${utmParams}` : ''}`;
 
   return (
-    <section id="bogo-hero" className="sm:px-4 bg-white">
-      <div className="max-w-[1265px] mx-auto sm:px-4">
-        <div className="text-center mb-8 lg:px-[60px]">
-          <h1 className="text-[23px] md:text-[35px] mb-4 leading-none">
-          <i > Carry Even MORE Ammo and <b>Reload Lightning Fast</b> With the VNSH Support-Side Mag Pouch...</i>
+    <section id="bogo-hero" className="sm:px-4 bg-white font-arial pt-[20px]">
+      <div className="mx-auto sm:px-4">
+        <div className="text-center">
+          <h1 className="text-[23px] md:text-[38px] mb-4 leading-[1.15] italic">
+         Carry Even MORE Ammo and <b>Reload Lightning Fast</b> With the VNSH Support-Side Mag Pouch...
           </h1>
         </div>
         
-        <div className="w-full mt-[30px] sm:mb-8 md:mb-12 overflow-hidden flex justify-center">
-          <div className="relative w-full max-w-[900px] mx-auto">
-            <div style={{ position: 'relative', width: '100%', paddingBottom: '56.25%' }}>
+        <div className="w-full overflow-hidden flex justify-center">
+            <div className="relative w-full">
               <Image
                 src={images.vnsmp1.hero}
                 alt="VNSH Holster - Comfortable and Secure Concealed Carry"
-                fill
-                sizes="(max-width: 768px) 100vw, 900px"
-                className="object-contain"
+                width={500}
+                height={500}
+                className="h-auto mx-auto mt-[3.8px]"
                 priority
-              />
+                />
             </div>
-          </div>
         </div>
       </div>
     </section>

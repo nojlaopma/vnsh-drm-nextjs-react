@@ -45,12 +45,12 @@ const BogoFeatures = () => {
   };
 
   return (
-    <section className="pt-2 pb-6">
-      <div className="max-w-[1100px] mx-auto px-4" style={{ fontFamily: 'Arial, sans-serif' }}>
+    <section className="pb-6 ml-[-8px] mr-[-8px]">
+      <div className="w-full font-arial">
         {/* Responsive Image */}
-        <div className="w-full mt-[30px] sm:mb-8 md:mb-12 overflow-hidden flex justify-center">
-          <div className="relative w-full max-w-[800px] mx-auto">
-            <div style={{ position: 'relative', width: '100%', paddingBottom: '56.25%' }}>
+        <div className="w-full overflow-hidden flex justify-center mt-[30px] mb-[25px]">
+          <div className="relative w-full max-w-[100%] mx-auto">
+            <div className='relative w-[90%] max-w-[100%] mx-auto overflow-hidden pb-[50%]'>
               <Image
                 src="/images/holster/VNSH_Camo_BOGO.webp"
                 alt="VNSH Camo Holster - Limited Time BOGO Offer"
@@ -65,9 +65,9 @@ const BogoFeatures = () => {
         
         <div className="text-left text-[18px] md:text-[22px] text-black">
 
-          <h2 className="text-[20px] md:text-[38px] font-bold text-center my-0 mx-5 lg:leading-[45px] py-4 px-6 rounded-lg">
-          <span className="bg-[#ffa500]">175,232 Americans Have Trusted Us to Give Them The MOST Comfortable Holster They've Ever Worn</span>
-          </h2>
+          <div className="text-center mb-4">
+            <span className="bg-[#ffa500] text-[20px] md:text-[36px] font-bold lg:leading-[45px] ">175,232 Americans Have Trusted Us to Give Them The MOST Comfortable Holster They've Ever Worn</span>
+          </div>
           
           <p className='mb-4'>The VNSH Holster is rapidly becoming one of America’s best-selling holsters… <b > and for good reason too!</b></p>
           
@@ -149,28 +149,16 @@ const BogoFeatures = () => {
           </div>
           
           <div className="w-full flex justify-center my-4">
-            <p 
-              className="font-bold px-4 py-2 text-center" 
-              style={{
-                backgroundColor: '#ff0',
-                color: 'red',
-                fontSize: '22px',
-                lineHeight: '33px',
-                display: 'inline-block'
-              }}
+            <span 
+              className="font-bold text-center bg-[#ff0] text-[#ff0000] text-[22px]"
             >
               60 Days to Try It Yourself… Love It Or You Don't Pay a Dime!
-            </p>
+            </span>
           </div><br></br>
           <hr></hr>
           
           <p 
-            className="text-center my-6 text-[26px] lg:text-[36px]"
-            style={{
-              color: '#f16500',
-              fontWeight: '700',
-              lineHeight: '1.2'
-            }}
+            className="text-center my-6 text-[26px] lg:text-[36px] text-[#f16500] font-bold leading-[1.2]"
           >
             Seriously, This Holster Works With 99.9% of Single Semi-Automatic Pistols On the Planet
           </p>
@@ -183,7 +171,6 @@ const BogoFeatures = () => {
                 width={1200}
                 height={675}
                 className="w-full h-auto object-contain"
-                style={{ borderRadius: 0 }}
                 priority
               />
             </div>
@@ -238,28 +225,16 @@ const BogoFeatures = () => {
             </Link>
           </div>
           <div className="w-full flex justify-center my-4">
-            <p 
-              className="font-bold px-4 py-2 text-center" 
-              style={{
-                backgroundColor: '#ff0',
-                color: 'red',
-                fontSize: '22px',
-                lineHeight: '33px',
-                display: 'inline-block'
-              }}
+            <span 
+              className="font-bold text-center bg-[#ff0] text-[#ff0000] text-[22px]"
             >
               60 Days to Try It Yourself… Love It Or You Don't Pay a Dime!
-            </p>
+            </span>
           </div><br></br>
           <hr></hr>
 
           <p 
-            className="text-center my-6 text-[26px] lg:text-[36px]"
-            style={{
-              color: '#f16500',
-              fontWeight: '700',
-              lineHeight: '1.2'
-            }}
+            className="text-center my-6 text-[26px] lg:text-[36px] text-[#f16500] font-bold leading-[1.2]"
           >
             Don’t Let An Uncomfortable Holster Be The Reason You’re Unarmed When Bad Guys Attack
           </p>
@@ -320,36 +295,24 @@ const BogoFeatures = () => {
             </Link>
           </div>
           <div className="w-full flex justify-center my-4">
-            <p 
-              className="font-bold px-4 py-2 text-center" 
-              style={{
-                backgroundColor: '#ff0',
-                color: 'red',
-                fontSize: '22px',
-                lineHeight: '33px',
-                display: 'inline-block'
-              }}
+            <span 
+              className="font-bold text-center bg-[#ff0] text-[#ff0000] text-[22px]"
             >
-              60 Days to Try It Yourself… Love It Or You Don’t Pay a Dime!
-            </p>
+              60 Days to Try It Yourself… Love It Or You Don't Pay a Dime!
+            </span>
           </div><br></br>
           <hr></hr>
 
           <p 
-            className="text-center my-6 text-[26px] lg:text-[36px]"
-            style={{
-              color: '#f16500',
-              fontWeight: '700',
-              lineHeight: '1.2'
-            }}
+            className="text-center my-6 text-[26px] lg:text-[36px] text-[#f16500] font-bold leading-[1.2]"
           >
             Crazy Holiday Deal!<br></br>
-            <span style={{ color: '#ff0000' }}>Buy 1 Holster, Get 1 FREE!</span>
+            <span className="font-bold text-[#ff0000]">Buy 1 Holster, Get 1 FREE!</span>
           </p>
 
           <div className="w-full mt-[30px] mb-8 md:mb-12 overflow-hidden flex justify-center">
           <div className="relative w-full max-w-[800px] mx-auto">
-            <div style={{ position: 'relative', width: '100%', paddingBottom: '56.25%' }}>
+            <div className="relative w-full pb-[56.25%]">
               <Image
                 src="/images/holster/VNSH_Camo_BOGO.webp"
                 alt="VNSH Camo Holster - Limited Time BOGO Offer"
@@ -376,15 +339,10 @@ const BogoFeatures = () => {
           <p className="mb-4">Plus, when you grab this deal today, you’ll be doing so <b>100% Risk-Free, because…</b></p>
           
           <p 
-            className="text-center my-6 text-[26px] lg:text-[36px]"
-            style={{
-              color: '#f16500',
-              fontWeight: '700',
-              lineHeight: '1.2'
-            }}
+            className="text-center my-6 text-[26px] lg:text-[36px] font-bold leading-[1.2] text-[#f16500]"
           >
             You’re Getting An 
-            <span style={{ color: '#ff0000' }}> Iron-Clad,
+            <br></br><span className='text-[#ff0000]'> Iron-Clad,
             Money-Back</span> Guarantee
           </p>
 
@@ -434,32 +392,20 @@ const BogoFeatures = () => {
             </Link>
           </div>
           <div className="w-full flex justify-center my-4">
-            <p 
-              className="font-bold px-4 py-2 text-center" 
-              style={{
-                backgroundColor: '#ff0',
-                color: 'red',
-                fontSize: '22px',
-                lineHeight: '33px',
-                display: 'inline-block'
-              }}
+            <span 
+              className="font-bold text-center bg-[#ff0] text-[#ff0000] text-[22px]"
             >
               60 Days to Try It Yourself… Love It Or You Don't Pay a Dime!
-            </p>
+            </span>
           </div><br></br>
           <hr></hr>
 
           <p 
-            className="text-center my-6 text-[26px] lg:text-[36px]"
-            style={{
-              color: '#f16500',
-              fontWeight: '700',
-              lineHeight: '1.2'
-            }}
+            className="text-center my-6 text-[26px] lg:text-[36px] font-bold leading-[1.2] text-[#f16500]"
           >
             Fair Warning… <br></br>
             Last Big Deal
-            <span style={{ color: '#ff0000' }}> Before prices go up…</span>
+            <span className='text-[#ff0000]'> Before prices go up…</span>
           </p>
 
 
@@ -494,18 +440,11 @@ const BogoFeatures = () => {
             </Link>
           </div>
           <div className="w-full flex justify-center my-4">
-            <p 
-              className="font-bold px-4 py-2 text-center" 
-              style={{
-                backgroundColor: '#ff0',
-                color: 'red',
-                fontSize: '22px',
-                lineHeight: '33px',
-                display: 'inline-block'
-              }}
+            <span 
+              className="font-bold text-center bg-[#ff0] text-[#ff0000] text-[22px]"
             >
               60 Days to Try It Yourself… Love It Or You Don't Pay a Dime!
-            </p>
+            </span>
           </div><br></br>
 
           <div className="w-full flex justify-center my-8">
@@ -549,19 +488,12 @@ const BogoFeatures = () => {
               </Button>
             </Link>
           </div>
-          <div className="w-full flex justify-center my-4">
-            <p 
-              className="font-bold px-4 py-2 text-center" 
-              style={{
-                backgroundColor: '#ff0',
-                color: 'red',
-                fontSize: '22px',
-                lineHeight: '33px',
-                display: 'inline-block'
-              }}
+          <div className="w-full flex justify-center my-4 mb-12">
+            <span 
+              className="font-bold text-center bg-[#ff0] text-[#ff0000] text-[22px]"
             >
-              60 Days to Try It Yourself… Love It Or You Don’t Pay a Dime!
-            </p>
+              60 Days to Try It Yourself… Love It Or You Don't Pay a Dime!
+            </span>
           </div>
 
           <FeatureGrid items={[
@@ -647,13 +579,8 @@ const FAQ = () => {
           {faqItems.map((item, index) => (
             <div key={index} className="border border-gray-200 overflow-hidden">
               <button
-                className="w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 transition-colors text-left cursor-pointer"
+                className="w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 transition-colors text-left cursor-pointer font-bold text-[20px] text-[#007bff]"
                 onClick={() => toggleFAQ(index)}
-                style={{
-                  fontSize: '20px',
-                  color: '#007bff',
-                  fontWeight: 700
-                }}
               >
                 <span className="flex-grow">{item.question}</span>
                 <span className="text-[#007bff] transform transition-transform duration-200 ml-4 flex-shrink-0">
