@@ -17,30 +17,24 @@ type FeatureItem = {
 const FeatureGrid = ({ items, className = '' }: { items: FeatureItem[]; className?: string }) => {
   return (
     <div className={`w-full ${className}`}>
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4 ml-[-20px] mr-[-20px] md:ml-[-80px] md:mr-[-80px] mb-[7px]">
         <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-1">
           {items.map((item, index) => (
             <div key={index} className="flex flex-col items-center text-center">
               <div className="mb-4">
-                <div className="relative w-[150px] h-[150px] mx-auto">
+                <div className={`relative w-[${item.imageHeight ?? 150}px] h-[${item.imageWidth ?? 150}px] mx-auto`}>
                   <Image
                     src={item.image.desktop}
                     alt={item.image.alt}
-                    fill
                     className="object-contain"
                     sizes="(max-width: 768px) 150px, 150px"
+                    height={item.imageHeight ?? 150}
+                    width={item.imageWidth ?? 150}
                   />
                 </div>
               </div>
-              <h3 className="text-xl font-bold mb-2" style={{ color: 'rgb(33, 37, 41)' }}>{item.title}</h3>
-              <p style={{
-                fontSize: '16px',
-                textAlign: 'center',
-                color: 'rgb(33, 37, 41)',
-                lineHeight: '20px',
-                margin: '0 auto',
-                maxWidth: '300px'
-              }}>{item.description}</p>
+              <h3 className="text-[1.17rem] font-bold mb-4 text-[#212529]">{item.title}</h3>
+              <p className="text-[16px] text-center text-[#212529] leading-[18px] mx-auto">{item.description}</p>
             </div>
           ))}
         </div>

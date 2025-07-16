@@ -37,9 +37,9 @@ const BogoFeatures = () => {
   return (
     <section className="pt-[19px] pb-6">
       <div className="max-w-[1100px] mx-auto px-1 font-arial">
-        
-      <p className="text-center text-[26px] lg:text-[38px] text-[#f16500] font-bold leading-[44px]">
-            Why Adding This to Your CCW Rig Lets You <br></br><span className="text-[#ff0000]">Be Ready for Anything...</span>
+      
+      <p className="text-center text-[23px] md:text-[38px] text-[#f16500] font-bold leading-[26px] md:leading-[44px] px-[10px] md:px-[100px]">
+            Why Adding This to Your CCW Rig Lets You <span className="text-[#ff0000]">Be Ready for Anything...</span>
           </p>
         
         <div className="text-left text-[18px] md:text-[22px] text-black mt-[39px] leading-[26px]">
@@ -76,13 +76,13 @@ const BogoFeatures = () => {
           
           <div className="w-full flex justify-center my-4">
             <span 
-              className="font-bold text-center bg-[#ff0] text-[#ff0000] text-[22px]"
+              className="font-bold text-center bg-[#ff0] text-[#ff0000] text-[18px] md:text-[22px]"
             >
               In Stock Now and Ships FREE!
             </span>
           </div><br></br>
           
-          <p className="text-center my-6 text-[26px] lg:text-[38px] italic text-[#ff0000] px-[100px] font-bold leading-[1.2]">
+          <p className="text-[23px] md:text-[38px] leading-[26px] md:leading-[44px] text-center my-6 italic text-[#ff0000] md:px-[100px] font-bold">
             Carry the Most Ammo Possible and Reload Faster to Maximize Your Defensive Capability
           </p>
 
@@ -114,13 +114,14 @@ const BogoFeatures = () => {
           
           <div className="w-full flex justify-center my-4">
             <span 
-              className="font-bold text-center bg-[#ff0] text-[#ff0000] text-[22px]"
+              className="font-bold text-center bg-[#ff0] text-[#ff0000] text-[18px] md:text-[22px]"
             >
               In Stock Now and Ships FREE!
             </span>
           </div><br></br><br></br>
           <hr></hr>
-          <p className="px-[100px] text-center my-6 text-[26px] lg:text-[38px] text-[#f16500] font-bold leading-[1.2]">
+          
+          <p className="text-[23px] md:text-[38px] leading-[26px] md:leading-[44px] md:px-[100px] text-center my-6 text-[#f16500] font-bold">
             <span className="text-[#ff0000]">5 Reasons</span> to Grab a VNSH Support-Side Mag Pouch NOW!
           </p>
 
@@ -300,13 +301,13 @@ const BogoFeatures = () => {
           </div>
           <div className="w-full flex justify-center my-4">
             <span 
-              className="font-bold text-center bg-[#ff0] text-[#ff0000] text-[22px]"
+              className="font-bold text-center bg-[#ff0] text-[#ff0000] md:text-[22px] text-[18px]"
             >
               In Stock Now and Ships FREE!
             </span>
           </div><br></br>
 
-          <p className="px-[100px] text-center my-6 text-[26px] lg:text-[38px] text-[#f16500] font-bold leading-[1.2]">
+          <p className="text-center my-6 text-[#f16500] font-bold text-[23px] md:text-[38px] leading-[26px] md:leading-[44px] md:px-[100px]">
            New Product Launch Pricing Is Still In Effect! Grab Your Support-Side Mag Pouch NOW
           </p>
 
@@ -322,20 +323,20 @@ const BogoFeatures = () => {
           
           <p className="mb-4">And if you act now, you can get one for <b>just $25.97</b>.</p>
           <p className="mb-4">Plus, when you grab yours right now, you’ll be doing so 100% risk-free, because…</p>
-          <p className="px-[100px] text-center my-6 text-[26px] lg:text-[38px] text-[#f16500] font-bold leading-[1.2]">
+          <p className="text-center my-6 text-[#f16500] font-bold text-[23px] md:text-[38px] leading-[26px] md:leading-[44px] md:px-[100px]">
             You’re Getting An 
             <span className="text-[#ff0000]"> Iron-Clad,
             <br></br>Money-Back</span> Guarantee
           </p>
 
-          <div className="w-full mt-[30px] mb-8 md:mb-12 overflow-hidden flex justify-center">
-            <div className="relative w-full max-w-[350px] mx-auto">
+          <div className="w-full mt-[30px] mb-8 md:mb-12 flex justify-center items-center">
+            <div className="relative max-w-[350px]">
               <Image
                 src={images.guarantee.moneyBack}
                 alt="60-Day Money Back Guarantee"
-                width={600}
-                height={600}
-                className="object-contain w-[350px] h-auto"
+                width={200}
+                height={200}
+                className="object-contain w-[200px] h-auto md:w-[350px] md:h-auto"
                 priority
               />
             </div>
@@ -365,52 +366,54 @@ const BogoFeatures = () => {
           
           <p className="mb-4">Grab your VNSH Support-Side Mag Pouch NOW!</p>
 
-          <p className="px-[100px] text-center my-6 text-[26px] lg:text-[38px] text-[#f16500] font-bold leading-[1.2]">
+          <p className="md:px-[100px] text-center my-6 sm:text-[23px] md:text-[26px] lg:text-[38px] text-[#f16500] font-bold leading-[1.2]">
             Don’t Wait - Leave Now and Your Chance to Lock In This Low Price
             <span className="text-[#ff0000]"> May Not Come Again!</span>  
           </p>
 
-          <div className="w-full mt-[30px] mb-8 md:mb-12 overflow-hidden flex justify-center">
-            <div className="relative w-full max-w-[600px] mx-auto">
+          <div className="w-full mt-[30px] mb-8 md:mb-12 flex justify-center items-center">
+            <div className="relative max-w-[350px]">
               <Image
                 src="https://cdn.shopify.com/s/files/1/0670/4948/8684/files/MagPouch5Mobile.webp?v=1730563797"
                 alt="VNSH Support-Side Mag Pouch - Money-Back Guarantee"
-                width={600}
-                height={600}
-                className="object-contain w-[600px] h-auto"
+                width={200}
+                height={200}
+                className="object-contain w-[200px] h-auto md:w-[350px] md:h-auto"
                 priority
               />
             </div>
           </div>
-          <p className="mb-4">If you want to carry with the <b>absolute most firepower possible</b>…</p>
-          
-          <p className="mb-4">And if you want to have <b className='italic'>life-saving speed on your reload time</b> in the heat of a conflict…</p>
-          
-          <p className="mb-4">Then you owe it to yourself to grab a VNSH Support-Side Mag Pouch today!</p>
 
-          <p className="mb-4">Like we said…</p>
-          
-          <p className="mb-4">There are <b>no promises</b> on how long today’s low, new product launch price will last…</p>
-          
-          <p className="mb-4">If you come back tomorrow or next week, it may not be here any longer.</p>
 
-          <p className="mb-4">Plus, your purchase today is <b>100% risk-free</b> since you’re covered by our <b>60-day, money-back guarantee</b>.</p>
-          <p className="mb-4">So don’t wait!</p>
-          <p className="mb-4">Grab your VNSH Support-Side Mag Pouch NOW!</p>
+          <p className="my-[1.35rem]">If you want to carry with the <b>absolute most firepower possible</b>…</p>
+          
+          <p className="my-[1.35rem]">And if you want to have <b className='italic'>life-saving speed on your reload time</b> in the heat of a conflict…</p>
+          
+          <p className="my-[1.35rem]">Then you owe it to yourself to grab a VNSH Support-Side Mag Pouch today!</p>
 
-        <div className="text-center mt-8 mb-6">
+          <p className="my-[1.35rem]">Like we said…</p>
+          
+          <p className="my-[1.35rem]">There are <b>no promises</b> on how long today’s low, new product launch price will last…</p>
+          
+          <p className="my-[1.35rem]">If you come back tomorrow or next week, it may not be here any longer.</p>
+
+          <p className="my-[1.35rem]">Plus, your purchase today is <b>100% risk-free</b> since you’re covered by our <b>60-day, money-back guarantee</b>.</p>
+          <p className="my-[1.35rem]">So don’t wait!</p>
+          <p className="mt-6 mb-4">Grab your VNSH Support-Side Mag Pouch NOW!</p>
+
+        <div className="text-center mb-6">
             <Link href={checkoutUrl} className="w-full">
               <Button 
                 variant="cta"
                 size="lg"
-                className="w-full mx-auto py-[39px] px-4 text-center font-bold animate-pulse-cta text-[1.125rem] md:text-[1.8rem] leading-[1.4] whitespace-normal break-words"
+                className="w-full mx-auto py-[34px] px-4 text-center font-bold animate-pulse-cta text-[1.125rem] md:text-[1.8rem] leading-[1] whitespace-normal break-words"
               >
                 YES! Send Me My VNSH Support-Side Mag Pouch Now!
               </Button>
             </Link>
           </div>
 
-          <div className="w-full flex justify-center my-4">
+          <div className="w-full flex justify-center my-4 pt-[30px] mb-[28px]">
             <span 
               className="font-bold text-center bg-[#ff0] text-[#ff0000] text-[22px]"
             >
@@ -426,7 +429,7 @@ const BogoFeatures = () => {
                 alt: '60 Day Money Back Guarantee'
               },
               title: '60 Day Money Back Guarantee',
-              description: 'No question asked 60 day refund or replacement guaranteed. If you are unhappy for any reason, get your money back.'
+              description: 'No question asked 60 day refund or replacement guaranteed. If you are unhappy for any reason, get your money back. Rock solid guarantee...'
             },
             {
               image: {
@@ -444,7 +447,9 @@ const BogoFeatures = () => {
                 alt: '100% Secure Payment'
               },
               title: '100% Secure Payment',
-              description: 'All orders are AES-256 Bit encrypted through a HTTPS secure network. We respect your privacy.'
+              description: 'All orders are AES-256 Bit encrypted through a HTTPS secure network. We respect your privacy...',
+              imageHeight: 157,
+              imageWidth: 125
             }
           ]} />
           

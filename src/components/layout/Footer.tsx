@@ -27,7 +27,7 @@ const Footer = () => {
   const closeModal = () => setActiveModal(null);
   
   return (
-    <footer className="bg-[#f7f4f4] w-full px-4 md:px-8 lg:px-[70px] max-w-[1200px] mx-auto py-8 font-arial">
+    <footer className="bg-[#f7f4f4] w-full px-4 md:px-8 lg:px-[70px] max-w-[1200px] mx-auto font-arial">
       {/* Terms & Conditions Modal */}
       <PolicyModal 
         isOpen={activeModal === 'terms'} 
@@ -73,42 +73,44 @@ const Footer = () => {
       </PolicyModal>
 
       <div className="max-w-[1100px] mx-auto px-4 font-arial">
-        <div id="footer-copyright" className="text-center text-gray-800">
-          &copy; {currentYear} VNSH.com. All Rights Reserved.
+        <div id="footer-copyright" className="text-center pb-[18px] text-[18px]">
+          &copy; {currentYear} VNSH.com All Rights Reserved.
         </div>
         
-        <div id="footer-links" className="flex flex-wrap justify-center gap-4 w-full pb-[20px] text-[18px] leading-[0.8]">
-          <button 
-            onClick={() => setActiveModal('terms')}
-            className="bg-transparent border-none text-[#212529] cursor-pointer p-0 no-underline"
-            aria-label="View Terms & Disclaimer"
-          >
-            Terms & Disclaimer
-          </button>
+        <div id="footer-links" className="flex flex-wrap justify-center gap-4 w-full pb-[50px] text-[18px] leading-[0.8]">
+          <div className="flex flex-col sm:flex-row md:gap-4 gap-[25px]">
+            <button 
+              onClick={() => setActiveModal('terms')}
+              className="bg-transparent border-none text-[#212529] cursor-pointer p-0 no-underline px-[2px] w-full sm:w-auto"
+              aria-label="View Terms & Disclaimer"
+            >
+              Terms & Disclaimer
+            </button>
 
-          <button 
-            onClick={() => setActiveModal('privacy')}
-            className="bg-transparent border-none text-[#212529] cursor-pointer p-0 no-underline"
-            aria-label="View Privacy Policy"
-          >
-            Privacy Policy
-          </button>
+            <button 
+              onClick={() => setActiveModal('privacy')}
+              className="bg-transparent border-none text-[#212529] cursor-pointer p-0 no-underline px-[2px] w-full sm:w-auto"
+              aria-label="View Privacy Policy"
+            >
+              Privacy Policy
+            </button>
 
-          <button 
-            onClick={() => setActiveModal('shipping')}
-            className="bg-transparent border-none text-[#212529] cursor-pointer p-0 no-underline"
-            aria-label="View Shipping Policy"
-          >
-            Shipping Policy
-          </button>
+            <button 
+              onClick={() => setActiveModal('shipping')}
+              className="bg-transparent border-none text-[#212529] cursor-pointer p-0 no-underline px-[2px] w-full sm:w-auto"
+              aria-label="View Shipping Policy"
+            >
+              Shipping Policy
+            </button>
 
-          <button 
-            onClick={() => setActiveModal('returns')}
-            className="bg-transparent border-none text-[#212529] cursor-pointer p-0 no-underline"
-            aria-label="View Return Policy"
-          >
-            Return Policy
-          </button>
+            <button 
+              onClick={() => setActiveModal('returns')}
+              className="bg-transparent border-none text-[#212529] cursor-pointer p-0 no-underline px-[2px] w-full sm:w-auto"
+              aria-label="View Return Policy"
+            >
+              Return Policy
+            </button>
+          </div>
         </div>
         
         {logoPath && (

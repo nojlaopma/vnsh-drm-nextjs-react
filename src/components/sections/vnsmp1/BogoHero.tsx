@@ -16,7 +16,7 @@ const BogoHero = () => {
     <section id="bogo-hero" className="sm:px-4 bg-white font-arial pt-[20px]">
       <div className="mx-auto sm:px-4">
         <div className="text-center">
-          <h1 className="text-[23px] md:text-[38px] mb-4 leading-[1.15] italic">
+          <h1 className="text-[23px] md:text-[38px] mb-1 md:mb-4 leading-[1.2] md:leading-[1.15] italic">
          Carry Even MORE Ammo and <b>Reload Lightning Fast</b> With the VNSH Support-Side Mag Pouch...
           </h1>
         </div>
@@ -26,9 +26,9 @@ const BogoHero = () => {
               <Image
                 src={images.vnsmp1.hero}
                 alt="VNSH Holster - Comfortable and Secure Concealed Carry"
-                width={500}
-                height={500}
-                className="h-auto mx-auto mt-[3.8px]"
+                width={300}
+                height={300}
+                className="w-[300px] h-[300px] md:w-[500px] md:h-[500px] mx-auto mt-[3.8px]"
                 priority
                 />
             </div>

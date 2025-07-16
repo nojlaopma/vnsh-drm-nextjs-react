@@ -38,9 +38,9 @@ const Header = () => {
     );
   }
   return (
-    <header className="bg-black pt-[10px] pb-[10px] font-arial">
+    <header className="bg-black pt-[10px] md:pb-[10px] pb-[6px] font-arial">
       <div className="max-w-[1265px] mx-auto px-4 md:px-8 lg:px-[70px]">
-        <div className="flex flex-col lg:flex-row lg:justify-between items-center w-full p-[10px] px-[3px]">
+        <div className="flex flex-col lg:flex-row lg:justify-between items-center w-full pt-[10px] md:pb-[10px] px-[3px]">
           <Link href="/" className="lg:flex-1 lg:flex lg:justify-start">
             <Image 
               src={logoPath} 
@@ -54,10 +54,10 @@ const Header = () => {
             />
           </Link>
           {isBogoPage && (
-            <div className="w-full lg:w-auto text-center lg:text-right mt-4 lg:mt-0">
+            <div className="w-full lg:w-auto text-center lg:text-right md:mt-4 mt-3 lg:mt-0">
               <div 
                 id="header-contact"
-                className="text-white text-lg md:text-[22px] lg:text-right"
+                className="text-white text-[15px] md:text-[22px] lg:text-right"
               >
                 Questions? | 888-526-1885
               </div>
