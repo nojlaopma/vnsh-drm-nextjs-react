@@ -3,11 +3,11 @@ import Link from 'next/link';
 
 const TermsContent = () => {
   return (
-    <div className="prose max-w-none text-base">
+    <div className="prose max-w-none text-base font-arial">
       <p className="font-semibold m-0 mb-2">Effective Date: January 1st, 2019</p>
-      <p className="mb-4 text-gray-700">To review material modifications and their effective dates scroll to the bottom of the page.</p>
+      <p className="mb-4">To review material modifications and their effective dates scroll to the bottom of the page.</p>
       
-      <div className="text-gray-700">
+      <div className="max-h-[50vh] overflow-y-auto">
         <ol className="list-decimal pl-5 space-y-3 m-0">
           <li>
             <span className="font-semibold">Parties.</span> The parties to these Terms of Use are you, and the owner of this VNSH.com website business, Sicuro Brands LLC ("Sicuro Brands"). All references to "we", "us", "our", this "website" or this "site" shall be construed to mean this website business and Sicuro Brands.

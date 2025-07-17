@@ -3,11 +3,11 @@ import Link from 'next/link';
 
 const PrivacyPolicyContent = () => {
   return (
-    <div className="prose max-w-none space-y-4 text-gray-700">
+    <div className="prose max-w-none space-y-4 font-arial">
       <p className="font-semibold">Effective Date: January 1st, 2019</p>
       <p>To review material modifications and their effective dates scroll to the bottom of the page.</p>
       
-      <div className="space-y-4">
+      <div className="space-y-4 max-h-[50vh] overflow-y-auto">
         <p>Sicuro Brands, LLC ("Sicuro Brands") owns and operates this VNSH.com website business. All references to "we", "us", this "website" or this "site" shall be construed to mean Sicuro Brands Publishing. We understand that visitors to this website are concerned about the privacy of information. The following describes our privacy policy regarding information, including Personal Information (defined below), that we collect through this website.</p>
         <p>By using this website you are accepting the practices described in this Privacy Policy.</p>
         

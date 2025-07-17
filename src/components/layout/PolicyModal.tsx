@@ -43,7 +43,7 @@ export const PolicyModal = ({ isOpen, onClose, title, children }: PolicyModalPro
   return (
     <div 
       id="policy-modal"
-      className="modal"
+      className="modal font-arial"
       style={{
         display: isOpen ? 'block' : 'none',
         position: 'fixed',
@@ -52,9 +52,7 @@ export const PolicyModal = ({ isOpen, onClose, title, children }: PolicyModalPro
         top: 0,
         width: '100%',
         height: '100%',
-        overflow: 'auto',
-        backgroundColor: 'rgba(0,0,0,0.5)',
-        fontFamily: 'Arial, sans-serif'
+        backgroundColor: 'rgba(0,0,0,0.5)'
       }}
     >
       <div 
@@ -64,13 +62,13 @@ export const PolicyModal = ({ isOpen, onClose, title, children }: PolicyModalPro
           margin: '2% auto',
           padding: '20px',
           border: '1px solid #888',
-          width: '100%',
-          maxWidth: '90%',
+          width: '50%',
+          maxWidth: '100%',
           boxShadow: '0 5px 15px rgba(0,0,0,0.3)',
           borderRadius: '10px',
           animation: 'modalopen 0.4s',
           maxHeight: '90vh',
-          overflowY: 'auto'
+          
         }}
       >
         <style jsx>{`
@@ -81,14 +79,13 @@ export const PolicyModal = ({ isOpen, onClose, title, children }: PolicyModalPro
           
           .modal-content {
             width: 100%;
-            max-width: 90%;
+            max-width: 80%;
           }
           
           @media (max-width: 1024px) {
             .modal-content {
               max-width: 90%;
               margin: 4% auto !important;
-              padding: 15px !important;
             }
           }
           
@@ -118,12 +115,11 @@ export const PolicyModal = ({ isOpen, onClose, title, children }: PolicyModalPro
           }
           .modal-title {
             font-weight: bold;
-            padding: 0 15px;
             margin: 0;
             font-size: 1.5rem;
           }
           .modal-body {
-            padding: 15px;
+            padding: 0;
             line-height: 1.6;
           }
         `}</style>
@@ -160,29 +156,18 @@ export const PolicyContent = ({
   children 
 }: PolicyContentProps) => {
   return (
+
     <div 
       id={id} 
-      className="policy-content" 
-      style={{ 
-        fontSize: '16px', 
-        lineHeight: '1.6',
-        fontFamily: 'Arial, sans-serif',
-        color: '#333',
-        padding: '0 15px'
-      }}
+      className="policy-content font-arial text-[16px] leading-[1.6] py-[0] px-[0]" 
     >
+      <hr className='h-[2px] my-[16px] bg-[#212529]' />
       {effectiveDate && (
-        <p style={{ 
-          marginBottom: '16px',
-          fontWeight: 'bold'
-        }}>
+        <p className="font-bold mb-[16px]" >
           Effective Date: {effectiveDate}
         </p>
       )}
-      <div style={{ 
-        marginTop: '16px',
-        textAlign: 'left'
-      }}>
+      <div className="mt-[16px] text-left">
         {children}
       </div>
       <style jsx>{`
@@ -194,7 +179,6 @@ export const PolicyContent = ({
         .policy-content h6 {
           margin: 1.5em 0 0.8em 0;
           font-weight: bold;
-          color: #000;
         }
         .policy-content h1 { font-size: 1.8em; }
         .policy-content h2 { font-size: 1.6em; }

@@ -16,20 +16,20 @@ const BogoHero = () => {
     <section id="bogo-hero" className="sm:px-4 bg-white font-arial pt-[20px]">
       <div className="max-w-[1265px] mx-auto sm:px-4">
         <div className="text-center mb-8 lg:px-[42px]">
-          <h1 className="text-[23px] md:text-[35px] mb-[10px] leading-[1.15]">
+          <h1 className="text-[23px] md:text-[35px] mb-[10px] md:leading-[1.14]">
           <i className='font-bold'> Insanely Comfy Holster</i> Makes Any Semi-Auto (Plus 2 Extra Mags) <i className='font-bold'>Disappear In Plain Sight</i> Even If You Wear <u className='text-italic'>Nothing But Gym Shorts, Sweatpants and T-Shirts!</u>
           </h1>
-          <p className="text-center font-bold inline-block text-red-600 text-[25px] italic leading-none"><span className='bg-[#ff0] '>Guaranteed Comfort Or 100% Of Your Money Back!</span>
+          <p className="text-center font-bold text-red-600 text-[25px] italic leading-[25px] mt-[12px]"><span className='bg-[#ff0] '>Guaranteed Comfort Or 100% Of Your Money Back!</span>
           </p>
         </div>
         
-        <div className="mx-auto mb-4 w-[98%]">
+        <div className="mx-auto mb-3 w-[97.7%] mt-[40px]">
           <VidalyticsPlayer 
             playerId="HwShRL3Xs4kohiz4" 
             className="rounded-lg shadow-lg w-full" 
           />
         </div>
-        <div className="text-center">
+        <div className="text-center w-[97.7%]">
           <Link href={checkoutUrl} className="w-full" target="_blank" rel="noopener noreferrer">
             <Button 
               variant="cta"

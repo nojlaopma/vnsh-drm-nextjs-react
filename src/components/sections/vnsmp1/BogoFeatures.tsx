@@ -444,12 +444,12 @@ const BogoFeatures = () => {
               image: {
                 mobile: images.features.securePayment,
                 desktop: images.features.securePayment,
-                alt: '100% Secure Payment'
+                alt: '100% Secure Payment',
+                imageHeight: 157,
+                imageWidth: 125
               },
               title: '100% Secure Payment',
               description: 'All orders are AES-256 Bit encrypted through a HTTPS secure network. We respect your privacy...',
-              imageHeight: 157,
-              imageWidth: 125
             }
           ]} />
           

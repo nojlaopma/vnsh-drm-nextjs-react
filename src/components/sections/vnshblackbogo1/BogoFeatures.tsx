@@ -494,9 +494,9 @@ const BogoFeatures = () => {
               </Button>
             </Link>
           </div>
-          <div className="w-full flex justify-center my-4">
+          <div className="w-full flex justify-center my-4 mb-[57px]">
             <span 
-              className="font-bold text-center bg-[#ff0] text-[#ff0000] text-[22px]"
+              className="font-bold text-center bg-[#ff0] text-[#ff0000] text-[22px] leading-none"
             >
               60 Days to Try It Yourself… Love It Or You Don't Pay a Dime!
             </span>
@@ -510,7 +510,7 @@ const BogoFeatures = () => {
                 alt: '60 Day Money Back Guarantee'
               },
               title: '60 Day Money Back Guarantee',
-              description: 'No question asked 60 day refund or replacement guaranteed. If you are unhappy for any reason, get your money back.'
+              description: 'No question asked 60 day refund or replacement guaranteed. If you are unhappy for any reason, get your money back. Rock solid guarantee...'
             },
             {
               image: {
@@ -525,7 +525,9 @@ const BogoFeatures = () => {
               image: {
                 mobile: images.features.securePayment,
                 desktop: images.features.securePayment,
-                alt: '100% Secure Payment'
+                alt: '100% Secure Payment',
+                imageHeight: 128,
+                imageWidth: 102
               },
               title: '100% Secure Payment',
               description: 'All orders are AES-256 Bit encrypted through a HTTPS secure network. We respect your privacy.'
@@ -578,14 +580,14 @@ const FAQ = () => {
   ];
 
   return (
-    <div className="w-full px-4 my-12">
+    <div className="w-full ">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-center mb-8">Frequently Asked Questions</h2>
         <div className="space-y-2">
           {faqItems.map((item, index) => (
-            <div key={index} className="border border-gray-200 overflow-hidden">
+            <div key={index} className="overflow-hidden md:mx-[-28px]">
               <button
-                className="w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 transition-colors text-left cursor-pointer text-[20px] font-bold text-[#007bff]"
+                className="w-full flex justify-between items-center p-2 bg-[#f2f2f2] hover:bg-gray-100 transition-colors text-left cursor-pointer text-[20px] font-bold text-[#007bff]"
                 onClick={() => toggleFAQ(index)}
               >
                 <span className="flex-grow">{item.question}</span>
@@ -594,8 +596,8 @@ const FAQ = () => {
                 </span>
               </button>
               {openIndex === index && (
-                <div className="p-4 bg-white border-t border-gray-100">
-                  <p className="text-gray-700">{item.answer}</p>
+                <div className="bg-[#e9e9e9] border-[1px] border-solid border-[#dddddd] leading-[22px] text-[20px] py-[30px] px-[10px]">
+                  <p className="text-[#212529]">{item.answer}</p>
                 </div>
               )}
             </div>

@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { getImagePath } from '@/utils/images';
 import { PolicyModal, PolicyContent } from './PolicyModal';
 import TermsContent from '../policies/TermsContent';
@@ -10,7 +11,10 @@ import ShippingPolicyContent from '../policies/ShippingPolicyContent';
 import ReturnPolicyContent from '../policies/ReturnPolicyContent';
 
 const Footer = () => {
+  const pathname = usePathname();
   const [logoPath, setLogoPath] = useState<string>('');
+
+  const isVnshBlackBogo1 = pathname?.includes('vnshblackbogo1');
 
   useEffect(() => {
     const loadLogo = async () => {
@@ -73,7 +77,7 @@ const Footer = () => {
       </PolicyModal>
 
       <div className="max-w-[1100px] mx-auto px-4 font-arial">
-        <div id="footer-copyright" className="text-center pb-[18px] text-[18px]">
+        <div id="footer-copyright" className={isVnshBlackBogo1 ? 'text-center color-[#212529]' : 'text-center pb-[18px] text-[18px]'}>
           &copy; {currentYear} VNSH.com All Rights Reserved.
         </div>
         
