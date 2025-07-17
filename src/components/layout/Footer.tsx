@@ -14,7 +14,8 @@ const Footer = () => {
   const pathname = usePathname();
   const [logoPath, setLogoPath] = useState<string>('');
 
-  const isVnshBlackBogo1 = pathname?.includes('vnshblackbogo1');
+  const bogoValues = ['vnshblackbogo1', 'vnshcamobogo1'];
+  const isVnshbogo = bogoValues.some(value => pathname?.includes(value));
 
   useEffect(() => {
     const loadLogo = async () => {
@@ -77,12 +78,12 @@ const Footer = () => {
       </PolicyModal>
 
       <div className="max-w-[1100px] mx-auto px-4 font-arial">
-        <div id="footer-copyright" className={isVnshBlackBogo1 ? 'text-center color-[#212529]' : 'text-center pb-[18px] text-[18px]'}>
-          &copy; {currentYear} VNSH.com All Rights Reserved.
+        <div id="footer-copyright" className={isVnshbogo ? 'text-center color-[#212529]' : 'text-center pb-[18px] text-[18px]'}>
+          &copy; {currentYear} VNSH.com{isVnshbogo ? '.' : ''} All Rights Reserved.
         </div>
         
-        <div id="footer-links" className="flex flex-wrap justify-center gap-4 w-full pb-[50px] text-[18px] leading-[0.8]">
-          <div className="flex flex-col sm:flex-row md:gap-4 gap-[25px]">
+        <div id="footer-links" className={`flex flex-wrap justify-center gap-4 w-full  text-[18px] leading-[0.8] ${isVnshbogo ? 'pb-[54px]' : 'pb-[50px]'}`}>
+          <div className={`flex flex-col sm:flex-row gap-[25px] ${isVnshbogo ? 'md:gap-[11px]' : 'md:gap-4'}`}>
             <button 
               onClick={() => setActiveModal('terms')}
               className="bg-transparent border-none text-[#212529] cursor-pointer p-0 no-underline px-[2px] w-full sm:w-auto"

@@ -45,12 +45,12 @@ const BogoFeatures = () => {
   };
 
   return (
-    <section className="pb-6 ml-[-8px] mr-[-8px]">
+    <section className="pb-6 mx-[5px] md:ml-[-8px] md:mr-[-8px] mt-[15px]">
       <div className="w-full font-arial">
         {/* Responsive Image */}
         <div className="w-full overflow-hidden flex justify-center">
           <div className="relative w-full max-w-[100%] mx-auto">
-            <div className="relative w-[90%] max-w-[100%] mx-auto overflow-hidden pb-[50%]">
+            <div className="relative w-[80%] md:w-[90%] max-w-[100%] mx-auto overflow-hidden pb-[50%]">
               <Image
                 src={images.holster.blackHolsterMobile4}
                 alt="VNSH Holster - Comfortable and Secure Concealed Carry"
@@ -66,7 +66,7 @@ const BogoFeatures = () => {
         <div className="text-left text-[18px] md:text-[22px] text-black">
 
           <div className="text-center mb-4">
-            <span className="bg-[#ffa500] text-[20px] md:text-[36px] font-bold lg:leading-[45px] ">175,232 Americans Have Trusted Us to Give Them The MOST Comfortable Holster They've Ever Worn</span>
+            <span className="bg-[#ffa500] text-[20px] md:text-[36px] font-bold leading-none md:leading-[45px] ">175,232 Americans Have Trusted Us to Give Them The MOST Comfortable Holster They've Ever Worn</span>
           </div>
           
           
@@ -137,21 +137,21 @@ const BogoFeatures = () => {
 
           {/* <div id="yotpo-testimonials-custom-tab" className="my-8"></div> */}
 
-          <div className="text-center mt-8 mb-12">
-            <Link href={checkoutUrl} className="w-full">
-              <Button 
-                variant="cta"
-                size="lg"
-                className="w-full mx-auto py-[2rem] px-4 font-bold animate-pulse-cta text-[1.125rem] md:text-[2rem] whitespace-normal break-words"
-              >
-                Give Me This Buy 1, Get 1 FREE Deal Before It's Gone!
-              </Button>
-            </Link>
-          </div>
+          <div className="text-center w-[97.7%]">
+          <Link href={checkoutUrl} className="w-full" target="_blank" rel="noopener noreferrer">
+            <Button 
+              variant="cta"
+              size="lg"
+              className="w-full mx-auto py-[2rem] px-4 font-bold animate-pulse-cta text-[1.325rem] md:text-[2rem] whitespace-normal break-words rounded-[0.25rem]"
+            >
+              Give Me This Buy 1, Get 1 FREE Deal Before It's Gone!
+            </Button>
+          </Link>
+        </div>
 
-          <div className="w-full flex justify-center my-4">
+          <div className="my-4 text-center">
             <span 
-              className="font-bold text-center bg-[#ff0] text-[#ff0000] text-[22px]"
+              className="font-bold text-center bg-[#ff0] text-[#ff0000] text-[18px] md:text-[22px] w-full my-4"
             >
               60 Days to Try It Yourself… Love It Or You Don't Pay a Dime!
             </span>
@@ -160,7 +160,7 @@ const BogoFeatures = () => {
           <hr></hr>
           
           <p 
-            className="text-center my-6 text-[26px] lg:text-[36px] text-[#f16500] font-bold leading-[1.2]"
+            className="text-center my-6 text-[20px] md:text-[36px] text-[#f16500] font-bold leading-[1.2]"
           >
             Seriously, This Holster Works With 99.9% of Single Semi-Automatic Pistols On the Planet
           </p>
@@ -215,21 +215,21 @@ const BogoFeatures = () => {
             </div>
           </div>
 
-          <div className="text-center mt-8 mb-12">
-            <Link href={checkoutUrl} className="w-full">
-              <Button 
-                variant="cta"
-                size="lg"
-                className="w-full mx-auto py-[2rem] px-4 font-bold animate-pulse-cta text-[1.125rem] md:text-[2rem] whitespace-normal break-words"
-              >
-                Give Me This Buy 1, Get 1 FREE Deal Before It's Gone!
-              </Button>
-            </Link>
-          </div>
+          <div className="text-center w-[97.7%]">
+          <Link href={checkoutUrl} className="w-full" target="_blank" rel="noopener noreferrer">
+            <Button 
+              variant="cta"
+              size="lg"
+              className="w-full mx-auto py-[2rem] px-4 font-bold animate-pulse-cta text-[1.325rem] md:text-[2rem] whitespace-normal break-words rounded-[0.25rem]"
+            >
+              Give Me This Buy 1, Get 1 FREE Deal Before It's Gone!
+            </Button>
+          </Link>
+        </div>
 
-          <div className="w-full flex justify-center my-4">
+        <div className="my-4 text-center">
             <span 
-              className="font-bold text-center bg-[#ff0] text-[#ff0000] text-[22px]"
+              className="font-bold text-center bg-[#ff0] text-[#ff0000] text-[18px] md:text-[22px] w-full my-4"
             >
               60 Days to Try It Yourself… Love It Or You Don't Pay a Dime!
             </span>
@@ -288,20 +288,20 @@ const BogoFeatures = () => {
           </div>
 
 
-          <div className="text-center mt-8 mb-12">
-            <Link href={checkoutUrl} className="w-full">
-              <Button 
-                variant="cta"
-                size="lg"
-                className="w-full mx-auto py-[2rem] px-4 font-bold animate-pulse-cta text-[1.125rem] md:text-[2rem] whitespace-normal break-words"
-              >
-                Give Me This Buy 1, Get 1 FREE Deal Before It's Gone!
-              </Button>
-            </Link>
-          </div>
-          <div className="w-full flex justify-center my-4">
+          <div className="text-center w-[97.7%]">
+          <Link href={checkoutUrl} className="w-full" target="_blank" rel="noopener noreferrer">
+            <Button 
+              variant="cta"
+              size="lg"
+              className="w-full mx-auto py-[2rem] px-4 font-bold animate-pulse-cta text-[1.325rem] md:text-[2rem] whitespace-normal break-words rounded-[0.25rem]"
+            >
+              Give Me This Buy 1, Get 1 FREE Deal Before It's Gone!
+            </Button>
+          </Link>
+        </div>
+        <div className="my-4 text-center">
             <span 
-              className="font-bold text-center bg-[#ff0] text-[#ff0000] text-[22px]"
+              className="font-bold text-center bg-[#ff0] text-[#ff0000] text-[18px] md:text-[22px] w-full my-4"
             >
               60 Days to Try It Yourself… Love It Or You Don't Pay a Dime!
             </span>
@@ -386,24 +386,25 @@ const BogoFeatures = () => {
 
 
 
-        <div className="text-center mt-8 mb-12">
-            <Link href={checkoutUrl} className="w-full">
-              <Button 
-                variant="cta"
-                size="lg"
-                className="w-full mx-auto py-[2rem] px-4 font-bold animate-pulse-cta text-[1.125rem] md:text-[2rem] whitespace-normal break-words"
-              >
-                Give Me This Buy 1, Get 1 FREE Deal Before It's Gone!
-              </Button>
-            </Link>
-          </div>
-          <div className="w-full flex justify-center my-4">
+          <div className="text-center w-[97.7%]">
+          <Link href={checkoutUrl} className="w-full" target="_blank" rel="noopener noreferrer">
+            <Button 
+              variant="cta"
+              size="lg"
+              className="w-full mx-auto py-[2rem] px-4 font-bold animate-pulse-cta text-[1.325rem] md:text-[2rem] whitespace-normal break-words rounded-[0.25rem]"
+            >
+              Give Me This Buy 1, Get 1 FREE Deal Before It's Gone!
+            </Button>
+          </Link>
+        </div>
+        <div className="my-4 text-center">
             <span 
-              className="font-bold text-center bg-[#ff0] text-[#ff0000] text-[22px]"
+              className="font-bold text-center bg-[#ff0] text-[#ff0000] text-[18px] md:text-[22px] w-full my-4"
             >
               60 Days to Try It Yourself… Love It Or You Don't Pay a Dime!
             </span>
-          </div><br></br>
+          </div>
+          <br></br>
           <hr></hr>
 
           <p 
@@ -434,24 +435,25 @@ const BogoFeatures = () => {
 
 
 
-          <div className="text-center mt-8 mb-12">
-            <Link href={checkoutUrl} className="w-full">
-              <Button 
-                variant="cta"
-                size="lg"
-                className="w-full mx-auto py-[2rem] px-4 font-bold animate-pulse-cta text-[1.125rem] md:text-[2rem] whitespace-normal break-words"
-              >
-                Give Me This Buy 1, Get 1 FREE Deal Before It's Gone!
-              </Button>
-            </Link>
-          </div>
-          <div className="w-full flex justify-center my-4">
+          <div className="text-center w-[97.7%]">
+          <Link href={checkoutUrl} className="w-full" target="_blank" rel="noopener noreferrer">
+            <Button 
+              variant="cta"
+              size="lg"
+              className="w-full mx-auto py-[2rem] px-4 font-bold animate-pulse-cta text-[1.325rem] md:text-[2rem] whitespace-normal break-words rounded-[0.25rem]"
+            >
+              Give Me This Buy 1, Get 1 FREE Deal Before It's Gone!
+            </Button>
+          </Link>
+        </div>
+        <div className="my-4 text-center">
             <span 
-              className="font-bold text-center bg-[#ff0] text-[#ff0000] text-[22px]"
+              className="font-bold text-center bg-[#ff0] text-[#ff0000] text-[18px] md:text-[22px] w-full my-4"
             >
               60 Days to Try It Yourself… Love It Or You Don't Pay a Dime!
             </span>
-          </div><br></br>
+          </div>
+          <br></br>
 
           <div className="w-full flex justify-center my-8">
             <div className="w-full max-w-[1200px] px-4">
@@ -483,22 +485,23 @@ const BogoFeatures = () => {
           {/* FAQ Section */}
           <FAQ />
 
-          <div className="text-center mt-8 mb-12">
+          <div className="text-center mt-[2.1rem] mb-10">
             <Link href={checkoutUrl} className="w-full">
               <Button 
                 variant="cta"
                 size="lg"
-                className="w-full mx-auto py-[2rem] px-4 font-bold animate-pulse-cta text-[1.125rem] md:text-[2rem] whitespace-normal break-words"
+                className="w-[90%] mx-auto py-[1.8rem] px-4 font-bold animate-pulse-cta text-[1.125rem] md:text-[2rem] whitespace-normal break-words"
               >
                 Give Me This Buy 1, Get 1 FREE Deal Before It's Gone!
               </Button>
             </Link>
           </div>
-          <div className="w-full flex justify-center my-4 mb-[57px]">
+
+          <div className="w-full md:flex md:justify-center text-center my-4 mb-[48px]">
             <span 
-              className="font-bold text-center bg-[#ff0] text-[#ff0000] text-[22px] leading-none"
+              className="font-bold text-center bg-[#ff0] text-[#ff0000] text-[18px] md:text-[22px] leading-none"
             >
-              60 Days to Try It Yourself… Love It Or You Don't Pay a Dime!
+              60 Days to Try It Yourself… Love It Or You Don’t Pay a Dime!
             </span>
           </div>
 
@@ -530,10 +533,10 @@ const BogoFeatures = () => {
                 imageWidth: 102
               },
               title: '100% Secure Payment',
-              description: 'All orders are AES-256 Bit encrypted through a HTTPS secure network. We respect your privacy.'
+              description: 'All orders are AES-256 Bit encrypted through a HTTPS secure network. We respect your privacy...'
             }
-          ]} />
-          
+          ]} className="mb-[-8px]"/>
+ 
         </div>
       </div>
     </section>
@@ -566,7 +569,7 @@ const FAQ = () => {
       answer: 'A: NO! The holster has a built in Waist Band. It secures around your waist with built-in, high quality molded velcro. You do not need a belt... or anything else for that matter. You could even wear it naked if you wanted too. ;)'
     },
     {
-      question: 'Q: My Semi-automatic Isn\'t Listed. Will it fit?',
+      question: 'Q: My Semi-automatic Isn\'t Listed Above. Will it fit?',
       answer: 'A: Yes, all semi-automatic firearms fit. In fact, that is what our design is specifically set for. This is the only holster on the market that will fit any semi-automatic firearm. The exception is the C.O.R.E. series from Smith and Wesson.'
     },
     {
@@ -587,11 +590,11 @@ const FAQ = () => {
           {faqItems.map((item, index) => (
             <div key={index} className="overflow-hidden md:mx-[-28px]">
               <button
-                className="w-full flex justify-between items-center p-2 bg-[#f2f2f2] hover:bg-gray-100 transition-colors text-left cursor-pointer text-[20px] font-bold text-[#007bff]"
+                className="w-full flex justify-between items-center py-[6.5px] px-[10px] bg-[#f2f2f2] hover:bg-gray-100 transition-colors text-left cursor-pointer text-[20px] font-bold text-[#007bff] md:mt-[2.1px]"
                 onClick={() => toggleFAQ(index)}
               >
                 <span className="flex-grow">{item.question}</span>
-                <span className="text-[#007bff] transform transition-transform duration-200 ml-4 flex-shrink-0">
+                <span className="text-[16px] text-[#007bff] transform transition-transform duration-200 ml-4 flex-shrink-0">
                   {openIndex === index ? '▲' : '▼'}
                 </span>
               </button>

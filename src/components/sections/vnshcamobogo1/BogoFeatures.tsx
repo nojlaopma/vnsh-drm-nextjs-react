@@ -477,22 +477,22 @@ const BogoFeatures = () => {
           {/* FAQ Section */}
           <FAQ />
 
-          <div className="text-center mt-8 mb-12">
+          <div className="text-center mt-[2.1rem] mb-10">
             <Link href={checkoutUrl} className="w-full">
               <Button 
                 variant="cta"
                 size="lg"
-                className="w-full mx-auto py-[39px] px-4 text-center font-bold animate-pulse-cta text-[1.125rem] md:text-[1.8rem] leading-[1.4] whitespace-normal break-words"
+                className="w-[90%] mx-auto py-[1.8rem] px-4 font-bold animate-pulse-cta text-[1.125rem] md:text-[2rem] whitespace-normal break-words"
               >
                 Give Me This Buy 1, Get 1 FREE Deal Before It's Gone!
               </Button>
             </Link>
           </div>
-          <div className="w-full flex justify-center my-4 mb-12">
+          <div className="w-full flex justify-center my-4 mb-[48px]">
             <span 
-              className="font-bold text-center bg-[#ff0] text-[#ff0000] text-[22px]"
+              className="font-bold text-center bg-[#ff0] text-[#ff0000] text-[22px] leading-none"
             >
-              60 Days to Try It Yourself… Love It Or You Don't Pay a Dime!
+              60 Days to Try It Yourself… Love It Or You Don’t Pay a Dime!
             </span>
           </div>
 
@@ -504,7 +504,7 @@ const BogoFeatures = () => {
                 alt: '60 Day Money Back Guarantee'
               },
               title: '60 Day Money Back Guarantee',
-              description: 'No question asked 60 day refund or replacement guaranteed. If you are unhappy for any reason, get your money back.'
+              description: 'No question asked 60 day refund or replacement guaranteed. If you are unhappy for any reason, get your money back. Rock solid guarantee...'
             },
             {
               image: {
@@ -519,13 +519,15 @@ const BogoFeatures = () => {
               image: {
                 mobile: images.features.securePayment,
                 desktop: images.features.securePayment,
-                alt: '100% Secure Payment'
+                alt: '100% Secure Payment',
+                imageHeight: 128,
+                imageWidth: 102
               },
               title: '100% Secure Payment',
-              description: 'All orders are AES-256 Bit encrypted through a HTTPS secure network. We respect your privacy.'
+              description: 'All orders are AES-256 Bit encrypted through a HTTPS secure network. We respect your privacy...'
             }
-          ]} />
-          
+          ]} className="mb-[-8px]"/>
+ 
         </div>
       </div>
     </section>
@@ -558,7 +560,7 @@ const FAQ = () => {
       answer: 'A: NO! The holster has a built in Waist Band. It secures around your waist with built-in, high quality molded velcro. You do not need a belt... or anything else for that matter. You could even wear it naked if you wanted too. ;)'
     },
     {
-      question: 'Q: My Semi-automatic Isn\'t Listed. Will it fit?',
+      question: 'Q: My Semi-automatic Isn\'t Listed Above. Will it fit?',
       answer: 'A: Yes, all semi-automatic firearms fit. In fact, that is what our design is specifically set for. This is the only holster on the market that will fit any semi-automatic firearm. The exception is the C.O.R.E. series from Smith and Wesson.'
     },
     {
@@ -572,24 +574,24 @@ const FAQ = () => {
   ];
 
   return (
-    <div className="w-full px-4 my-12">
+    <div className="w-full ">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-center mb-8">Frequently Asked Questions</h2>
         <div className="space-y-2">
           {faqItems.map((item, index) => (
-            <div key={index} className="border border-gray-200 overflow-hidden">
+            <div key={index} className="overflow-hidden md:mx-[-28px]">
               <button
-                className="w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 transition-colors text-left cursor-pointer font-bold text-[20px] text-[#007bff]"
+                className="w-full flex justify-between items-center py-[6.5px] px-[10px] bg-[#f2f2f2] hover:bg-gray-100 transition-colors text-left cursor-pointer text-[20px] font-bold text-[#007bff] md:mt-[2.1px]"
                 onClick={() => toggleFAQ(index)}
               >
                 <span className="flex-grow">{item.question}</span>
-                <span className="text-[#007bff] transform transition-transform duration-200 ml-4 flex-shrink-0">
+                <span className="text-[16px] text-[#007bff] transform transition-transform duration-200 ml-4 flex-shrink-0">
                   {openIndex === index ? '▲' : '▼'}
                 </span>
               </button>
               {openIndex === index && (
-                <div className="p-4 bg-white border-t border-gray-100">
-                  <p className="text-gray-700">{item.answer}</p>
+                <div className="bg-[#e9e9e9] border-[1px] border-solid border-[#dddddd] leading-[22px] text-[20px] py-[30px] px-[10px]">
+                  <p className="text-[#212529]">{item.answer}</p>
                 </div>
               )}
             </div>
