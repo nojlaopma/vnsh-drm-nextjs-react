@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const TermsContent = () => {
   return (
-    <div className="prose max-w-none text-base font-arial">
+    <div className="max-w-none text-[16px] leading-[1.4] font-arial">
       <p className="font-semibold m-0 mb-2">Effective Date: January 1st, 2019</p>
       <p className="mb-4">To review material modifications and their effective dates scroll to the bottom of the page.</p>
       

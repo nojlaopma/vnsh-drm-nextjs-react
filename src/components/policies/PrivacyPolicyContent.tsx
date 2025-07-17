@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const PrivacyPolicyContent = () => {
   return (
-    <div className="prose max-w-none space-y-4 font-arial">
+    <div className="max-w-none space-y-4 text-[16px] leading-[1.4] font-arial">
       <p className="font-semibold">Effective Date: January 1st, 2019</p>
       <p>To review material modifications and their effective dates scroll to the bottom of the page.</p>
       

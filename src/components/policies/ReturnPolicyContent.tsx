@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const ReturnPolicyContent = () => {
   return (
-    <div className="prose max-w-none space-y-4 text-gray-700">
+    <div className="max-w-none space-y-4 text-[16px] leading-[1.4] font-arial">
       <p className="px-3">
         If you would like to return your purchase for a refund, you must reach out to customer support by either email or phone to receive a return merchandise authorization (RMA).
       </p>
