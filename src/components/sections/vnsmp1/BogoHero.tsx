@@ -28,7 +28,7 @@ const BogoHero = () => {
                 alt="VNSH Holster - Comfortable and Secure Concealed Carry"
                 width={300}
                 height={300}
-                className="w-[300px] h-[300px] md:w-[500px] md:h-[500px] mx-auto mt-[3.8px]"
+                className="w-[300px] h-[300px] md:w-[500px] md:h-[500px] mx-auto mt-[5px] md:mt-[3.8px]"
                 priority
                 />
             </div>

@@ -50,8 +50,8 @@ export default function VnshBlackBogo1Page({ params }: VnshBlackBogo1PageProps) 
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col bg-transparent font-arial">
-      <main className="bg-transparent">
+    <div className="w-full bg-[#fff] px-[10px] md:px-10 lg:px-[70px] max-w-[1200px] mx-auto relative overflow-hidden min-h-screen flex flex-col font-arial">
+      <main>
         <BogoHero />
         <BogoFeatures />
       </main>

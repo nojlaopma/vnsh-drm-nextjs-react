@@ -41,8 +41,8 @@ export default function vnls1Page({ params }: vnls1PageProps) {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col bg-transparent">
-      <main className="bg-transparent">
+    <div className="w-full bg-[#fff] md:px-8 lg:px-[70px] max-w-[1240px] mx-auto relative overflow-hidden min-h-screen flex flex-col px-[15px]">
+      <main>
         <BogoHero />
         <BogoFeatures />
       </main>

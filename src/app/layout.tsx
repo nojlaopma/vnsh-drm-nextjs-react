@@ -61,7 +61,7 @@ export default function RootLayout({
       <body className={`${inter.variable} ${montserrat.variable} font-sans bg-white text-gray-900 antialiased`}>
         <Header />
         <div className="min-h-screen w-full">
-          <main className="w-full bg-[#f7f4f4] md:px-8 lg:px-[70px] max-w-[1200px] mx-auto relative overflow-hidden">
+          <main>
             {/* Reserve space for any fixed/absolute positioned elements */}
             <div className="relative">
               {/* Add a placeholder for any potential content that might cause layout shifts */}

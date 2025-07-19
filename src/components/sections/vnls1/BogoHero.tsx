@@ -15,14 +15,14 @@ const BogoHero = () => {
   return (
     <section id="bogo-hero" className="sm:px-4 bg-white font-arial">
       <div className="max-w-[1265px] mx-auto font-arial">
-        <div className="text-center mb-5">
-          <h1 className="text-[23px] md:text-[38px] mb-4 leading-none font-arial">
+        <div className="text-center mb-[21px] md:mb-[21px]">
+          <h1 className="text-[23px] md:text-[38px] mb-4 md:mb-3 leading-[28px] md:leading-[43px] font-arial mt-[14px] md:mt-[10px]">
           Cutting-Edge Dry Fire System Maximizes Accuracy With <u>$0.00 Spent On Ammo and 0 Hours At the Range…</u>
           </h1>
-          <h1 className="text-center font-bold inline-block text-[34px] italic leading-none">(Train Like the Pros from the Comfort of Your Living Room!)</h1>
+          <h1 className="text-center font-bold inline-block text-[26px] md:text-[34px] italic leading-[30px] md:leading-none">(Train Like the Pros from the Comfort of Your Living Room!)</h1>
         </div>
         
-        <div className="w-full px-[100px] mb-8">
+        <div className="w-full md:px-[84px] mb-2">
           <VidalyticsPlayer 
             playerId="SvCThUZ_l0peXdh_" 
             className="w-full" 
@@ -34,17 +34,18 @@ const BogoHero = () => {
             <Button 
               variant="cta"
               size="lg"
-              className="w-[70%] mx-auto py-[25px] px-4 text-center font-bold animate-pulse-cta text-[1.125rem] md:text-[1.8rem] leading-[1.4] whitespace-normal break-words"
+              className="w-full md:w-[70%] mx-auto py-[30px] px-4 text-center font-bold animate-pulse-cta text-[1.425rem] md:text-[1.8rem] leading-[1.4] whitespace-normal break-words"
             >
               Yes! Give Me My Laser Strike System!
             </Button>
           </Link>
         </div>
-        <div className="w-full flex justify-center my-4">
-            <span className="font-bold text-center bg-[#ff0] text-[red] text-[22px]">
+        <div className="w-full text-center my-[15px] md:my-[31px]">
+            <span className="font-bold text-center bg-[#ff0] text-[red] text-[18px] md:text-[22px]">
               In Stock Now and Ships FREE!
             </span>
-          </div><br></br>
+          </div>
+          <br></br>
 
       </div>
     </section>

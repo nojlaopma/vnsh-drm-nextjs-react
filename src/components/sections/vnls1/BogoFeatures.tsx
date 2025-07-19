@@ -23,15 +23,15 @@ const BogoFeatures = () => {
 
   const featuresList = [
     {
-      title: 'The Laser Strike Cartridge:',
+      title: 'The Laser Strike Cartridge',
       description: 'Cased with a beautiful graf metal finish, our laser cartridge comes in a caliber of your choosing to fit perfectly in your firearm. It features a soft rubber backing that absorbs the impact of the firing pin and activates the laser with every trigger pull.'
     },
     {
-      title: 'The Laser Strike Target System:',
+      title: 'The Laser Strike Target System',
       description: 'Your Laser Strike comes with three targets and a tripod that function seamlessly with the companion smartphone app. Just hang up your target, put your phone on the tripod, do a quick calibration, then start training!'
     },
     {
-      title: 'Companion Smartphone App:',
+      title: 'Companion Smartphone App',
       description: 'Available for both Apple and Android phones, the free app that goes with your Laser Strike System offers innovative functionality that detects and records laser hits instantly, giving you additional insight with every shot.'
     }
   ];
@@ -61,9 +61,9 @@ const BogoFeatures = () => {
 
   return (
     <section className="pt-2 pb-6">
-      <div className="max-w-[1100px] mx-auto px-4 font-arial">
+      <div className="max-w-[1100px] mx-auto md:px-4 font-arial">
       <p 
-            className="text-center my-6 text-[26px] lg:text-[38px] text-[#f16500] font-bold leading-[1.2]"
+            className="text-center mb-[15px] md:my-6 text-[20px] mid:text-[26px] lg:text-[38px] text-[#f16500] font-bold leading-[1.2]"
           >
            <span className='text-[#dc3545]'>The Fastest, Easiest Way to</span>  Become An <u>Insanely Accurate Shooter</u> <span className='text-[#dc3545]'> (Guaranteed, Or You Don't Pay a Dime)</span>  
           </p>
@@ -97,14 +97,14 @@ const BogoFeatures = () => {
           
 
           <p 
-            className="text-center my-6 text-[26px] lg:text-[38px] text-[#f16500] font-bold leading-[1.2]"
+            className="text-center my-6 text-[20px] md:text-[26px] lg:text-[38px] text-[#f16500] font-bold leading-[1.2]"
           >
             You Will Become a Better Shot In Minutes –
             <span className='text-[#dc3545]'> Without Spending a Dime On Ammo or Range Time!</span>
           </p>
 
           <div className="w-full my-6 flex justify-center">
-            <div className="w-full md:w-[90%] lg:w-[65%] mx-auto">
+            <div className="w-full w-[80%] md:w-[90%] lg:w-[54%] mx-auto">
               <Image
                 src={images.laserStrike.laser1}
                 alt="60 Day Money Back Guarantee"
@@ -134,14 +134,14 @@ const BogoFeatures = () => {
           <Button 
               variant="cta"
               size="lg"
-              className="w-[70%] mx-auto py-[25px] px-4 text-center font-bold animate-pulse-cta text-[1.125rem] md:text-[1.8rem] leading-[1.4] whitespace-normal break-words"
+              className="w-full md:w-[50%] mx-auto py-[30px] px-4 text-center font-bold animate-pulse-cta text-[1.425rem] md:text-[1.8rem] leading-[1.4] whitespace-normal break-words"
             >
               Yes! Give Me My Laser Strike System!
             </Button>
           </Link>
         </div>
-        <div className="w-full flex justify-center my-4">
-            <span className="font-bold text-center bg-[#ff0] text-[red] text-[22px]">
+        <div className="w-full text-center my-[15px] md:my-[31px]">
+            <span className="font-bold text-center bg-[#ff0] text-[red] text-[18px] md:text-[22px]">
               In Stock Now and Ships FREE!
             </span>
           </div>
@@ -150,7 +150,7 @@ const BogoFeatures = () => {
 
 
           <p 
-            className="text-center my-6 text-[26px] lg:text-[38px] text-[#f16500] font-bold leading-[1.2]"
+            className="text-center my-6 text-[20px] md:text-[26px] lg:text-[38px] text-[#f16500] font-bold leading-[1.2]"
             
           >
             1000s and 1000s of Americans Have Used This to
@@ -167,7 +167,7 @@ const BogoFeatures = () => {
           
           <p className="mb-4">When asked “How often do you dry fire?” he replied…</p>
 
-          <p className="mb-4 italic bg-[yellow] font-bold">"In one form or another, just about every day. For sheer skill building I feel it has no equal. For every live round that I actually fire, <u>I probably mimic that round eight to 10 times in dry fire.</u>"</p>
+          <p className="mb-4 italic font-black"><span className="bg-[yellow]">"In one form or another, just about every day. For sheer skill building I feel it has no equal. For every live round that I actually fire, <u>I probably mimic that round eight to 10 times in dry fire.</u>"</span></p>
 
           <p className="mb-4">See, even the professionals can’t afford to spend countless hours in the range.</p>
 
@@ -190,28 +190,28 @@ const BogoFeatures = () => {
           <Button 
               variant="cta"
               size="lg"
-              className="w-[70%] mx-auto py-[25px] px-4 text-center font-bold animate-pulse-cta text-[1.125rem] md:text-[1.8rem] leading-[1.4] whitespace-normal break-words"
+              className="w-full md:w-[50%] mx-auto py-[30px] px-4 text-center font-bold animate-pulse-cta text-[1.425rem] md:text-[1.8rem] leading-[1.4] whitespace-normal break-words"
             >
               Yes! Give Me My Laser Strike System!
             </Button>
           </Link>
         </div>
-        <div className="w-full flex justify-center my-4">
-        <span className="font-bold text-center bg-[#ff0] text-[red] text-[22px]">
+        <div className="w-full text-center my-[15px] md:my-[31px]">
+            <span className="font-bold text-center bg-[#ff0] text-[red] text-[18px] md:text-[22px]">
               In Stock Now and Ships FREE!
             </span>
           </div>
 
 
           <p 
-            className="text-center my-6 text-[26px] lg:text-[38px] text-[#f16500] font-bold leading-[1.2]">
+            className="text-center my-6 text-[20px] md:text-[26px] lg:text-[38px] text-[#f16500] font-bold leading-[1.2]">
             The Laser Strike System Is<br></br>
             <span className="text-[#dc3545]"> Stupid-Simple to Use!</span>
           </p>
 
 
           <div className="w-full my-6 flex justify-center">
-            <div className="w-full md:w-[90%] lg:w-[80%] mx-auto">
+            <div className="w-full w-[80%] md:w-[90%] lg:w-[80%] mx-auto">
               <Image
                 src={images.laserStrike.demo}
                 alt="Laser Strike Demo"
@@ -260,9 +260,10 @@ const BogoFeatures = () => {
           <hr></hr>
 
           <p 
-            className="text-center my-6 text-[26px] lg:text-[38px] text-[#f16500] font-bold leading-[1.2]"
+            className="mx-[15px] md:mx-[31px] text-center my-6 text-[20px] md:text-[26px] lg:text-[38px] text-[#f16500] font-bold leading-[1.2]"
           >
-            <span className='text-[#dc3545]'>6 Reasons</span> the Laser Strike Will Help You Make the Shot <br></br> <span className='text-[#dc3545]'>You Can’t Afford to Miss…</span>
+            <span className='text-[#dc3545]'>6 Reasons</span> the Laser Strike Will Help You Make the Shot
+            <span className='text-[#dc3545]'> You Can’t Afford to Miss…</span>
           </p>
           
 
@@ -463,21 +464,21 @@ const BogoFeatures = () => {
           <Button 
               variant="cta"
               size="lg"
-              className="w-[70%] mx-auto py-[25px] px-4 text-center font-bold animate-pulse-cta text-[1.125rem] md:text-[1.8rem] leading-[1.4] whitespace-normal break-words"
+              className="w-full md:w-[50%] mx-auto py-[30px] px-4 text-center font-bold animate-pulse-cta text-[1.425rem] md:text-[1.8rem] leading-[1.4] whitespace-normal break-words"
             >
               Yes! Give Me My Laser Strike System!
             </Button>
           </Link>
         </div>
-        <div className="w-full flex justify-center my-4">
-        <span className="font-bold text-center bg-[#ff0] text-[red] text-[22px]">
+        <div className="w-full text-center my-[15px] md:my-[31px]">
+            <span className="font-bold text-center bg-[#ff0] text-[red] text-[18px] md:text-[22px]">
               In Stock Now and Ships FREE!
             </span>
           </div>
 
 
           <p 
-            className="text-center my-6 text-[26px] lg:text-[38px] text-[#f16500] font-bold leading-[1.2]"
+            className="text-center my-6 text-[18px] md:text-[26px] lg:text-[38px] text-[#f16500] font-bold leading-[1.2]"
           >
             We Give You An
             <span className='text-[#dc3545]'> Iron-Clad,
@@ -486,7 +487,7 @@ const BogoFeatures = () => {
 
           
           <div className="w-full flex justify-center my-6">
-            <div className="w-[90%] md:w-[90%] lg:w-[30%] mx-auto">
+            <div className="w-[70%] md:w-[90%] lg:w-[30%] mx-auto">
               <Image
                 src={images.guarantee.moneyBack}
                 alt="Money-Back Guarantee"
@@ -528,9 +529,9 @@ const BogoFeatures = () => {
           <hr></hr>
 
           <p 
-            className="text-center my-6 text-[26px] lg:text-[38px] text-[#f16500] font-bold leading-[1.2]"
+            className="text-center my-6 text-[18px] md:text-[26px] lg:text-[38px] text-[#f16500] font-bold leading-[1.2]"
           >
-            Don’t Wait… Leave Now and Your Chance to Lock In <br></br>Today’s Low Price <span className='text-[#dc3545]'>May Not Come Again!</span>
+            Don’t Wait… Leave Now and Your Chance to Lock In Today’s Low Price <span className='text-[#dc3545]'>May Not Come Again!</span>
           </p>
 
           <p className="mb-4 font-bold italic">If you want the <u>fastest, easiest possible way</u> to maximize your accuracy and confidence…</p>
@@ -546,19 +547,19 @@ const BogoFeatures = () => {
           <p className="mb-4">Grab your Laser Strike System NOW!</p>
 
 
-          <div className="text-center mt-8 mb-12">
-            <Link href={checkoutUrl} className="w-full">
-            <Button 
+          <div className="text-center">
+          <Link href={checkoutUrl} className="w-full" target="_blank" rel="noopener noreferrer">
+          <Button 
               variant="cta"
               size="lg"
-              className="w-[70%] mx-auto py-[25px] px-4 text-center font-bold animate-pulse-cta text-[1.125rem] md:text-[1.8rem] leading-[1.4] whitespace-normal break-words"
+              className="w-full w-[50%] md:w-[70%] mx-auto py-[30px] px-4 text-center font-bold animate-pulse-cta text-[1.425rem] md:text-[1.8rem] leading-[1.4] whitespace-normal break-words"
             >
               Yes! Give Me My Laser Strike System!
             </Button>
-            </Link>
-          </div>
-          <div className="w-full flex justify-center my-4">
-          <span className="font-bold text-center bg-[#ff0] text-[red] text-[22px]">
+          </Link>
+        </div>
+        <div className="w-full text-center my-[15px] md:my-[31px]">
+            <span className="font-bold text-center bg-[#ff0] text-[red] text-[18px] md:text-[22px]">
               In Stock Now and Ships FREE!
             </span>
           </div>
@@ -575,7 +576,7 @@ const BogoFeatures = () => {
                 alt: '60 Day Money Back Guarantee'
               },
               title: '60 Day Money Back Guarantee',
-              description: 'No question asked 60 day refund or replacement guaranteed. If you are unhappy for any reason, get your money back.'
+              description: 'No question asked 60 day refund or replacement guaranteed. If you are unhappy for any reason, get your money back. Rock solid guarantee...'
             },
             {
               image: {
@@ -590,12 +591,15 @@ const BogoFeatures = () => {
               image: {
                 mobile: images.features.securePayment,
                 desktop: images.features.securePayment,
-                alt: '100% Secure Payment'
+                alt: '100% Secure Payment',
+                imageHeight: 128,
+                imageWidth: 102,
+                className: 'md:mb-[20px]'
               },
               title: '100% Secure Payment',
               description: 'All orders are AES-256 Bit encrypted through a HTTPS secure network. We respect your privacy.'
             }
-          ]} />
+          ]}  className="mb-[-8px]" />
           
         </div>
       </div>
@@ -632,24 +636,20 @@ const FAQ = () => {
       question: 'Q: Will I Need to Rerack After Every Shot?',
       answer: 'A: Yes, the smartphone app needed to use the Laser Strike System is available for all Apple and Android phones.'
     },
-    {
-      question: 'Q: Will I Need to Rerack After Every Shot?',
-      answer: 'A: It depends, if you are using a single and double action weapon you can manually reset the hammer without the need to rerack the slide for a reset. Internally hammer-fired guns like Glocks will re-racking between each shot. If you understand that proper dryfire is not affected with re-racking, this is a non-issue and won’t be creating any bad habits.'
-    }
   ];
 
   return (
-    <div className="w-full px-4 my-12">
+    <div className="w-full px-4 md:mt[10px] md:mb-[30px]">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-8 text-[#f16500]">Frequently Answered Questions About the VNSH Laser Strike Training System</h2>
+        <h2 className="text-[20px] md:text-[38px] md:leading-[42px] font-bold text-center mb-5 text-[#f16500]">Frequently Answered Questions About the VNSH Laser Strike Training System</h2>
         <div className="space-y-2">
           {faqItems.map((item, index) => (
-            <div key={index} className="border border-gray-200 overflow-hidden">
+            <div key={index} className="overflow-hidden md:mx-[-14px]">
               <button
-                className="w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 transition-colors text-left cursor-pointer text-[20px] text-[#007bff] font-bold"
+                className="w-full flex justify-between items-center py-[6.5px] px-[10px] bg-[#f2f2f2] hover:bg-gray-100 transition-colors text-left cursor-pointer text-[20px] font-bold text-[#007bff] md:mt-[2.1px]"
                 onClick={() => toggleFAQ(index)}
               >
-                <span className="flex-grow">{item.question}</span>
+                <span className="flex-grow text-[18px] md:text-[20px]">{item.question}</span>
                 <span className="text-[#007bff] transform transition-transform duration-200 ml-4 flex-shrink-0">
                   {openIndex === index ? '▲' : '▼'}
                 </span>

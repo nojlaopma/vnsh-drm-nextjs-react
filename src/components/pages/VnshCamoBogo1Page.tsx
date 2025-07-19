@@ -26,14 +26,14 @@ export default function VnshCamoBogo1Page({ params }: VnshCamoBogo1PageProps) {
     const header = document.querySelector('header');
     if (header) {
       const floater = document.createElement('div');
-      floater.className = 'banner-floater w-full bg-[#2afe4e] text-center sticky top-0 z-10 text-[22px] leading-[2.5] font-bold text-black font-arial';
+      floater.className = 'banner-floater w-full bg-[#2afe4e] text-center sticky top-0 z-10 text-[20px] md:text-[22px] md:leading-[2.5] leading-[1.5] font-bold text-black font-arial';
       
       const link = document.createElement('span');
       link.className = 'hover:underline block w-full';
       link.textContent = 'Buy 1 Get 1 FREE Blowout On Limited-Run Camo Holsters!';
       
       const container = document.createElement('div');
-      container.className = 'max-w-[1265px] mx-auto px-4 md:px-8 lg:px-[70px]';
+      container.className = 'max-w-[1265px] mx-auto md:px-4 md:px-8 lg:px-[70px]';
       container.appendChild(link);
       
       floater.appendChild(container);
@@ -58,8 +58,8 @@ export default function VnshCamoBogo1Page({ params }: VnshCamoBogo1PageProps) {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col bg-transparent font-arial">
-      <main className="bg-transparent">
+    <div className="w-full bg-[#fff] px-[10px] md:px-10 lg:px-[70px] max-w-[1200px] mx-auto relative overflow-hidden min-h-screen flex flex-col font-arial">
+      <main>
         <BogoHero />
         <BogoFeatures />
       </main>

@@ -28,8 +28,8 @@ export default function Vnsmp1Page({ params }: Vnsmp1PageProps) {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col bg-transparent font-arial">
-      <main className="bg-transparent">
+    <div className="w-full bg-[#fff] md:px-8 lg:px-[70px] max-w-[1200px] mx-auto relative overflow-hidden min-h-screen flex flex-col px-[15px] font-arial">
+      <main>
         <BogoHero />
         <BogoFeatures />
       </main>

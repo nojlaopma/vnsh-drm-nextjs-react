@@ -35,30 +35,30 @@ const BogoFeatures = () => {
   }, []);
 
   return (
-    <section className="pt-[19px] pb-6">
+    <section className="pt-[20px] md:pt-[19px] pb-6">
       <div className="max-w-[1100px] mx-auto px-1 font-arial">
       
-      <p className="text-center text-[23px] md:text-[38px] text-[#f16500] font-bold leading-[26px] md:leading-[44px] px-[10px] md:px-[100px]">
+      <p className="text-center text-[23px] md:text-[38px] text-[#f16500] font-bold leading-[27px] md:leading-[43px] px-[10px] md:px-[125px]">
             Why Adding This to Your CCW Rig Lets You <span className="text-[#ff0000]">Be Ready for Anything...</span>
           </p>
         
-        <div className="text-left text-[18px] md:text-[22px] text-black mt-[39px] leading-[26px]">
+        <div className="text-left text-[20px] md:text-[22px] mt-[30px] md:mt-[42px] leading-[26px] mx-[-3px] md:mx-[16px]">
 
-          <p className='mb-[23px]'>Let’s be honest, there's never such a thing as too much ammo.</p>
+          <p className='md:mb-[22px] mb-[20px]'>Let’s be honest, there's never such a thing as too much ammo.</p>
           
-          <p className="mb-[23px]">And if you own a VNSH holster, you’re already aware it’s a leader in its class with how many rounds it lets you carry.</p>
+          <p className="md:mb-[22px] mb-[20px]">And if you own a VNSH holster, you’re already aware it’s a leader in its class with how many rounds it lets you carry.</p>
           
-          <p className="mb-[23px]">But what if you want to add <b className='italic'>even more ammo</b> … or use the pockets on your VNSH holster for a knife or light?</p>
+          <p className="md:mb-[22px] mb-[20px]">But what if you want to add <b className='italic'>even more ammo</b> … or use the pockets on your VNSH holster for a knife or light?</p>
           
-          <p className="mb-[23px]">Or maybe you want to reload from your support side, not your strong side.</p>
+          <p className="md:mb-[22px] mb-[20px]">Or maybe you want to reload from your support side, not your strong side.</p>
           
-          <p className="mb-[23px] underline">That’s why we made the VNSH Support-Side Mag Pouch.</p>
+          <p className="md:mb-[22px] mb-[20px] underline">That’s why we made the VNSH Support-Side Mag Pouch.</p>
           
-          <p className="mb-[23px]">Not only does it let you carry an <b>absolutely massive load of ammo</b>…</p>
+          <p className="md:mb-[22px] mb-[20px]">Not only does it let you carry an <b>absolutely massive load of ammo</b>…</p>
           
-          <p className="mb-[23px]">But it also <b>prevents you from having to reach across your body</b> to reload – saving you precious time in a conflict and preserving your stance.</p>
+          <p className="md:mb-[22px] mb-[20px]">But it also <b>prevents you from having to reach across your body</b> to reload – saving you precious time in a conflict and preserving your stance.</p>
           
-          <p className="mb-[23px]">There’s no two ways about it.</p>
+          <p className="md:mb-[22px] mb-[20px]">There’s no two ways about it.</p>
           
           <p className="mb-4">This support-side mag pouch is <b className='italic'>perfect for anyone who wants to</b>…</p>
           
@@ -451,7 +451,7 @@ const BogoFeatures = () => {
               title: '100% Secure Payment',
               description: 'All orders are AES-256 Bit encrypted through a HTTPS secure network. We respect your privacy...',
             }
-          ]} />
+          ]}  />
           
         </div>
       </div>

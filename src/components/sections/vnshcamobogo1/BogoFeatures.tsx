@@ -45,12 +45,12 @@ const BogoFeatures = () => {
   };
 
   return (
-    <section className="pb-6 ml-[-8px] mr-[-8px]">
+    <section className="pb-[19px] md:pb-6 mx-[5px] md:ml-[-8px] md:mr-[-8px] mt-[15px]">
       <div className="w-full font-arial">
         {/* Responsive Image */}
-        <div className="w-full overflow-hidden flex justify-center mt-[30px] mb-[25px]">
+        <div className="w-full overflow-hidden flex justify-center mt-[20px] md:mt-[30px] mb-[25px]">
           <div className="relative w-full max-w-[100%] mx-auto">
-            <div className='relative w-[90%] max-w-[100%] mx-auto overflow-hidden pb-[50%]'>
+            <div className='relative w-[84%] md:w-[90%] max-w-[100%] mx-auto overflow-hidden pb-[50%]'>
               <Image
                 src="/images/holster/VNSH_Camo_BOGO.webp"
                 alt="VNSH Camo Holster - Limited Time BOGO Offer"
@@ -521,7 +521,8 @@ const BogoFeatures = () => {
                 desktop: images.features.securePayment,
                 alt: '100% Secure Payment',
                 imageHeight: 128,
-                imageWidth: 102
+                imageWidth: 102,
+                className: 'mb-[20px]'
               },
               title: '100% Secure Payment',
               description: 'All orders are AES-256 Bit encrypted through a HTTPS secure network. We respect your privacy...'
@@ -576,10 +577,10 @@ const FAQ = () => {
   return (
     <div className="w-full ">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-8">Frequently Asked Questions</h2>
+        <h2 className="text-3xl font-bold text-center mb-8"></h2>
         <div className="space-y-2">
           {faqItems.map((item, index) => (
-            <div key={index} className="overflow-hidden md:mx-[-28px]">
+            <div key={index} className="overflow-hidden md:mx-[-12px]">
               <button
                 className="w-full flex justify-between items-center py-[6.5px] px-[10px] bg-[#f2f2f2] hover:bg-gray-100 transition-colors text-left cursor-pointer text-[20px] font-bold text-[#007bff] md:mt-[2.1px]"
                 onClick={() => toggleFAQ(index)}

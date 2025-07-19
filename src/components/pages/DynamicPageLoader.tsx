@@ -46,5 +46,6 @@ export default function DynamicPageLoader({ params, searchParams = {} }: PagePro
     ? Object.fromEntries(searchParams.entries())
     : searchParams;
 
-  return <PageComponent params={params} searchParams={safeSearchParams} />;
+  return <PageComponent params={params} searchParams={safeSearchParams} />
+
 }

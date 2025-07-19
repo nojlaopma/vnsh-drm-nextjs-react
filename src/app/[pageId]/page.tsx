@@ -23,6 +23,8 @@ export async function generateMetadata({ params }: { params: { pageId: string } 
     vnsmp1: 'Vintage Nylon Shoulder Bag - Multi-Pack',
   
     'vnls1': 'Vnsh Black Bogo1',
+  
+    'vns3mmbonus': 'vnsmp1',
   };
 
   return {
