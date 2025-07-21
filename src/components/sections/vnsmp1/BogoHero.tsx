@@ -16,7 +16,7 @@ const BogoHero = () => {
     <section id="bogo-hero" className="sm:px-4 bg-white font-arial pt-[20px]">
       <div className="mx-auto sm:px-4">
         <div className="text-center">
-          <h1 className="text-[23px] md:text-[38px] mb-1 md:mb-4 leading-[1.2] md:leading-[1.15] italic">
+          <h1 className="text-[23px] md:text-[38px] mb-1 md:mb-4 leading-[1.2] md:leading-[43px] italic">
          Carry Even MORE Ammo and <b>Reload Lightning Fast</b> With the VNSH Support-Side Mag Pouch...
           </h1>
         </div>

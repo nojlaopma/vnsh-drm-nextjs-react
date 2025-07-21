@@ -19,6 +19,8 @@ const Footer = () => {
 
   const isVnls2 = pathname?.includes('vnls2');
 
+  const isVns3mmbonus = pathname?.includes('vns3mmbonus');
+
   let maxWidth = 'max-w-[1200px]';
   let paddingBottom = '';
   let backgroundColor = 'bg-[#f7f4f4]';
@@ -33,7 +35,7 @@ const Footer = () => {
     paddingBottom = 'pb-[34px]';
   }else if( pathname.includes('vnls2') ) {
     maxWidth = 'max-w-[1240px]';
-    backgroundColor = 'bg-[#fff] md:bg-[#f7f4f4]';
+    backgroundColor = 'bg-[#f7f4f4] md:bg-[#f7f4f4]';
     footerLinkGap = 'gap-[16px]';
   }else if( isVnshbogo ) {
     footerLinkPaddingBottom = 'pb-[54px]';
@@ -41,7 +43,7 @@ const Footer = () => {
     copyRightText = 'text-center color-[#212529]';
     footerLinkMarginTop = 'mt-[17px] md:mt-[0]';
     footerCopyrightMarginBottom = 'mb-[-4px] md:mb-[0]';
-  }else if( pathname.includes('vnsmp1') ) {
+  }else if( pathname.includes('vnsmp1') || pathname.includes('vns3mmbonus') ) {
     footerLinkPaddingBottom = 'pb-[50px]';
     footerLinkGap = 'md:gap-[16px]';
     copyRightText = 'text-center text-[18px]';
@@ -112,7 +114,7 @@ const Footer = () => {
 
       <div className="max-w-[1100px] mx-auto px-4 font-arial">
         <div id="footer-copyright" className={`${copyRightText} ${footerCopyrightMarginBottom}`}>
-          &copy; {currentYear} VNSH.com{isVnshbogo || isVnls2 ? '.' : ''} All Rights Reserved.
+          &copy; {currentYear} VNSH.com{isVnshbogo || isVnls2 || isVns3mmbonus ? '.' : ''} All Rights Reserved.
         </div>
         
         <div id="footer-links" className={`flex flex-wrap justify-center gap-4 w-full text-[18px] leading-[0.8] ${footerLinkPaddingBottom}`}>

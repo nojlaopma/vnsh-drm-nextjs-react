@@ -35,7 +35,7 @@ const BogoFeatures = () => {
   }, []);
 
   return (
-    <section className="pt-[20px] md:pt-[19px] pb-6">
+    <section className="pt-[20px] md:pt-[20px] pb-6">
       <div className="max-w-[1100px] mx-auto px-1 font-arial">
       
       <p className="text-center text-[23px] md:text-[38px] text-[#f16500] font-bold leading-[27px] md:leading-[43px] px-[10px] md:px-[125px]">
@@ -451,7 +451,7 @@ const BogoFeatures = () => {
               title: '100% Secure Payment',
               description: 'All orders are AES-256 Bit encrypted through a HTTPS secure network. We respect your privacy...',
             }
-          ]}  />
+          ]} className='' />
           
         </div>
       </div>

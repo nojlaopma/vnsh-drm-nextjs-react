@@ -134,7 +134,7 @@ const BogoFeatures = () => {
           <Button 
               variant="cta"
               size="lg"
-              className="w-full md:w-[50%] mx-auto py-[30px] px-4 text-center font-bold animate-pulse-cta text-[1.425rem] md:text-[1.8rem] leading-[1.4] whitespace-normal break-words"
+              className="w-full md:w-[70%] mx-auto py-[30px] px-4 text-center font-bold animate-pulse-cta text-[1.425rem] md:text-[1.8rem] leading-[1.4] whitespace-normal break-words"
             >
               Yes! Give Me My Laser Strike System!
             </Button>
@@ -190,7 +190,7 @@ const BogoFeatures = () => {
           <Button 
               variant="cta"
               size="lg"
-              className="w-full md:w-[50%] mx-auto py-[30px] px-4 text-center font-bold animate-pulse-cta text-[1.425rem] md:text-[1.8rem] leading-[1.4] whitespace-normal break-words"
+              className="w-full md:w-[70%] mx-auto py-[30px] px-4 text-center font-bold animate-pulse-cta text-[1.425rem] md:text-[1.8rem] leading-[1.4] whitespace-normal break-words"
             >
               Yes! Give Me My Laser Strike System!
             </Button>
@@ -464,7 +464,7 @@ const BogoFeatures = () => {
           <Button 
               variant="cta"
               size="lg"
-              className="w-full md:w-[50%] mx-auto py-[30px] px-4 text-center font-bold animate-pulse-cta text-[1.425rem] md:text-[1.8rem] leading-[1.4] whitespace-normal break-words"
+              className="w-full md:w-[70%] mx-auto py-[30px] px-4 text-center font-bold animate-pulse-cta text-[1.425rem] md:text-[1.8rem] leading-[1.4] whitespace-normal break-words"
             >
               Yes! Give Me My Laser Strike System!
             </Button>
@@ -552,7 +552,7 @@ const BogoFeatures = () => {
           <Button 
               variant="cta"
               size="lg"
-              className="w-full w-[50%] md:w-[70%] mx-auto py-[30px] px-4 text-center font-bold animate-pulse-cta text-[1.425rem] md:text-[1.8rem] leading-[1.4] whitespace-normal break-words"
+              className="w-full md:w-[70%] mx-auto py-[30px] px-4 text-center font-bold animate-pulse-cta text-[1.425rem] md:text-[1.8rem] leading-[1.4] whitespace-normal break-words"
             >
               Yes! Give Me My Laser Strike System!
             </Button>
@@ -655,7 +655,7 @@ const FAQ = () => {
                 </span>
               </button>
               {openIndex === index && (
-                <div className="p-4 bg-white border-t border-gray-100">
+                <div className="bg-[#e9e9e9] border-[1px] border-solid border-[#dddddd] leading-[22px] text-[20px] py-[30px] px-[10px]">
                   <p className="text-gray-700 text-[20px]">{item.answer}</p>
                 </div>
               )}
