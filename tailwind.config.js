@@ -19,6 +19,12 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['sans-serif'],
+        heading: ['Montserrat', 'sans-serif'],
+        'arial': ['Arial', 'sans-serif'],
+        appleemoji: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji']
+      },
       colors: {
         // Primary brand colors
         primary: {
@@ -96,11 +102,6 @@ module.exports = {
           DEFAULT: '#dc3545',
           dark: '#c82333',
         },
-      },
-      fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        heading: ['Montserrat', 'sans-serif'],
-        'arial': ['Arial', 'sans-serif'],
       },
       boxShadow: {
         'lg': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',

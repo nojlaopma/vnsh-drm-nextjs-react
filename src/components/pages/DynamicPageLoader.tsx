@@ -12,6 +12,7 @@ const pageComponents = {
   vnsmp1: dynamic(() => import('./Vnsmp1Page'), { ssr: false }),
   vnls1: dynamic(() => import('./vnls1Page'), { ssr: false }),
   vns3mmbonus: dynamic(() => import('./vns3mmbonusPage'), { ssr: false }),
+  vnshlite1: dynamic(() => import('./vnshlite1Page'), { ssr: false }),
 } as const;
 
 type PageId = keyof typeof pageComponents;
@@ -48,6 +49,7 @@ export default function DynamicPageLoader({ params, searchParams = {} }: PagePro
     : searchParams;
 
   return <PageComponent params={params} searchParams={safeSearchParams} />
+
 
 
 }

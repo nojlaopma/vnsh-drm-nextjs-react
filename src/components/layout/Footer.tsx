@@ -16,10 +16,9 @@ const Footer = () => {
 
   const bogoValues = ['vnshblackbogo1', 'vnshcamobogo1'];
   const isVnshbogo = bogoValues.some(value => pathname?.includes(value));
-
   const isVnls2 = pathname?.includes('vnls2');
-
   const isVns3mmbonus = pathname?.includes('vns3mmbonus');
+  const isVnshlite1 = pathname?.includes('vnshlite1');
 
   let maxWidth = 'max-w-[1200px]';
   let paddingBottom = '';
@@ -37,7 +36,11 @@ const Footer = () => {
     maxWidth = 'max-w-[1240px]';
     backgroundColor = 'bg-[#f7f4f4] md:bg-[#f7f4f4]';
     footerLinkGap = 'gap-[16px]';
-  }else if( isVnshbogo ) {
+  }else if( isVnshlite1 ) {
+    maxWidth = 'max-w-[1140px]';
+    backgroundColor = 'bg-[#f7f4f4] md:bg-[#f7f4f4]';
+  }
+  else if( isVnshbogo ) {
     footerLinkPaddingBottom = 'pb-[54px]';
     footerLinkGap = 'md:gap-[11px]';
     copyRightText = 'text-center color-[#212529]';
@@ -66,6 +69,108 @@ const Footer = () => {
   const openModal = (modalName: string) => setActiveModal(modalName);
   const closeModal = () => setActiveModal(null);
   
+  if( isVnshlite1 ){
+    return (
+      <footer className={`${maxWidth} ${backgroundColor} w-full px-0 md:px-8 md:px-[70px] mx-auto font-arial  md:pb-[42px] pb-[20px] md:pb-[0]`}>
+        {/* Terms & Conditions Modal */}
+        <PolicyModal 
+          isOpen={activeModal === 'terms'} 
+          onClose={closeModal}
+          title="Terms & Disclaimer"
+        >
+          <PolicyContent >
+            <TermsContent />
+          </PolicyContent>
+        </PolicyModal>
+  
+        {/* Privacy Policy Modal */}
+        <PolicyModal 
+          isOpen={activeModal === 'privacy'} 
+          onClose={closeModal}
+          title="Privacy Policy"
+        >
+          <PolicyContent>
+            <PrivacyPolicyContent />
+          </PolicyContent>
+        </PolicyModal>
+  
+        {/* Shipping Policy Modal */}
+        <PolicyModal 
+          isOpen={activeModal === 'shipping'} 
+          onClose={closeModal}
+          title="Shipping Policy"
+        >
+          <PolicyContent>
+            <ShippingPolicyContent />
+          </PolicyContent>
+        </PolicyModal>
+  
+        {/* Return Policy Modal */}
+        <PolicyModal 
+          isOpen={activeModal === 'returns'} 
+          onClose={closeModal}
+          title="Return Policy"
+        >
+          <PolicyContent>
+            <ReturnPolicyContent />
+          </PolicyContent>
+        </PolicyModal>
+  
+        <div className="max-w-[1100px] mx-auto font-arial text-center text-[17.5px] leading-[45px] md:leading-[24px] font-400">
+          <div id="footer-copyright" className="break-words mx-[-5.5px] md:mx-[0]">
+            &copy; {currentYear} VNSH.com. All Rights Reserved. 
+            <span 
+                onClick={() => setActiveModal('terms')}
+                className={`bg-transparent border-none text-[#212529] cursor-pointer p-0 no-underline px-[2px] w-full sm:w-auto ${footerLinkMarginTop}`}
+                aria-label="View Terms & Disclaimer"
+              >&nbsp;Terms & Disclaimer&nbsp;|
+              </span>
+              <span 
+                onClick={() => setActiveModal('privacy')}
+                className={`bg-transparent border-none text-[#212529] cursor-pointer p-0 no-underline px-[2px] w-full sm:w-auto ${footerLinkMarginTop}`}
+                aria-label="View Privacy Policy"
+              >&nbsp;Privacy Policy&nbsp;|
+              </span>
+
+              <span 
+                onClick={() => setActiveModal('shipping')}
+                className={`bg-transparent border-none text-[#212529] cursor-pointer p-0 no-underline px-[2px] w-full sm:w-auto ${footerLinkMarginTop}`}
+                aria-label="View Shipping Policy"
+              >&nbsp;Shipping Policy&nbsp;|
+              </span>
+              <span 
+                onClick={() => setActiveModal('returns')}
+                className={`bg-transparent border-none text-[#212529] cursor-pointer p-0 no-underline px-[2px] w-full sm:w-auto ${footerLinkMarginTop}`}
+                aria-label="View Return Policy"
+              >&nbsp;Return Policy&nbsp;
+              </span>
+
+          </div>
+          
+          
+          {logoPath && (
+            <div className="footer-logo-container flex justify-center pb-[53px] mt-[5px]">
+              <div className="w-[225px] md:w-[325px]">
+                <Image 
+                  src={logoPath}
+                  alt="VNSH Logo" 
+                  width={225} 
+                  height={75} 
+                  className="w-full h-auto"
+                  loading="lazy"
+                  decoding="async"
+                  quality={85}
+                  sizes="(max-width: 768px) 100vw, 225px"
+                />
+              </div>
+            </div>
+          )}
+        </div>
+      </footer>
+    );
+  }
+
+
   return (
     <footer className={`${maxWidth} ${backgroundColor} w-full px-4 md:px-8 lg:px-[70px] mx-auto font-arial ${paddingBottom}`}>
       {/* Terms & Conditions Modal */}

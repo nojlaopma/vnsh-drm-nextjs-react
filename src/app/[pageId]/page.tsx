@@ -27,6 +27,8 @@ export async function generateMetadata({ params }: { params: { pageId: string } 
     'vns3mmbonus': 'vnsmp1',
   
     'vns3mmbonus': 'vnshblackbogo1',
+  
+    'vnshlite1': 'vns3mmbonus',
   };
 
   return {

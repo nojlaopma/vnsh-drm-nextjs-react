@@ -100,7 +100,40 @@ const FeatureGrid = ({ items, className = '' }: { items: FeatureItem[]; classNam
         </div>
       </div>
     );
+  }else if(pathname?.includes('vnshlite1')){
+    return (
+      <div className={`w-full ${className}`} >
+        <div className={`max-w-7xl mx-auto px-4 ml-[-20px] mr-[-20px] md:ml-[-40px] md:mr-[-40px] mb-[7px]`}>
+          <div className={`grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-4`}>
+            {items.map((item, index) => (
+              <div key={index} className="flex flex-col items-center text-center">
+                <div className="mb-[1px]">
+                  <div className={`relative w-[${item.image.imageHeight ?? 129}px] h-[${item.image.imageWidth ?? 129}px] mx-auto`}>
+                    <Image
+                      src={item.image.desktop}
+                      alt={item.image.alt}
+                      className={`object-contain ${item.image.className}`}
+                      sizes="(max-width: 768px) ${item.image.imageHeight ?? 129}px, ${item.image.imageWidth ?? 129}px"
+                      height={item.image.imageHeight ?? 129}
+                      width={item.image.imageWidth ?? 129}
+                    />
+                  </div>
+                </div>
+                <h3 className="text-[17.6px] font-bold text-[#212529]">{item.title}</h3>
+                <p className="text-[17.6px] text-center text-[#212529] leading-[35px] md:leading-[32px] mx-auto">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    );
   }
+  
+
+
+
+
+
   return (
     <div className={`w-full ${className}`} >
       <div className={`max-w-7xl mx-auto px-4 ml-[-20px] mr-[-20px] md:ml-[-80px] md:mr-[-80px] mb-[7px]`}>
