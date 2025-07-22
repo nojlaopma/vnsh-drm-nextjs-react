@@ -558,7 +558,7 @@ const BogoFeatures = () => {
             </Button>
           </Link>
         </div>
-        <div className="w-full text-center my-[15px] md:my-[31px]">
+        <div className="w-full text-center my-[15px] md:mt-[20px] md:mb-[25px]">
             <span className="font-bold text-center bg-[#ff0] text-[red] text-[18px] md:text-[22px]">
               In Stock Now and Ships FREE!
             </span>
@@ -639,7 +639,7 @@ const FAQ = () => {
   ];
 
   return (
-    <div className="w-full px-4 md:mt[10px] md:mb-[30px]">
+    <div className="w-full px-4 md:mt[10px] md:mb-[42px]">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-[20px] md:text-[38px] md:leading-[42px] font-bold text-center mb-5 text-[#f16500]">Frequently Answered Questions About the VNSH Laser Strike Training System</h2>
         <div className="space-y-2">
