@@ -23,6 +23,7 @@ const Header = () => {
   const isVnls = pathname?.includes('vnls2') || pathname?.includes('vnls1');
   const isVnls2 = pathname?.includes('vnls2');
   const isVnshlite1 = pathname?.includes('vnshlite1');
+  const isVnsmm1 = pathname?.includes('vnsmm1');
 
   const logoSize = isBogoPage ? BOGO_LOGO_SIZE : DEFAULT_LOGO_SIZE;
 
@@ -45,7 +46,7 @@ const Header = () => {
     );
   }
 
-  if( isVnshlite1 ){
+  if( isVnshlite1 || isVnsmm1){
     return(
     <header className="bg-black font-arial">
       <div className="max-w-[1265px] mx-auto px-4 md:px-8 md:px-[70px]">

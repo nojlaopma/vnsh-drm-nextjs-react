@@ -19,6 +19,7 @@ const Footer = () => {
   const isVnls2 = pathname?.includes('vnls2');
   const isVns3mmbonus = pathname?.includes('vns3mmbonus');
   const isVnshlite1 = pathname?.includes('vnshlite1');
+  const isVnsmm1 = pathname?.includes('vnsmm1');
 
   let maxWidth = 'max-w-[1200px]';
   let paddingBottom = '';
@@ -36,7 +37,7 @@ const Footer = () => {
     maxWidth = 'max-w-[1240px]';
     backgroundColor = 'bg-[#f7f4f4] md:bg-[#f7f4f4]';
     footerLinkGap = 'gap-[16px]';
-  }else if( isVnshlite1 ) {
+  }else if( isVnshlite1  || isVnsmm1) {
     maxWidth = 'max-w-[1140px]';
     backgroundColor = 'bg-[#f7f4f4] md:bg-[#f7f4f4]';
   }
@@ -69,7 +70,7 @@ const Footer = () => {
   const openModal = (modalName: string) => setActiveModal(modalName);
   const closeModal = () => setActiveModal(null);
   
-  if( isVnshlite1 ){
+  if( isVnshlite1 || isVnsmm1){
     return (
       <footer className={`${maxWidth} ${backgroundColor} w-full px-0 md:px-8 md:px-[70px] mx-auto font-arial  md:pb-[42px] pb-[20px] md:pb-[0]`}>
         {/* Terms & Conditions Modal */}
@@ -116,33 +117,33 @@ const Footer = () => {
           </PolicyContent>
         </PolicyModal>
   
-        <div className="max-w-[1100px] mx-auto font-arial text-center text-[17.5px] leading-[45px] md:leading-[24px] font-400">
-          <div id="footer-copyright" className="break-words mx-[-5.5px] md:mx-[0]">
-            &copy; {currentYear} VNSH.com. All Rights Reserved. 
+        <div className="max-w-[1100px] mx-auto font-arial text-center text-[17.5px] leading-[48px] md:leading-[24px] font-400">
+          <div id="footer-copyright" className="break-words md:mx-[0]">
+            &copy; {currentYear} VNSH.com{isVnsmm1 ? '' : '.'} All Rights Reserved.
             <span 
                 onClick={() => setActiveModal('terms')}
                 className={`bg-transparent border-none text-[#212529] cursor-pointer p-0 no-underline px-[2px] w-full sm:w-auto ${footerLinkMarginTop}`}
                 aria-label="View Terms & Disclaimer"
-              >&nbsp;Terms & Disclaimer&nbsp;|
+              > Terms & Disclaimer<span className="md:text-[22px]"> |</span>
               </span>
               <span 
                 onClick={() => setActiveModal('privacy')}
                 className={`bg-transparent border-none text-[#212529] cursor-pointer p-0 no-underline px-[2px] w-full sm:w-auto ${footerLinkMarginTop}`}
                 aria-label="View Privacy Policy"
-              >&nbsp;Privacy Policy&nbsp;|
+              > Privacy Policy<span className="md:text-[22px]"> |</span>
               </span>
 
               <span 
                 onClick={() => setActiveModal('shipping')}
                 className={`bg-transparent border-none text-[#212529] cursor-pointer p-0 no-underline px-[2px] w-full sm:w-auto ${footerLinkMarginTop}`}
                 aria-label="View Shipping Policy"
-              >&nbsp;Shipping Policy&nbsp;|
+              > Shipping Policy<span className="md:text-[22px]"> |</span>
               </span>
               <span 
                 onClick={() => setActiveModal('returns')}
                 className={`bg-transparent border-none text-[#212529] cursor-pointer p-0 no-underline px-[2px] w-full sm:w-auto ${footerLinkMarginTop}`}
                 aria-label="View Return Policy"
-              >&nbsp;Return Policy&nbsp;
+              >Return Policy&nbsp;
               </span>
 
           </div>

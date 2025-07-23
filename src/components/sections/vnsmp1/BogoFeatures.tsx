@@ -126,8 +126,6 @@ const BogoFeatures = () => {
           </p>
 
           <p className="mb-4">The simple fact that the VNSH Support-Side Mag Pouch lets you conceal an absurd amount of ammo wherever you go… while also making it lightning-fast to reload in a confrontation… should be more than enough to justify owning one.</p>
-          
-          
           <p className="mb-4">However, that's not all that makes it one of the smartest ways to add extra ammo to your carry setup…</p>
           
           <div className="flex flex-col lg:flex-row gap-6 mb-6">
@@ -286,8 +284,6 @@ const BogoFeatures = () => {
             </div>
           </div>
 
-
-          
           <div className="text-center mt-8 mb-6">
             <Link href={checkoutUrl} className="w-full">
               <Button 

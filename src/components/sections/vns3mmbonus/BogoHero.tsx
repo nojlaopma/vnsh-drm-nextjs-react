@@ -36,7 +36,7 @@ const BogoHero = () => {
               size="lg"
               className="w-full mx-auto py-[30px] px-1 font-bold animate-pulse-cta text-[22px] md:text-[2rem] whitespace-normal break-words rounded-[0.25rem]"
             >
-              Give Me My VNSH Holster + FREE MagMate
+              Give Me My VNSH Holster <span className='blo'>+ FREE MagMate</span>
             </Button>
           </Link>
         </div>

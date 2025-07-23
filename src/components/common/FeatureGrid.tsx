@@ -127,6 +127,32 @@ const FeatureGrid = ({ items, className = '' }: { items: FeatureItem[]; classNam
         </div>
       </div>
     );
+  }else if(pathname?.includes('vnsmm1')){
+    return (
+      <div className={`w-full ${className}`} >
+        <div className={`max-w-7xl mx-auto px-4 ml-[-20px] mr-[-20px] md:mx-[-48px] mb-[7px]`}>
+          <div className={`grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-5`}>
+            {items.map((item, index) => (
+              <div key={index} className="flex flex-col items-center text-center">
+                <div className="mb-[1px]">
+                  <div className={`relative w-[${item.image.imageHeight ?? 129}px] h-[${item.image.imageWidth ?? 129}px] mx-auto`}>
+                    <Image
+                      src={item.image.desktop}
+                      alt={item.image.alt}
+                      className={`object-contain h-[${item.image.imageHeight}px] w-[${item.image.imageWidth}px]`}
+                      height={item.image.imageHeight ?? 129}
+                      width={item.image.imageWidth ?? 129}
+                    />
+                  </div>
+                </div>
+                <h3 className="text-[17.6px] font-bold text-[#212529]">{item.title}</h3>
+                <p className="text-[17.6px] text-left text-[#212529] leading-[35px] md:leading-[32px] mx-auto">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    );
   }
   
 

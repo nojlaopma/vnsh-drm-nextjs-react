@@ -19,6 +19,11 @@ export const images = {
     blackHolsterMobile4: '/images/holster/BlackHolsterMobile4.webp',
   },
 
+  magmate:{
+    image1: '/images/magmate/MagMate1.webp',
+    image2: '/images/magmate/1697434951532_MagMate_Image1.png',
+  },
+
   holsterlite:{
     lite1: '/images/holster/1726060001334_image6.jpg',
     lite2: '/images/holster/holster_lite.jpg',
@@ -54,7 +59,9 @@ export const images = {
   // Footer features
   features: {
     moneyBack: '/images/features/money_back_guarantee_footer.webp',
+    moneyBack2: '/images/features/seal-min.jpg',
     smallBusiness: '/images/features/small_business_footer.webp',
+    smallBusiness2: '/images/features/1673961033090_Support_American_SMB_500x500.png',
     securePayment: '/images/features/secure_payment_footer.webp',
   },
 };
