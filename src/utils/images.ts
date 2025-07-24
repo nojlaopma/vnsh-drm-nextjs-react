@@ -60,7 +60,8 @@ export const images = {
   // ggg images
   ggg: {
     hero: '/images/ggg/guerrillabookDesktop.webp',
-    gungirldesktop: '/images/ggg/GunGirlDesktop.webp'
+    hero1: '/images/ggg/Guerrilla_Gun_Guide_book.webp',
+    gungirldesktop: '/images/ggg/GunGirlDesktop.webp',
   },
   
   // Footer features

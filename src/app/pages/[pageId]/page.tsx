@@ -5,7 +5,7 @@ import DynamicPageLoader from '@/components/pages/DynamicPageLoader';
 
 // This is a list of valid page IDs for static generation.
 // It must be kept in sync with the keys in `pageComponents` in DynamicPageLoader.tsx
-const validPageIds = ['vnls2', 'vnshblackbogo1', 'vnshcamobogo1', 'vnsmp1', 'vnls1', 'vns3mmbonus', 'vnshlite1', 'vnsmm1', 'vnshggg1', 'vnls1po223', 'vnshblackbogogbb1'] as const;
+const validPageIds = ['vnls2', 'vnshblackbogo1', 'vnshcamobogo1', 'vnsmp1', 'vnls1', 'vns3mmbonus', 'vnshlite1', 'vnsmm1', 'vnshggg1', 'vnls1po223', 'vnshblackbogogbb1', 'vnshggg1fs'] as const;
 
 type ValidPageId = typeof validPageIds[number];
 
