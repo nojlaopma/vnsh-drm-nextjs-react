@@ -17,9 +17,11 @@ const Footer = () => {
   const bogoValues = ['vnshblackbogo1', 'vnshcamobogo1'];
   const isVnshbogo = bogoValues.some(value => pathname?.includes(value));
   const isVnls2 = pathname?.includes('vnls2');
+  const isVnls1 = pathname?.includes('vnls1');
   const isVns3mmbonus = pathname?.includes('vns3mmbonus');
   const isVnshlite1 = pathname?.includes('vnshlite1');
   const isVnsmm1 = pathname?.includes('vnsmm1');
+  const isVnshggg1 = pathname?.includes('vnshggg1');
 
   let maxWidth = 'max-w-[1200px]';
   let paddingBottom = '';
@@ -30,30 +32,36 @@ const Footer = () => {
   let footerCopyrightMarginBottom = '';
   let footerLinkMarginTop = '';
 
-  if( pathname.includes('vnls1') ) {
+  if( isVnls1 ) {
     maxWidth = 'max-w-[1240px]';
     paddingBottom = 'pb-[34px]';
-  }else if( pathname.includes('vnls2') ) {
+  }else if( isVnls2 ) {
     maxWidth = 'max-w-[1240px]';
     backgroundColor = 'bg-[#f7f4f4] md:bg-[#f7f4f4]';
     footerLinkGap = 'gap-[16px]';
   }else if( isVnshlite1  || isVnsmm1) {
     maxWidth = 'max-w-[1140px]';
     backgroundColor = 'bg-[#f7f4f4] md:bg-[#f7f4f4]';
-  }
-  else if( isVnshbogo ) {
+  }else if( isVnshbogo ) {
     footerLinkPaddingBottom = 'pb-[54px]';
     footerLinkGap = 'md:gap-[11px]';
     copyRightText = 'text-center color-[#212529]';
     footerLinkMarginTop = 'mt-[17px] md:mt-[0]';
     footerCopyrightMarginBottom = 'mb-[-4px] md:mb-[0]';
-  }else if( pathname.includes('vnsmp1') || pathname.includes('vns3mmbonus') ) {
+  }else if( isVnsmm1 || isVns3mmbonus  ) {
     footerLinkPaddingBottom = 'pb-[50px]';
     footerLinkGap = 'md:gap-[16px]';
     copyRightText = 'text-center text-[18px]';
     footerCopyrightMarginBottom = 'mb-[-10px] md:mb-[18px]';
     footerLinkMarginTop = 'mt-[27px] md:mt-[0]';
+  }else if( isVnshggg1 ) {
+    footerLinkPaddingBottom = 'pb-[50px] md:pb-[50px]';
+    footerLinkGap = 'md:gap-[16px]';
+    copyRightText = 'text-center text-[18px]';
+    footerCopyrightMarginBottom = 'mb-[-10px] md:mb-[18px]';
+    footerLinkMarginTop = 'mt-[27px] md:mt-[0]';
   }
+
 
 
   useEffect(() => {
@@ -220,7 +228,7 @@ const Footer = () => {
 
       <div className="max-w-[1100px] mx-auto px-4 font-arial">
         <div id="footer-copyright" className={`${copyRightText} ${footerCopyrightMarginBottom}`}>
-          &copy; {currentYear} VNSH.com{isVnshbogo || isVnls2 || isVns3mmbonus ? '.' : ''} All Rights Reserved.
+          &copy; {currentYear} VNSH.com{isVnshbogo || isVnls2 || isVns3mmbonus || isVnshggg1 ? '.' : ''} All Rights Reserved.
         </div>
         
         <div id="footer-links" className={`flex flex-wrap justify-center gap-4 w-full text-[18px] leading-[0.8] ${footerLinkPaddingBottom}`}>

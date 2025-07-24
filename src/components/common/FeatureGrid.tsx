@@ -153,11 +153,34 @@ const FeatureGrid = ({ items, className = '' }: { items: FeatureItem[]; classNam
         </div>
       </div>
     );
+  }else if(pathname?.includes('vnshggg1')){
+    return (
+      <div className={`w-full ${className}`} >
+        <div className={`max-w-7xl mx-auto px-4 mx[-20px] md:mx-[-90px] mb-[7px]`}>
+          <div className={`grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-5`}>
+            {items.map((item, index) => (
+              <div key={index} className="flex flex-col items-center text-center">
+                <div className="mb-[18.2px] md:mb-[1px] md:pb-[20px]">
+                  <div className={`relative w-[${item.image.imageHeight ?? 129}px] h-[${item.image.imageWidth ?? 129}px] mx-auto`}>
+                    <Image
+                      src={item.image.desktop}
+                      alt={item.image.alt}
+                      className={`${item.image.className} object-contain h-[${item.image.imageHeight}px] w-[${item.image.imageWidth}px]`}
+                      height={item.image.imageHeight ?? 129}
+                      width={item.image.imageWidth ?? 129}
+                    />
+                  </div>
+                </div>
+                <h3 className="text-[18.9px] font-bold text-[#212529] pb-[16px] md:pb-[15px]">{item.title}</h3>
+                <p className="text-[16px] md:text-[17px] text-center text-[#212529] leading-[18px] md:leading-[17.6px] mx-auto md:px-[0]">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    );
   }
   
-
-
-
 
 
   return (

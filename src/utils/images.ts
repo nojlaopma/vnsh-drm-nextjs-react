@@ -22,6 +22,7 @@ export const images = {
   magmate:{
     image1: '/images/magmate/MagMate1.webp',
     image2: '/images/magmate/1697434951532_MagMate_Image1.png',
+    free: '/images/magmate/FREE_Magmate.webp'
   },
 
   holsterlite:{
@@ -54,6 +55,12 @@ export const images = {
   guarantee: {
     bannerMobile: '/images/guarantee/guaranteed_bannerMobile.webp',
     moneyBack: '/images/guarantee/guarantee-money-back-200.webp',
+  },
+  
+  // ggg images
+  ggg: {
+    hero: '/images/ggg/guerrillabookDesktop.webp',
+    gungirldesktop: '/images/ggg/GunGirlDesktop.webp'
   },
   
   // Footer features
