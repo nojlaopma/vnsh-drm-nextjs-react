@@ -19,7 +19,19 @@ type FeatureItem = {
 const FeatureGrid = ({ items, className = '' }: { items: FeatureItem[]; className?: string }) => {
   const pathname = usePathname();
 
-  if( pathname?.includes('vnshblackbogo1') || pathname?.includes('vnshcamobogo1') ) {
+
+  let isVnshBogo = pathname?.includes('vnshblackbogo1') || pathname?.includes('vnshcamobogo1') || pathname?.includes('vnshblackbogogbb1');
+  let isVnls1 = pathname?.includes('vnls1');
+  let isVnls2 = pathname?.includes('vnls2');
+  let isVnshLite1 = pathname?.includes('vnshlite1');
+  let isVnsmm1 = pathname?.includes('vnsmm1');
+  let isVnshggg1 = pathname?.includes('vnshggg1');
+  let isVnls1po223 = pathname?.includes('vnls1po223');
+  let isVnsmp1 = pathname?.includes('vnsmp1');
+
+
+
+  if( isVnshBogo ) {
     return (
       <div className={`w-[98%] mx-auto md:w-full ${className} ${pathname}`} >
         <div className={`mx-auto mb-[7px]`}>
@@ -46,7 +58,7 @@ const FeatureGrid = ({ items, className = '' }: { items: FeatureItem[]; classNam
         </div>
       </div>
     );
-  }else if(pathname?.includes('vnls1')){
+  }else if(isVnls1){
     return (
       <div className={`w-full ${className}`} >
         <div className={`mx-auto mb-[7px]`}>
@@ -73,7 +85,7 @@ const FeatureGrid = ({ items, className = '' }: { items: FeatureItem[]; classNam
         </div>
       </div>
     );
-  }else if(pathname?.includes('vnsmp1')){
+  }else if(isVnsmp1){
     return (
       <div className={`w-full ${className}`} >
         <div className={`max-w-7xl mx-auto px-4 md:px-1 ml-[-20px] mr-[-20px] md:ml-[-60px] md:mr-[-60px] mb-[-9px] md:mb-[7px]`}>
@@ -100,7 +112,7 @@ const FeatureGrid = ({ items, className = '' }: { items: FeatureItem[]; classNam
         </div>
       </div>
     );
-  }else if(pathname?.includes('vnshlite1')){
+  }else if(isVnshLite1){
     return (
       <div className={`w-full ${className}`} >
         <div className={`max-w-7xl mx-auto px-4 ml-[-20px] mr-[-20px] md:ml-[-40px] md:mr-[-40px] mb-[7px]`}>
@@ -127,7 +139,7 @@ const FeatureGrid = ({ items, className = '' }: { items: FeatureItem[]; classNam
         </div>
       </div>
     );
-  }else if(pathname?.includes('vnsmm1')){
+  }else if(isVnsmm1){
     return (
       <div className={`w-full ${className}`} >
         <div className={`max-w-7xl mx-auto px-4 ml-[-20px] mr-[-20px] md:mx-[-48px] mb-[7px]`}>
@@ -153,7 +165,7 @@ const FeatureGrid = ({ items, className = '' }: { items: FeatureItem[]; classNam
         </div>
       </div>
     );
-  }else if(pathname?.includes('vnshggg1')){
+  }else if(isVnshggg1){
     return (
       <div className={`w-full ${className}`} >
         <div className={`max-w-7xl mx-auto px-4 mx[-20px] md:mx-[-90px] mb-[7px]`}>

@@ -14,7 +14,7 @@ const Footer = () => {
   const pathname = usePathname();
   const [logoPath, setLogoPath] = useState<string>('');
 
-  const bogoValues = ['vnshblackbogo1', 'vnshcamobogo1'];
+  const bogoValues = ['vnshblackbogo1', 'vnshcamobogo1','vnshblackbogogbb1'];
   const isVnshbogo = bogoValues.some(value => pathname?.includes(value));
   const isVnls2 = pathname?.includes('vnls2');
   const isVnls1 = pathname?.includes('vnls1');
