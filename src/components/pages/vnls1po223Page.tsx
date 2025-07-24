@@ -22,7 +22,7 @@ export default function vnls1po223po223Page({ params }: vnls1po223po223PageProps
     const header = document.querySelector('header');
     if (header) {
       const floater = document.createElement('div');
-      floater.className = 'banner-floater w-full bg-[#2afe4e] text-center sticky top-0 z-10  text-[16px] md:text-[22px] md:leading-[26px] leading-[1.5] font-bold text-black font-arial';
+      floater.className = 'banner-floater w-full bg-[#2afe4e] text-center sticky top-0 z-10 text-[16px] md:text-[22px] md:leading-[26px] leading-[1.5] font-bold text-black font-arial';
       
       const link = document.createElement('span');
       link.className = 'hover:underline block w-full';
