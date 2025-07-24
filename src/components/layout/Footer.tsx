@@ -22,6 +22,7 @@ const Footer = () => {
   const isVnshlite1 = pathname?.includes('vnshlite1');
   const isVnsmm1 = pathname?.includes('vnsmm1');
   const isVnshggg1 = pathname?.includes('vnshggg1');
+  const isVnls1po223 = pathname?.includes('vnls1po223');
 
   let maxWidth = 'max-w-[1200px]';
   let paddingBottom = '';
@@ -29,37 +30,52 @@ const Footer = () => {
   let footerLinkGap = 'gap-[25px] md:gap-[11px]';
   let footerLinkPaddingBottom = 'pb-[20px]';
   let copyRightText = 'text-center color-[#212529] text-[16px]';
-  let footerCopyrightMarginBottom = '';
-  let footerLinkMarginTop = '';
-
+  let footerLinkCampaignName = '';
+  let copyYearBrand = '';
+  
   if( isVnls1 ) {
     maxWidth = 'max-w-[1240px]';
     paddingBottom = 'pb-[34px]';
-  }else if( isVnls2 ) {
+  }
+  
+  if( isVnls2 ) {
     maxWidth = 'max-w-[1240px]';
     backgroundColor = 'bg-[#f7f4f4] md:bg-[#f7f4f4]';
     footerLinkGap = 'gap-[16px]';
-  }else if( isVnshlite1  || isVnsmm1) {
+  }
+  
+  if( isVnshlite1  || isVnsmm1) {
     maxWidth = 'max-w-[1140px]';
     backgroundColor = 'bg-[#f7f4f4] md:bg-[#f7f4f4]';
-  }else if( isVnshbogo ) {
+  }
+  
+  if( isVnshbogo ) {
     footerLinkPaddingBottom = 'pb-[54px]';
     footerLinkGap = 'md:gap-[11px]';
-    copyRightText = 'text-center color-[#212529]';
-    footerLinkMarginTop = 'mt-[17px] md:mt-[0]';
-    footerCopyrightMarginBottom = 'mb-[-4px] md:mb-[0]';
-  }else if( isVnsmm1 || isVns3mmbonus  ) {
+    copyRightText = 'text-center color-[#212529] mb-[-4px] md:mb-[0]';
+    footerLinkCampaignName = 'mt-[17px] md:mt-[0]';
+  }
+  
+  if( isVnsmm1 || isVns3mmbonus  ) {
     footerLinkPaddingBottom = 'pb-[50px]';
     footerLinkGap = 'md:gap-[16px]';
-    copyRightText = 'text-center text-[18px]';
-    footerCopyrightMarginBottom = 'mb-[-10px] md:mb-[18px]';
-    footerLinkMarginTop = 'mt-[27px] md:mt-[0]';
-  }else if( isVnshggg1 ) {
+    copyRightText = 'text-center text-[18px] mb-[-10px] md:mb-[18px]';
+    footerLinkCampaignName = 'mt-[27px] md:mt-[0]';
+  }
+  
+  if( isVnshggg1 ) {
     footerLinkPaddingBottom = 'pb-[50px] md:pb-[50px]';
     footerLinkGap = 'md:gap-[16px]';
-    copyRightText = 'text-center text-[18px]';
-    footerCopyrightMarginBottom = 'mb-[-10px] md:mb-[18px]';
-    footerLinkMarginTop = 'mt-[27px] md:mt-[0]';
+    copyRightText = 'text-center text-[18px] mb-[-10px] md:mb-[18px]';
+    footerLinkCampaignName = 'mt-[27px] md:mt-[0]';
+  }
+  
+  if( isVnls1po223 ) {
+    footerLinkPaddingBottom = 'pb-[25px] md:pb-[35px]';
+    footerLinkGap = 'md:gap-[16px]';
+    copyRightText = 'text-center text-[16px] mb-[-10px] md:mb-[0]';
+    footerLinkCampaignName = 'mt-[16.5px] md:mt-[0] px-[20px] md:px-[0]';
+    copyYearBrand = 'font-bold';
   }
 
 
@@ -130,26 +146,26 @@ const Footer = () => {
             &copy; {currentYear} VNSH.com{isVnsmm1 ? '' : '.'} All Rights Reserved.
             <span 
                 onClick={() => setActiveModal('terms')}
-                className={`bg-transparent border-none text-[#212529] cursor-pointer p-0 no-underline px-[2px] w-full sm:w-auto ${footerLinkMarginTop}`}
+                className={`bg-transparent border-none text-[#212529] cursor-pointer p-0 no-underline px-[2px] w-full sm:w-auto ${footerLinkCampaignName}`}
                 aria-label="View Terms & Disclaimer"
               > Terms & Disclaimer<span className="md:text-[22px]"> |</span>
               </span>
               <span 
                 onClick={() => setActiveModal('privacy')}
-                className={`bg-transparent border-none text-[#212529] cursor-pointer p-0 no-underline px-[2px] w-full sm:w-auto ${footerLinkMarginTop}`}
+                className={`bg-transparent border-none text-[#212529] cursor-pointer p-0 no-underline px-[2px] w-full sm:w-auto ${footerLinkCampaignName}`}
                 aria-label="View Privacy Policy"
               > Privacy Policy<span className="md:text-[22px]"> |</span>
               </span>
 
               <span 
                 onClick={() => setActiveModal('shipping')}
-                className={`bg-transparent border-none text-[#212529] cursor-pointer p-0 no-underline px-[2px] w-full sm:w-auto ${footerLinkMarginTop}`}
+                className={`bg-transparent border-none text-[#212529] cursor-pointer p-0 no-underline px-[2px] w-full sm:w-auto ${footerLinkCampaignName}`}
                 aria-label="View Shipping Policy"
               > Shipping Policy<span className="md:text-[22px]"> |</span>
               </span>
               <span 
                 onClick={() => setActiveModal('returns')}
-                className={`bg-transparent border-none text-[#212529] cursor-pointer p-0 no-underline px-[2px] w-full sm:w-auto ${footerLinkMarginTop}`}
+                className={`bg-transparent border-none text-[#212529] cursor-pointer p-0 no-underline px-[2px] w-full sm:w-auto ${footerLinkCampaignName}`}
                 aria-label="View Return Policy"
               >Return Policy&nbsp;
               </span>
@@ -181,7 +197,7 @@ const Footer = () => {
 
 
   return (
-    <footer className={`${maxWidth} ${backgroundColor} w-full px-4 md:px-8 lg:px-[70px] mx-auto font-arial ${paddingBottom}`}>
+    <footer className={`${maxWidth} ${backgroundColor} ${paddingBottom} w-full px-4 md:px-8 lg:px-[70px] mx-auto font-arial `}>
       {/* Terms & Conditions Modal */}
       <PolicyModal 
         isOpen={activeModal === 'terms'} 
@@ -227,15 +243,15 @@ const Footer = () => {
       </PolicyModal>
 
       <div className="max-w-[1100px] mx-auto px-4 font-arial">
-        <div id="footer-copyright" className={`${copyRightText} ${footerCopyrightMarginBottom}`}>
-          &copy; {currentYear} VNSH.com{isVnshbogo || isVnls2 || isVns3mmbonus || isVnshggg1 ? '.' : ''} All Rights Reserved.
+        <div id="footer-copyright" className={`${copyRightText}`}>
+          <span className={`${copyYearBrand}`}>&copy; {currentYear} VNSH.com{isVnshbogo || isVnls2 || isVns3mmbonus || isVnshggg1 ? '.' : ''}</span> All Rights Reserved.
         </div>
         
         <div id="footer-links" className={`flex flex-wrap justify-center gap-4 w-full text-[18px] leading-[0.8] ${footerLinkPaddingBottom}`}>
           <div className={`flex flex-col sm:flex-row ${footerLinkGap}`}>
             <button 
               onClick={() => setActiveModal('terms')}
-              className={`bg-transparent border-none text-[#212529] cursor-pointer p-0 no-underline px-[2px] w-full sm:w-auto ${footerLinkMarginTop}`}
+              className={`bg-transparent border-none text-[#212529] cursor-pointer p-0 no-underline px-[2px] w-full sm:w-auto ${footerLinkCampaignName}`}
               aria-label="View Terms & Disclaimer"
             >
               Terms & Disclaimer
@@ -243,7 +259,7 @@ const Footer = () => {
 
             <button 
               onClick={() => setActiveModal('privacy')}
-              className={`bg-transparent border-none text-[#212529] cursor-pointer p-0 no-underline px-[2px] w-full sm:w-auto ${footerLinkMarginTop}`}
+              className={`bg-transparent border-none text-[#212529] cursor-pointer p-0 no-underline px-[2px] w-full sm:w-auto ${footerLinkCampaignName}`}
               aria-label="View Privacy Policy"
             >
               Privacy Policy
@@ -251,7 +267,7 @@ const Footer = () => {
 
             <button 
               onClick={() => setActiveModal('shipping')}
-              className={`bg-transparent border-none text-[#212529] cursor-pointer p-0 no-underline px-[2px] w-full sm:w-auto ${footerLinkMarginTop}`}
+              className={`bg-transparent border-none text-[#212529] cursor-pointer p-0 no-underline px-[2px] w-full sm:w-auto ${footerLinkCampaignName}`}
               aria-label="View Shipping Policy"
             >
               Shipping Policy
@@ -259,7 +275,7 @@ const Footer = () => {
 
             <button 
               onClick={() => setActiveModal('returns')}
-              className={`bg-transparent border-none text-[#212529] cursor-pointer p-0 no-underline px-[2px] w-full sm:w-auto ${footerLinkMarginTop}`}
+              className={`bg-transparent border-none text-[#212529] cursor-pointer p-0 no-underline px-[2px] w-full sm:w-auto ${footerLinkCampaignName}`}
               aria-label="View Return Policy"
             >
               Return Policy
