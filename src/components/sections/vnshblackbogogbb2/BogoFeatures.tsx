@@ -7,14 +7,14 @@ import { images } from '@/utils/images';
 import Link from 'next/link';
 import Button from '@/components/ui/Button';
 import FeatureGrid from '@/components/common/FeatureGrid';
-import Pricing from '@/components/sections/vnshblackbogogbb1/Pricing';
+import Pricing from '@/components/sections/vnshblackbogogbb2/Pricing';
 
 const BogoFeatures = () => {
   const searchParams = useSearchParams();
   const utmParams = Array.from(searchParams.entries())
     .map(([key, value]) => `${key}=${encodeURIComponent(value)}`)
     .join('&');
-  const checkoutUrl = `https://secure.vnsh.com/vnshblackbogogbb1/checkout${utmParams ? `?${utmParams}` : ''}`;
+  const checkoutUrl = `https://secure.vnsh.com/vnshblackbogogbb2/checkout${utmParams ? `?${utmParams}` : ''}`;
 
   const [imagePaths, setImagePaths] = useState<{[key: string]: string}>({
     desktop: '',
