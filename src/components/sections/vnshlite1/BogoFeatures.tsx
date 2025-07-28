@@ -255,7 +255,7 @@ const BogoFeatures = () => {
             <div 
               data-text="text" 
               data-yotpo-instance-id="461899" 
-              data-yotpo-product-id=""
+              data-yotpo-product-id="8836877746476"
               data-yotpo-cart-product-id="" 
               data-secondsdelay="" 
               className="yotpo-widget-instance"

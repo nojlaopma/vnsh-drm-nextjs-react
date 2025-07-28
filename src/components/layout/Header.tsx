@@ -17,7 +17,7 @@ const Header = () => {
   const [logoPath, setLogoPath] = useState<string>('');
   
   // Determine logo size and showContact based on the current route
-  const listSpage = ['vnshblackbogo1', 'vnshcamobogo1','vnsmp1','vnls1','vns3mmbonus','vnshlite1','vnshggg1','vnshblackbogogbb1','vnshblackbogogbb2'];
+  const listSpage = ['vnshblackbogo1', 'vnshcamobogo1','vnsmp1','vnls1','vns3mmbonus','vnshlite1','vnshggg1','vnshblackbogogbb1','vnshblackbogogbb2','vnshblackbogogbb3'];
   const isBogoPage = listSpage.some(value => pathname?.includes(value));
 
   const isVnls = pathname?.includes('vnls2') || pathname?.includes('vnls1');

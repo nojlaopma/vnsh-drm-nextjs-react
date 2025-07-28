@@ -20,7 +20,7 @@ const FeatureGrid = ({ items, className = '' }: { items: FeatureItem[]; classNam
   const pathname = usePathname();
 
 
-  let isVnshBogo = pathname?.includes('vnshblackbogo1') || pathname?.includes('vnshcamobogo1') || pathname?.includes('vnshblackbogogbb1') || pathname?.includes('vnshblackbogogbb2');
+  let isVnshBogo = pathname?.includes('vnshblackbogo1') || pathname?.includes('vnshcamobogo1') || pathname?.includes('vnshblackbogogbb1') || pathname?.includes('vnshblackbogogbb2') || pathname?.includes('vnshblackbogogbb3');
   let isVnls1 = pathname?.includes('vnls1');
   let isVnls2 = pathname?.includes('vnls2');
   let isVnshLite1 = pathname?.includes('vnshlite1');

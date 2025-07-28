@@ -7,14 +7,14 @@ import { images } from '@/utils/images';
 import Link from 'next/link';
 import Button from '@/components/ui/Button';
 import FeatureGrid from '@/components/common/FeatureGrid';
-import Pricing from '@/components/sections/vnshblackbogogbb1/Pricing';
+import Pricing from '@/components/sections/vnshblackbogogbb3/Pricing';
 
 const BogoFeatures = () => {
   const searchParams = useSearchParams();
   const utmParams = Array.from(searchParams.entries())
     .map(([key, value]) => `${key}=${encodeURIComponent(value)}`)
     .join('&');
-  const checkoutUrl = `https://secure.vnsh.com/vnshblackbogogbb1/checkout${utmParams ? `?${utmParams}` : ''}`;
+  const checkoutUrl = `https://secure.vnsh.com/vnshblackbogogbb3/checkout${utmParams ? `?${utmParams}` : ''}`;
 
   const [imagePaths, setImagePaths] = useState<{[key: string]: string}>({
     desktop: '',
@@ -349,7 +349,7 @@ const BogoFeatures = () => {
 
 
           <p 
-            className="text-center my-6 text-[26px] lg:text-[36px] text-[#f16500] font-bold leading-[1.2]"
+            className="md:px-[250px] text-center my-6 text-[26px] md:text-[36px] text-[#f16500] font-bold leading-[1.2]"
             
           >
             You’re Getting An 
