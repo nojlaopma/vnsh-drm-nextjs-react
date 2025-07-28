@@ -139,7 +139,7 @@ const BogoFeatures = () => {
           {/* <div id="yotpo-testimonials-custom-tab" className="my-8"></div> */}
 
           <div className="text-center w-[97.7%]">
-          <Link href={checkoutUrl} className="w-full" target="_blank" rel="noopener noreferrer">
+          <Link href="#pricing" className="w-full" target="_blank" rel="noopener noreferrer">
             <Button 
               variant="cta"
               size="lg"
@@ -217,7 +217,7 @@ const BogoFeatures = () => {
           </div>
 
           <div className="text-center w-[97.7%]">
-          <Link href={checkoutUrl} className="w-full" target="_blank" rel="noopener noreferrer">
+          <Link href="#pricing" className="w-full" target="_blank" rel="noopener noreferrer">
             <Button 
               variant="cta"
               size="lg"
@@ -290,7 +290,7 @@ const BogoFeatures = () => {
 
 
           <div className="text-center w-[97.7%]">
-          <Link href={checkoutUrl} className="w-full" target="_blank" rel="noopener noreferrer">
+          <Link href="#pricing" className="w-full" target="_blank" rel="noopener noreferrer">
             <Button 
               variant="cta"
               size="lg"
@@ -342,7 +342,7 @@ const BogoFeatures = () => {
 
           <p className="mb-4 font-bold underline " ><span className='bg-[#ff0]'>Buy 1 Holster, Get 1 Totally FREE!!</span></p>
           
-          <p className="mb-4">Plus, when you grab this deal today, you’ll be doing so <b>100% Risk-Free, because…</b></p>
+          <p className="mb-4" id="pricing">Plus, when you grab this deal today, you’ll be doing so <b>100% Risk-Free, because…</b></p>
           
 
           <Pricing />
@@ -392,7 +392,7 @@ const BogoFeatures = () => {
 
 
           <div className="text-center w-[97.7%]">
-          <Link href={checkoutUrl} className="w-full" target="_blank" rel="noopener noreferrer">
+          <Link href="#pricing" className="w-full" target="_blank" rel="noopener noreferrer">
             <Button 
               variant="cta"
               size="lg"
@@ -441,7 +441,7 @@ const BogoFeatures = () => {
 
 
           <div className="text-center w-[97.7%]">
-          <Link href={checkoutUrl} className="w-full" target="_blank" rel="noopener noreferrer">
+          <Link href="#pricing" className="w-full" target="_blank" rel="noopener noreferrer">
             <Button 
               variant="cta"
               size="lg"
@@ -491,7 +491,7 @@ const BogoFeatures = () => {
           <FAQ />
 
           <div className="text-center mt-[2.1rem] mb-10">
-            <Link href={checkoutUrl} className="w-full">
+            <Link href="#pricing" className="w-full">
               <Button 
                 variant="cta"
                 size="lg"
