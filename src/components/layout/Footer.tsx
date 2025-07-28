@@ -21,6 +21,7 @@ const Footer = () => {
   const isVns3mmbonus = pathname?.includes('vns3mmbonus');
   const isVnshlite1 = pathname?.includes('vnshlite1');
   const isVnsmm1 = pathname?.includes('vnsmm1');
+  const isVnsmmfs1 = pathname?.includes('vnsmmfs1');
   const isVnshggg1 = pathname?.includes('vnshggg1');
   const isVnls1po223 = pathname?.includes('vnls1po223');
 
@@ -44,7 +45,7 @@ const Footer = () => {
     footerLinkGap = 'gap-[16px]';
   }
   
-  if( isVnshlite1  || isVnsmm1) {
+  if( isVnshlite1  || isVnsmm1 || isVnsmmfs1) {
     maxWidth = 'max-w-[1140px]';
     backgroundColor = 'bg-[#f7f4f4] md:bg-[#f7f4f4]';
   }
@@ -56,7 +57,7 @@ const Footer = () => {
     footerLinkCampaignName = 'mt-[17px] md:mt-[0]';
   }
   
-  if( isVnsmm1 || isVns3mmbonus  ) {
+  if( isVnsmm1 || isVns3mmbonus || isVnsmmfs1 ) {
     footerLinkPaddingBottom = 'pb-[50px]';
     footerLinkGap = 'md:gap-[16px]';
     copyRightText = 'text-center text-[18px] mb-[-10px] md:mb-[18px]';
@@ -94,7 +95,7 @@ const Footer = () => {
   const openModal = (modalName: string) => setActiveModal(modalName);
   const closeModal = () => setActiveModal(null);
   
-  if( isVnshlite1 || isVnsmm1){
+  if( isVnshlite1 || isVnsmm1 || isVnsmmfs1){
     return (
       <footer className={`${maxWidth} ${backgroundColor} w-full px-0 md:px-8 md:px-[70px] mx-auto font-arial  md:pb-[42px] pb-[20px] md:pb-[0]`}>
         {/* Terms & Conditions Modal */}
@@ -143,7 +144,7 @@ const Footer = () => {
   
         <div className="max-w-[1100px] mx-auto font-arial text-center text-[17.5px] leading-[48px] md:leading-[24px] font-400">
           <div id="footer-copyright" className="break-words md:mx-[0]">
-            &copy; {currentYear} VNSH.com{isVnsmm1 ? '' : '.'} All Rights Reserved.
+            &copy; {currentYear} VNSH.com{isVnsmm1 || isVnsmmfs1 ? '' : '.'} All Rights Reserved.
             <span 
                 onClick={() => setActiveModal('terms')}
                 className={`bg-transparent border-none text-[#212529] cursor-pointer p-0 no-underline px-[2px] w-full sm:w-auto ${footerLinkCampaignName}`}

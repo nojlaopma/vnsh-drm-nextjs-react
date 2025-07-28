@@ -22,7 +22,8 @@ export const images = {
   magmate:{
     image1: '/images/magmate/MagMate1.webp',
     image2: '/images/magmate/1697434951532_MagMate_Image1.png',
-    free: '/images/magmate/FREE_Magmate.webp'
+    free: '/images/magmate/FREE_Magmate.webp',
+    free1: '/images/magmate/1705299324898_ddd.png'
   },
 
   holsterlite:{

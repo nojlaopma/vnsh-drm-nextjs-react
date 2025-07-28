@@ -93,13 +93,13 @@ function updateDynamicPageLoader(newPageId) {
       return; // Already exists
     }
     
-    // Find the last component in the pageComponents object
-    const lastComponentRegex = /([\s\S]*?)(\},[\s\r\n]+)\] as const;/;
-    const match = content.match(lastComponentRegex);
+    // Find the end of the pageComponents object
+    const endOfObjectRegex = /(const pageComponents = \{[\s\S]*?)(\}\s+as const;)/;
+    const match = content.match(endOfObjectRegex);
     
     if (match) {
       const newComponent = `  ${pageKebab}: dynamic(() => import('./${newPageId}'), { ssr: false }),\n`;
-      const newContent = content.replace(lastComponentRegex, `$1$2${newComponent}] as const;`);
+      const newContent = content.replace(endOfObjectRegex, `$1${newComponent}$2`);
       fs.writeFileSync(loaderPath, newContent, 'utf8');
       console.log(`✅ Updated DynamicPageLoader with ${newPageId}`);
     }
