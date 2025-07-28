@@ -63,7 +63,7 @@ function updateValidPageIds(newPageId) {
       
       if (!currentIds.includes(pageId)) {
         const newIds = [...currentIds, `'${pageId}'`];
-        const newValidPageIds = `const validPageIds = [${newIds.join(', ')}] as const;`;
+        const newValidPageIds = `const validPageIds = [${newIds.map(id => `'${id}'`).join(', ')}] as const;`;
         content = content.replace(regex, newValidPageIds);
         
         // Ensure the page component is async
@@ -93,15 +93,19 @@ function updateDynamicPageLoader(newPageId) {
       return; // Already exists
     }
     
-    // Find the end of the pageComponents object
-    const endOfObjectRegex = /(const pageComponents = \{[\s\S]*?)(\}\s+as const;)/;
-    const match = content.match(endOfObjectRegex);
+    // Insert before the closing brace of the pageComponents object
+    // This regex looks for the last entry in the pageComponents object
+    const lastEntryRegex = /(\s+\w+:\s+dynamic\(.*?\),\s*?\n)(\s*\}\s+as const;)/;
+    const match = content.match(lastEntryRegex);
     
     if (match) {
-      const newComponent = `  ${pageKebab}: dynamic(() => import('./${newPageId}'), { ssr: false }),\n`;
-      const newContent = content.replace(endOfObjectRegex, `$1${newComponent}$2`);
+      const newComponent = `$1  ${pageKebab}: dynamic(() => import('./${newPageId}'), { ssr: false }),\n$2`;
+      const newContent = content.replace(lastEntryRegex, newComponent);
       fs.writeFileSync(loaderPath, newContent, 'utf8');
       console.log(`✅ Updated DynamicPageLoader with ${newPageId}`);
+    } else {
+      console.warn('⚠️ Could not find the right insertion point in DynamicPageLoader.');
+      console.warn(`Add '${pageKebab}': dynamic(() => import('./${newPageId}'), { ssr: false }), to the pageComponents object manually`);
     }
   } catch (error) {
     console.warn('⚠️ Could not update DynamicPageLoader. Please update it manually.');
