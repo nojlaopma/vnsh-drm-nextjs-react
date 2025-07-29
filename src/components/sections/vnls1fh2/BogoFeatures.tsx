@@ -62,11 +62,19 @@ const BogoFeatures = () => {
   return (
     <section className="pt-8 pb-6">
       <div className="max-w-[1100px] mx-auto md:px-4 font-arial">
-      <p 
-            className="text-center mb-[15px] md:my-6 text-[20px] mid:text-[26px] lg:text-[38px] text-[#f16500] font-bold leading-[1.2]"
-          >
-           <span className='text-[#dc3545]'>The Fastest, Easiest Way to</span>  Become An <u>Insanely Accurate Shooter</u> <span className='text-[#dc3545]'> (Guaranteed, Or <span className="italic">You Don't Pay a Dime)</span></span>  
-          </p>
+
+      <div className="w-full w-[90%] md:w-[82%] mx-auto">
+              <Image
+                src={images.holster.freeholster}
+                alt="60 Day Money Back Guarantee"
+                width={1200}
+                height={320}
+                className="w-full h-auto"
+                priority
+              />
+      </div>
+
+      <p className="text-center mb-[15px] md:my-6 text-[20px] mid:text-[26px] lg:text-[38px] text-[#f16500] font-bold leading-[1.2]"><span className='text-[#dc3545]'>The Fastest, Easiest Way to</span>  Become An <u>Insanely Accurate Shooter</u> <span className='text-[#dc3545]'> (Guaranteed, Or <span className="italic">You Don't Pay a Dime)</span></span></p>
 
         <div className="text-left text-[18px] md:text-[22px] text-black">
 
@@ -129,21 +137,6 @@ const BogoFeatures = () => {
 
           <p className="mb-4">That’s the simple reason why…</p>
 
-          <div className="text-center">
-          <Link href={checkoutUrl} className="w-full" target="_blank" rel="noopener noreferrer">
-            <Button 
-              variant="cta"
-              size="lg"
-              className="w-full md:w-[75%] mx-auto py-[3rem] md:py-[2rem] px-4 text-center font-bold animate-pulse-cta text-[1.425rem] md:text-[1.8rem] text-[1rem] leading-[2rem] whitespace-normal break-words"
-            >
-              Pre-Order My .223 Laser Strike System HALF OFF Now!
-            </Button>
-          </Link>
-        </div>
-          <br></br>
-          <hr></hr>
-
-
           <p 
             className="text-center my-6 text-[20px] md:text-[26px] lg:text-[38px] text-[#f16500] font-bold leading-[1.2]"
             
@@ -187,11 +180,15 @@ const BogoFeatures = () => {
               size="lg"
               className="w-full md:w-[75%] mx-auto py-[3rem] md:py-[2rem] px-4 text-center font-bold animate-pulse-cta text-[1.425rem] md:text-[1.8rem] text-[1rem] leading-[2rem] whitespace-normal break-words"
             >
-              Pre-Order My .223 Laser Strike System HALF OFF Now!
+              Give Me My Laser Strike System + FREE VNSH Holster
             </Button>
           </Link>
         </div>
-
+        <div className="w-full flex justify-center my-4">
+            <span className="font-bold text-center bg-[#ff0] text-[#ff0000] text-[22px]">
+              60 Days to Try It Yourself… Love It Or You Don't Pay a Dime!
+            </span>
+        </div>
 
           <p 
             className="text-center my-6 text-[20px] md:text-[26px] lg:text-[38px] text-[#f16500] font-bold leading-[1.2]">
@@ -246,8 +243,6 @@ const BogoFeatures = () => {
           <p className="mb-4">All said, it takes no more than 5 minutes to get up-and-running anywhere.</p>
 
           <p className="mb-4">But that’s not the only thing that makes it great…</p>
-
-          <hr></hr>
 
           <p 
             className="mx-[15px] md:mx-[31px] text-center my-6 text-[20px] md:text-[26px] lg:text-[38px] text-[#f16500] font-bold leading-[1.2]"
@@ -449,6 +444,163 @@ const BogoFeatures = () => {
             </div>
           </div>
 
+
+         <p className="text-center my-6 text-[26px] md:text-[36px] text-[#f16500] font-bold leading-[1.2]">
+            <span className="text-[#ff0000] italic"> Limited FREE Bonus Gift (Worth $80)</span> Holster Makes Any Semi-Auto (Plus 2 Spare Mags) Disappear In Plain Sight!
+          </p>
+
+          <div className="w-full flex justify-center my-8">
+            <div className="w-[90%] md:w-[85%] mx-auto">
+              <Image
+                src="/images/magmate/FREE_Magmate.jpeg"
+                alt="VNSH Holster - Secure Retention"
+                width={1200}
+                height={800}
+                className="w-full h-auto rounded-none"
+                priority
+              />
+            </div>
+          </div>
+
+          <p className="mb-4">For a short time, we’re sending out our flagship product <span className="font-bold italic">- the VNSH MagMate</span> – <span className="bg-[#ff0] font-bold">100% FREE with every Laser Strike order (from this page ONLY!)</span></p>
+          <p className="mb-4">Our mission is simple… to help Americans defend themselves as <span className="font-bold italic">easily and effectively</span> as possible <span className="underline">everywhere they go.</span></p>
+          <p className="mb-4">That’s why we set out to create the most comfortable holster on the planet… which has sold over <span className="font-bold italic">175,234</span> units since we launched late last year.</p>
+          <p className="mb-4">The reason it’s quickly become America’s favorite Belly Band are simple:</p>
+          <br></br>
+          <div className="flex flex-col md:flex-row gap-7 mb-1">
+            <div className="space-y-4 flex-1">
+              <div className="flex items-start">
+                <div className="flex-shrink-0 mr-3 mt-1">
+                    <Image 
+                      src={images.checkmark}
+                      alt="Checkmark"
+                      width={30}
+                      height={30}
+                    />
+                </div>
+                <p className="leading-relaxed">
+                Unique V-Design Minimizes Printing In ANY Clothing <span className="font-bold italic">(even nothing but shorts and a t-shirt)</span>
+                </p>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="flex-shrink-0 mr-3 mt-1">
+                    <Image 
+                      src={images.checkmark}
+                      alt="Checkmark"
+                      width={30}
+                      height={30}
+                    />
+                </div>
+                <p className="leading-relaxed">
+                Compatible With 99% of Modern Handguns (no need to buy different holsters for each of your guns and save serious $$$)
+                </p>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="flex-shrink-0 mr-3 mt-1">
+                    <Image 
+                      src={images.checkmark}
+                      alt="Checkmark"
+                      width={30}
+                      height={30}
+                    />
+                </div>
+                <p className="leading-relaxed">
+                Ambidextrous and Fully Adjustable for Multiple Carry Options (so you can dial it in and find your perfect setup)
+                </p>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="flex-shrink-0 mr-3 mt-1">
+                    <Image 
+                      src={images.checkmark}
+                      alt="Checkmark"
+                      width={30}
+                      height={30}
+                    />
+                </div>
+                <p className="leading-relaxed">
+                Enhanced Trigger Guard and Level 2 Retention (enjoy max comfort with confidence and peace-of-mind)
+                </p>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="flex-shrink-0 mr-3 mt-1">
+                    <Image 
+                      src={images.checkmark}
+                      alt="Checkmark"
+                      width={30}
+                      height={30}
+                    />
+                </div>
+                <p className="leading-relaxed">
+                Ultra-Plush “Yoga Pant” Material (never chafes, holds no odor, and so comfy you might forget it’s even there)
+                </p>
+              </div>
+            </div>
+            
+            {/* Side images - responsive layout */}
+            <div className="w-full md:w-auto md:pl-6 mt-6 md:mt-0 md:pt-6">
+              {/* Grid for medium and large screens */}
+              <div className="hidden md:grid grid-cols-2 md:grid-cols-1 gap-1 md:w-full items-start">
+                <div className="relative aspect-square w-full h-[233px] overflow-hidden">
+                  <Image 
+                    src={images.holster.blackHolsterMobile5}
+                    alt="Magazine Pouch - Front View"
+                    width={350}
+                    height={233}
+                    className="object-cover"
+                    sizes="(min-width: 1024px) 350px, (min-width: 768px) calc(50vw - 2rem), 100vw"
+                  />
+                </div>
+                <div className="relative aspect-square w-full overflow-hidden">
+                  <Image 
+                    src={images.holster.blackHolsterMobile6}
+                    alt="Magazine Pouch - Side View"
+                    width={350}
+                    height={233}
+                    className="object-cover"
+                    sizes="(min-width: 1024px) 350px, (min-width: 768px) calc(50vw - 2rem), 100vw"
+                  />
+                </div>
+              </div>
+              
+              {/* Mobile carousel - shows on small screens */}
+              <div className="md:hidden">
+                <div className="flex space-x-4 overflow-x-auto pb-4 -mx-4 px-4 snap-x snap-mandatory">
+                  <div className="flex-shrink-0 w-[85vw] aspect-square relative rounded-lg overflow-hidden snap-center">
+                    <Image 
+                      src="/images/magmate/MagMate1.webp"
+                      alt="Magazine Pouch - Front View"
+                      width={250}
+                      height={250}
+                      className="object-cover w-full h-full"
+                      sizes="85vw"
+                      priority
+                    />
+                  </div>
+                  <div className="flex-shrink-0 w-[85vw] aspect-square relative rounded-lg overflow-hidden snap-center">
+                    <Image 
+                      src="/images/magmate/MagMate2.webp"
+                      alt="Magazine Pouch - Side View"
+                      width={250}
+                      height={250}
+                      className="object-cover w-full h-full"
+                      sizes="85vw"
+                    />
+                  </div>
+                </div>
+                <div className="text-center text-sm text-gray-500 mt-2">Swipe to see more</div>
+              </div>
+            </div>
+          </div>
+          <p className="mb-4">Normally $80…</p>
+          <p className="mb-4">The VNSH Holster is yours <span className="font-bold italic bg-[#ff0]">totally FREE</span> with your holster order today!</p>
+          <p className="mb-4">Plus, when you grab this deal, you’ll be doing so <span className="font-bold italic">100% Risk-Free</span>, because…</p>
+
+
+
           <div className="text-center">
           <Link href={checkoutUrl} className="w-full" target="_blank" rel="noopener noreferrer">
             <Button 
@@ -456,16 +608,18 @@ const BogoFeatures = () => {
               size="lg"
               className="w-full md:w-[75%] mx-auto py-[3rem] md:py-[2rem] px-4 text-center font-bold animate-pulse-cta text-[1.425rem] md:text-[1.8rem] text-[1rem] leading-[2rem] whitespace-normal break-words"
             >
-              Pre-Order My .223 Laser Strike System HALF OFF Now!
+              Give Me My Laser Strike System + FREE VNSH Holster
             </Button>
           </Link>
         </div>
+        <div className="w-full flex justify-center my-4">
+            <span className="font-bold text-center bg-[#ff0] text-[#ff0000] text-[22px]">
+              60 Days to Try It Yourself… Love It Or You Don't Pay a Dime!
+            </span>
+        </div>
 
-          <p 
-            className="text-center my-6 text-[18px] md:text-[26px] lg:text-[38px] text-[#f16500] font-bold leading-[1.2]"
-          >
-            We Give You An
-            <span className='text-[#dc3545]'> Iron-Clad,
+          <p className="text-center my-6 text-[18px] md:text-[26px] lg:text-[38px] text-[#f16500] font-bold leading-[1.2] mt-[40px]">
+          You’re Getting An <span className='text-[#dc3545]'> Iron-Clad,
             <br></br>Money-Back</span>  Guarantee
           </p>
 
@@ -484,65 +638,39 @@ const BogoFeatures = () => {
             </div>
           </div>
 
-          <p className="mb-4">Our stance on doing business is simple.</p>
+          <p className="mb-4">Love everything about your order, or we’ll refund you every penny.</p>
           
-          <p className="mb-4">You must absolutely love your Laser Strike System.</p>
-          
-          <p className="mb-4">If not, then <b className='italic'>we’ll refund you every penny.</b></p>
-
           <p className="mb-4">It’s that simple.</p>
-
-          <p className="mb-4">You have a <b className='underline'>full 60-days</b> to get it… try it yourself… and see if it’s worth your hard-earned money.</p>
           
-          <p className="mb-4">If you decide it’s not…</p>
+          <p className="mb-4">If you aren’t totally thrilled, all you have to do is contact our US-Based Support Team within 60 days to get a full refund.</p>
+
+          <p className="mb-4">Plus, we also give you a 2-year workmanship guarantee as well!</p>
+
+          <p className="mb-4">We know you’ll love your VNSH gear, which is why we’re happy to extend you these iron-clad guarantees.</p>
           
-          <p className="mb-4">All you have to do is call or email our <b className='italic'>US-Based Support Team</b>, and we’ll promptly refund you everything.</p>
-
-          <p className="mb-4">We’ll <b className='italic'>even cover your return shipping</b> if you aren’t absolutely thrilled.</p>
-
-          <p className="mb-4">If for any reason you don’t think it is, you get every penny back.</p>
-
-          <p className="mb-4">Plus, we also give you a <b className='italic'>2-year workmanship guarantee</b> as well!</p>
+          <p className="mb-4">So if you want to get an awesome price on the fastest, easiest way to become a dead accurate shooter…</p>
           
-          <p className="mb-4">We know you’ll love the Laser Strike System, which is why we’re happy to extend you this iron-clad guarantee.</p>
-          
-          <p className="mb-4">So don’t wait any longer!</p>
+          <p className="mb-4">Plus… get a FREE VNSH Holster with it…</p>
 
-          <p className="mb-4">Grab yours NOW!</p>
-
-          <hr></hr>
-
-          <p 
-            className="text-center my-6 text-[18px] md:text-[26px] lg:text-[38px] text-[#f16500] font-bold leading-[1.2]"
-          >
-            Don’t Wait… Leave Now and Your Chance to Lock In Today’s Low Price <span className='text-[#dc3545]'>May Not Come Again!</span>
-          </p>
-
-          <p className="mb-4 font-bold italic">If you want the <u>fastest, easiest possible way</u> to maximize your accuracy and confidence…</p>
-
-          <p className="mb-4">And if you want to save countless hours and hundreds of dollars in range time and ammo costs…</p>
-
-          <p className="mb-4">Then you owe it to yourself to grab a VNSH Laser Strike System today!</p>
-          
-          <p className="mb-4">Plus, you’re getting it risk-free with our 60-day satisfaction guarantee.</p>
-          
-          <p className="mb-4">So don’t wait!</p>
-
-          <p className="mb-4">Grab your Laser Strike System NOW!</p>
+          <p className="mb-4">Then you owe it to yourself to grab this deal now!</p>
 
 
-          <div className="text-center mb-[20px]">
+          <div className="text-center">
           <Link href={checkoutUrl} className="w-full" target="_blank" rel="noopener noreferrer">
             <Button 
               variant="cta"
               size="lg"
               className="w-full md:w-[75%] mx-auto py-[3rem] md:py-[2rem] px-4 text-center font-bold animate-pulse-cta text-[1.425rem] md:text-[1.8rem] text-[1rem] leading-[2rem] whitespace-normal break-words"
             >
-              Pre-Order My .223 Laser Strike System HALF OFF Now!
+              Give Me My Laser Strike System + FREE VNSH Holster
             </Button>
           </Link>
         </div>
-
+        <div className="w-full flex justify-center my-4">
+            <span className="font-bold text-center bg-[#ff0] text-[#ff0000] text-[22px]">
+              60 Days to Try It Yourself… Love It Or You Don't Pay a Dime!
+            </span>
+        </div>
 
           {/* FAQ Section */}
           <FAQ />
@@ -595,6 +723,10 @@ const FAQ = () => {
   };
 
   const faqItems = [
+    {
+      question: 'Q: What Guns Work With This System?',
+      answer: 'A: Right now, the Laser Strike is available in the following calibers: 9mm, .45mm, .40 S&W, and .380 ACP. If you don’t see your caliber, just know we plan on adding more very soon!'
+    },
     {
       question: 'Q: Does Lack of Recoil Make This Less Effective Than Live Rounds?',
       answer: 'A: No! This is a huge myth. The effectiveness of dry fire training lies in the fact that recoil isn’t connected to the accuracy of your shot. Since the gun doesn’t kick until the bullet has exited the barrel, your precision and aim alone are what dictate accuracy.'

@@ -34,7 +34,7 @@ const BogoHero = () => {
             <Button 
               variant="cta"
               size="lg"
-              className="w-full md:w-[75%] mx-auto py-[3rem] md:py-[2rem] px-4 text-center font-bold animate-pulse-cta text-[1.425rem] md:text-[1.8rem] text-[1rem] leading-[2rem] whitespace-normal break-words"
+              className="w-full md:w-[85%] mx-auto py-[3rem] md:py-[2rem] px-4 text-center font-bold animate-pulse-cta text-[1.425rem] md:text-[1.8rem] text-[1rem] leading-[2rem] whitespace-normal break-words"
             >
               Give Me My Laser Strike System + FREE VNSH Holster
             </Button>

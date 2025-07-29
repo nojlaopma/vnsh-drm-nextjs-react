@@ -24,6 +24,7 @@ const Footer = () => {
   const isVnsmmfs1 = pathname?.includes('vnsmmfs1');
   const isVnshggg1 = pathname?.includes('vnshggg1');
   const isVnls1po223 = pathname?.includes('vnls1po223');
+  const isVnls1fh2 = pathname?.includes('vnls1fh2');
 
   let maxWidth = 'max-w-[1200px]';
   let paddingBottom = '';
@@ -34,7 +35,7 @@ const Footer = () => {
   let footerLinkCampaignName = '';
   let copyYearBrand = '';
   
-  if( isVnls1 ) {
+  if( isVnls1 || isVnls1fh2) {
     maxWidth = 'max-w-[1240px]';
     paddingBottom = 'pb-[34px]';
   }

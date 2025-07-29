@@ -29,7 +29,7 @@ export default function vnls1fh2po223Page({ params }: vnls1fh2po223PageProps) {
       link.innerHTML = 'Limited Gift! Get Our “World\'s Comfiest” Holster <strike>$80</strike> FREE';
       
       const container = document.createElement('div');
-      container.className = 'max-w-[1265px] mx-auto px-4 md:py-[6px] py-[1px]';
+      container.className = 'max-w-[1265px] mx-auto px-4 md:py-[14.5px] py-[1px]';
       container.appendChild(link);
       
       floater.appendChild(container);

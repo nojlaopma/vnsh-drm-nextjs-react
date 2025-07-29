@@ -17,7 +17,11 @@ export const images = {
     blackHolsterMobile2: '/images/holster/BlackHolsterMobile2.webp',
     blackHolsterMobile3: '/images/holster/BlackHolsterMobile3.webp',
     blackHolsterMobile4: '/images/holster/BlackHolsterMobile4.webp',
+    blackHolsterMobile5: '/images/holster/VNSH_Black_Holster_LS_435_290.webp',
+    blackHolsterMobile6: '/images/holster/BlackHolsterMobile3.webp',
+    freeholster: '/images/holster/freeholster1-desktop.webp',
   },
+
 
   magmate:{
     image1: '/images/magmate/MagMate1.webp',

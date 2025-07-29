@@ -20,7 +20,6 @@ const BogoHero = () => {
           The Comfiest,<i className='font-bold'> Most Discreet</i> Way to Conceal Spare Mags Right In Your Pocket <u>(Or Anywhere You Want!)</u> – While Still Being Able to <b>Deploy In Seconds </b>…
           </h1>
         </div>
-
         <div className="mx-auto mb-3 w-[100%] md:w-[97.6%] mt-[24px] md:mt-[24px]">
           <VidalyticsPlayer 
             playerId="QBcF0gJAHJbvE4zx" 

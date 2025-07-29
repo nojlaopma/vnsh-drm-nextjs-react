@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 // Import components from the vnsmmfs1 sections
-import { BogoHero, BogoFeatures, Pricing } from '@/components/sections/vnsmmfs1';
+import { BogoHero, BogoFeatures } from '@/components/sections/vnsmmfs1';
 
 interface VnshBlackBogo1PageProps {
   params: {
@@ -29,7 +29,7 @@ export default function VnshBlackBogo1Page({ params }: VnshBlackBogo1PageProps) 
       link.innerHTML = `Handing Out FREE MagMates Today! (just cover s&h)`;
       
       const container = document.createElement('div');
-      container.className = 'max-w-[1265px] mx-auto pl-[6px] md:px-8 lg:px-[70px]';
+      container.className = 'max-w-[1265px] mx-auto pl-[6px] md:px-8 md:px-[70px]';
       container.appendChild(link);
       
       floater.appendChild(container);
