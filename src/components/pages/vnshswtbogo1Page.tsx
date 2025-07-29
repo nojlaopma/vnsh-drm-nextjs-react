@@ -1,0 +1,41 @@
+'use client';
+
+import { useEffect } from 'react';
+// Import BogoHero and BogoFeatures from the vnshswtbogo1 sections
+import { BogoHero, BogoFeatures } from '@/components/sections/vnshswtbogo1';
+
+interface Vnsmp1PageProps {
+  params: {
+    pageId: string;
+  };
+  searchParams?: { [key: string]: string | string[] | undefined };
+}
+
+export default function Vnsmp1Page({ params }: Vnsmp1PageProps) {
+  useEffect(() => {
+    // Add specific class to body for this page
+    document.body.classList.add('bogo-page');
+    // Apply Tailwind classes to body
+    document.body.className += ' bg-[url(/images/background/black_geo_ver_min.webp)] bg-cover bg-fixed bg-repeat bg-center'
+
+    // Cleanup function
+    return () => {
+      document.body.classList.remove('bogo-page');
+      // Reset body styles
+      document.body.className = document.body.className.replace('bg-[url(/images/background/black_geo_ver_min.webp)] bg-cover bg-fixed bg-repeat bg-center', '');
+      
+    };
+  }, []);
+
+  return (
+    <div className="w-full bg-[#fff] max-w-[1140px] mx-auto relative overflow-hidden min-h-screen flex flex-col font-arial md:mt-[12px] mt-[-1px] rounded-t-[5px]">
+      <main>
+        <BogoHero />
+        <BogoFeatures />
+      </main>
+    </div>
+  );
+};
+
+
+

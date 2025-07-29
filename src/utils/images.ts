@@ -77,6 +77,16 @@ export const images = {
     smallBusiness2: '/images/features/1673961033090_Support_American_SMB_500x500.png',
     securePayment: '/images/features/secure_payment_footer.webp',
   },
+
+  swt:{
+    hero: '/images/swt/1709980810708_SW2K_Lightening_1920x1080_5813cf84-ebe1-4cd1-af9a-90fc95ea3aee.webp',
+    news: '/images/swt/vnshswtbogo1_article_1.webp',
+    image1: '/images/swt/vnsh_shocwave_torch.webp',
+    gunfreedefense: '/images/swt/gun_free_self_defense.webp',
+    perfectlighting: '/images/swt/perfect_lighting_up.webp',
+    easytouse: '/images/swt/vnsh_shocwave_torch_7a4f09ad-7b8b-4e6b-a2b9-e10d9a94f000.webp',
+    review1: '/images/swt/reviews/stuart_testimony_shocwave_torch.webp',
+  }
 };
 
 // For backward compatibility

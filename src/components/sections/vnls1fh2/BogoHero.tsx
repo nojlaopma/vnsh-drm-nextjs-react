@@ -30,7 +30,7 @@ const BogoHero = () => {
         </div>
         
         <div className="text-center">
-          <Link href={checkoutUrl} className="w-full" target="_blank" rel="noopener noreferrer">
+          <Link href={checkoutUrl} className="w-full" rel="noopener noreferrer">
             <Button 
               variant="cta"
               size="lg"

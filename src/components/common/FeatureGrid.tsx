@@ -29,9 +29,10 @@ const FeatureGrid = ({ items, className = '' }: { items: FeatureItem[]; classNam
   let isVnls1po223 = pathname?.includes('vnls1po223');
   let isVnsmp1 = pathname?.includes('vnsmp1');
   let isVnsmmfs1 = pathname?.includes('vnsmmfs1');
+  let isVnshswtbogo1 = pathname?.includes('vnshswtbogo1');
 
 
-  if( isVnshBogo ) {
+  if( isVnshBogo) {
     return (
       <div className={`w-[98%] mx-auto md:w-full ${className} ${pathname}`} >
         <div className={`mx-auto mb-[7px]`}>
@@ -58,7 +59,7 @@ const FeatureGrid = ({ items, className = '' }: { items: FeatureItem[]; classNam
         </div>
       </div>
     );
-  }else if(isVnls1){
+  }else if(isVnls1 ){
     return (
       <div className={`w-full ${className}`} >
         <div className={`mx-auto mb-[7px]`}>
@@ -217,8 +218,34 @@ const FeatureGrid = ({ items, className = '' }: { items: FeatureItem[]; classNam
         </div>
       </div>
     );
+  }else if(isVnshswtbogo1 ){
+    return (
+      <div className={`w-full ${className}`} >
+        <div className={`mx-auto mb-[7px]`}>
+          <div className={`grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-1`}>
+            {items.map((item, index) => (
+              <div key={index} className="flex flex-col items-center text-center px-[14px]">
+                <div className="mb-[16px]">
+                  <div className={`relative w-[${item.image.imageHeight ?? 150}px] h-[${item.image.imageWidth ?? 150}px] mx-auto pb-[20px] md:pb-[0]`}>
+                    <Image
+                      src={item.image.desktop}
+                      alt={item.image.alt}
+                      className={`object-contain ${item.image.className}`}
+                      sizes="(max-width: 768px) ${item.image.imageHeight ?? 150}px, ${item.image.imageWidth ?? 150}px"
+                      height={item.image.imageHeight ?? 150}
+                      width={item.image.imageWidth ?? 150}
+                    />
+                  </div>
+                </div>
+                <p className="text-[20px] font-bold mb-[20px] md:mb-[16px] text-[#212529]">{item.title}</p>
+                <p className="text-[18px] text-center text-[#212529] leading-[20px] mx-auto">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    );
   }
-  
 
 
   return (

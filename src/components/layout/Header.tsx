@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useMemo } from 'react';
 import { getImagePath } from '@/utils/images';
 
 // Default logo size
@@ -25,6 +24,7 @@ const Header = () => {
   const isVnshlite1 = pathname?.includes('vnshlite1');
   const isVnsmm1 = pathname?.includes('vnsmm1');
   const isVnsmmfs1 = pathname?.includes('vnsmmfs1');
+  const isVnshswtbogo1 = pathname?.includes('vnshswtbogo1');
 
   const logoSize = isBogoPage ? BOGO_LOGO_SIZE : DEFAULT_LOGO_SIZE;
 
@@ -76,6 +76,34 @@ const Header = () => {
       </div>
     </header>
     );
+  }
+
+  if( isVnshswtbogo1 ){
+    return(
+      <header className="bg-black font-arial">
+        <div className="max-w-[1265px] mx-auto px-4 md:px-[73px]">
+          <div className={`flex flex-col md:flex-row md:justify-between items-center w-full md:py-[25px] py-[25px]`}>
+            <Link href="/" className="md:flex-1 md:flex">
+              <Image 
+                src={logoPath} 
+                alt="VNSH Logo" 
+                width="218"
+                height="72"
+                priority
+                loading="eager"
+                decoding="sync"
+                className="aspect-auto object-contain"
+              />
+            </Link>
+              <div className="md:flex-1 md:flex md:justify-end">
+                <div id="header-contact" className={`text-white text-[19px] md:text-[26px] pt-[22px] md:pt-[0]`}>
+                  Questions? | {contactNumber}
+                </div>
+              </div>
+          </div>
+        </div>
+      </header>
+      );
   }
 
   return (

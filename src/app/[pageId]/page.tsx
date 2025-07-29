@@ -49,6 +49,8 @@ export async function generateMetadata({ params }: { params: { pageId: string } 
     'vnls1fh2': 'vnls1po223',
   
     'vnls1fh2': 'vnls1po223',
+  
+    'vnshswtbogo1': 'vnsmp1',
   };
 
   return {

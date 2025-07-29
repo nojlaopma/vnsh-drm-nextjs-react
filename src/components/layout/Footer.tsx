@@ -25,6 +25,7 @@ const Footer = () => {
   const isVnshggg1 = pathname?.includes('vnshggg1');
   const isVnls1po223 = pathname?.includes('vnls1po223');
   const isVnls1fh2 = pathname?.includes('vnls1fh2');
+  const isVnshswtbogo1 = pathname?.includes('vnshswtbogo1');
 
   let maxWidth = 'max-w-[1200px]';
   let paddingBottom = '';
@@ -80,6 +81,13 @@ const Footer = () => {
     copyYearBrand = 'font-bold';
   }
 
+  if( isVnshswtbogo1 ) {
+    footerLinkPaddingBottom = 'pb-[45px]';
+    footerLinkGap = 'md:gap-[16px]';
+    copyRightText = 'text-center text-[20px] mb-[-10px] md:mb-[18px]';
+    footerLinkCampaignName = 'mt-[27px] md:mt-[0]';
+    maxWidth = 'max-w-[1140px] mb-[12px] rounded-b-[5px]';
+  }
 
 
   useEffect(() => {
